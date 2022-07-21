@@ -1,0 +1,7 @@
+header {
+    justify-content: flex-end;
+}
+
+.logo {
+    max-height: 3rem;
+}
