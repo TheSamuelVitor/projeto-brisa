@@ -1,8 +1,26 @@
 .sidenav{
+    width: 3rem;
+    transition: 0.5s;
+}
+
+.sidenav:hover{
+    transition: 0.5s;
     width: 10rem;
-    align-items: flex-start;
 }
 
 a i{
     margin-right: 1rem;
+}
+
+.mat-list-item{
+    transition: 0.5s;
+    transform: scale(0.8);
+}
+
+.mat-list-item:hover{
+    height: 3rem;
+    transition: 0.5s;
+    background-color: #f37500a2;
+    color: #ffffff;
+    transform: scale(1);
 }
