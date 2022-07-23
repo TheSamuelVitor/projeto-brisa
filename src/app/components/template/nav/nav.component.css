@@ -1,6 +1,7 @@
 .sidenav{
-    width: 3rem;
+    width: 3.2rem;
     transition: 0.5s;
+    background-color: grey;
 }
 
 .sidenav:hover{
@@ -18,9 +19,8 @@ a i{
 }
 
 .mat-list-item:hover{
+    background-color: white;
     height: 3rem;
     transition: 0.5s;
-    background-color: #f37500a2;
-    color: #ffffff;
     transform: scale(1);
 }
