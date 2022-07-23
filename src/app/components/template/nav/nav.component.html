@@ -2,31 +2,31 @@
     <mat-sidenav class="sidenav" mode="side" opened 
     fixedInViewport="True" fixedTopGap="64">
         <mat-nav-list class="nav-list">
-            <a mat-list-item>
+            <a mat-list-item routerLink="">
                 <i class="material-icons">
                     dashboard
                 </i>
                 Dashboard
             </a>
-            <a mat-list-item>
+            <a mat-list-item routerLink="membros">
                 <i class="material-icons">
                     person
                 </i>
                 Membro
             </a>
-            <a mat-list-item>
+            <a mat-list-item routerLink="equipes">
                 <i class="material-icons">
                     people
                 </i>
                 Equipe
             </a>
-            <a mat-list-item>
+            <a mat-list-item routerLink="tarefas">
                 <i class="material-icons">
                     assignment
                 </i>
                 Tarefas
             </a>
-            <a mat-list-item>
+            <a mat-list-item routerLink="projetos">
                 <i class="material-icons">
                     description
                 </i>
@@ -34,4 +34,9 @@
             </a>
         </mat-nav-list>
     </mat-sidenav>
+    <mat-card-content>
+        <router-outlet>
+
+        </router-outlet>
+    </mat-card-content>
 </mat-sidenav-container>
