@@ -1,12 +1,8 @@
 .sidenav{
-    width: 3.2rem;
     transition: 0.5s;
-    background-color: rgb(115, 115, 115);
-}
-
-.sidenav:hover{
-    transition: 0.5s;
-    width: 10rem;
+    border-radius: 5px;
+    background-color: #0000ffbb;
+    height: auto;
 }
 
 a i{
@@ -19,7 +15,7 @@ a i{
 }
 
 .mat-list-item:hover{
-    background-color: white;
+    color: orange;
     height: 3rem;
     transition: 0.5s;
     transform: scale(1);
