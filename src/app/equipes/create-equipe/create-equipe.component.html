@@ -1,1 +1,22 @@
-<p>create-equipe works!</p>
+<mat-card class="form">
+    <mat-card-title>
+        Criar equipe
+    </mat-card-title>
+    <mat-card-subtitle>
+        Área para criação de novas equipes
+    </mat-card-subtitle>
+</mat-card>
+
+<form class="form">
+    <mat-form-field class="create-equipe" appearance="fill">
+        <mat-label>Nome da Equipe</mat-label>
+        <input matInput placeholder="Nome da equipe">
+    </mat-form-field>
+    <button mat-raised-button class="salvar" (click)="goBack()">
+        Salvar
+    </button>
+    <button mat-raised-button class="cancelar" (click)="goBack()">
+        Cancelar
+    </button>
+</form>
+

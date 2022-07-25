@@ -1,1 +1,45 @@
-<p>create-tarefas works!</p>
+<mat-card class="form">
+    <mat-card-title>
+        Criar tarefa
+    </mat-card-title>
+    <mat-card-subtitle>
+        Área para criar tarefas novas
+    </mat-card-subtitle>
+</mat-card>
+
+<form class="form">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nome da Tarefa</mat-label>
+        <input matInput placeholder="Nome da tarefa">
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Descrição da Tarefa</mat-label>
+        <textarea matInput cols="30" rows="10"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Projeto da Tarefa</mat-label>
+        <mat-select>
+            <mat-option value="one">1 - Página Clientes</mat-option>
+            <mat-option value="two">2 - Página Fornecedores</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nome do Integrante</mat-label>
+        <mat-select>
+            <mat-option value="one">1 - Samuel Vitor</mat-option>
+            <mat-option value="two">2 - Vinicius Guedes</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button class="salvar" (click)="goBack()">
+        Salvar
+    </button>
+    <button mat-raised-button class="cancelar" (click)="goBack()">
+        Cancelar
+    </button>
+
+</form>

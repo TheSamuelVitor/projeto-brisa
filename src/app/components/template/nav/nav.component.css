@@ -1,22 +1,25 @@
 .sidenav{
+    display: flex;
+    flex-direction: column;
     transition: 0.5s;
     border-radius: 5px;
-    background-color: #0000ffbb;
+    background-color: #0e43e4a8;
     height: auto;
+    width: 12rem;
 }
 
 a i{
-    margin-right: 1rem;
+    margin: 2rem 1rem;
 }
 
 .mat-list-item{
+    color: white;
     transition: 0.5s;
-    transform: scale(0.8);
 }
 
 .mat-list-item:hover{
-    color: orange;
+    background-color: #0040ff;
     height: 3rem;
     transition: 0.5s;
-    transform: scale(1);
+    transform: scale(1.1);
 }

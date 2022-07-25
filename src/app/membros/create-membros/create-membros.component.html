@@ -1,1 +1,26 @@
-<p>create-membros works!</p>
+<form class="form">
+    <mat-form-field appearance="fill">
+        <mat-label>Nome do membro</mat-label>
+        <input matInput placeholder="Nome do membro">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Nome da Equipe</mat-label>
+        <mat-select>
+            <mat-option value="one">Devs Cariri</mat-option>
+            <mat-option value="two">Komanda</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Tarefa</mat-label>
+        <mat-select>
+            <mat-option value="one">1 - Build API</mat-option>
+            <mat-option value="two">2 - Build Database</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button class="salvar" (click)="goBack()">
+        Salvar
+    </button>
+    <button mat-raised-button class="cancelar" (click)="goBack()">
+        Cancelar
+    </button>
+</form>
