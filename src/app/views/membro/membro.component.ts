@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-membro',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembroComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goToCreateMembro(): void {
+    this.router.navigate(['membros/create'])
   }
 
 }
