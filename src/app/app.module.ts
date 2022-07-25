@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import { MatInputModule } from '@angular/material/input'
 import { MatSelectModule } from '@angular/material/select'
+import { MatSnackBarModule} from  '@angular/material/snack-bar'
 
 // Import componentes da tela
 import { HeaderComponent } from './components/template/header/header.component';
@@ -63,7 +64,8 @@ import { CreateProjetosComponent } from './projetos/create-projetos/create-proje
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

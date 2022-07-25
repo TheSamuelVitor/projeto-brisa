@@ -1,3 +1,4 @@
+import { AvisoService } from './../../components/aviso.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 
@@ -8,13 +9,19 @@ import { Router } from '@angular/router'
 })
 export class CreateEquipeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private aviso: AvisoService) { }
 
   ngOnInit(): void {
   }
 
   goBack(): void {
     this.router.navigate(['equipes'])
+  }
+
+  salvar(): void {
+    this.goBack()
+    this.aviso.showMsg({msg: 'Equipe criada com sucesso'})
   }
 
 }
