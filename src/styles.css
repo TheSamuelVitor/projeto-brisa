@@ -2,8 +2,22 @@
 
 html, body { 
     height: 100%; 
+    overflow-y: hidden;
 }
+
 body { 
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+button.add{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin: 6rem 3rem;
+    color: #F56E28;
+    background-color: #1E2D69;
 }

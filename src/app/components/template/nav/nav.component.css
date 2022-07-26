@@ -3,7 +3,7 @@
     flex-direction: column;
     transition: 0.5s;
     border-radius: 5px;
-    background-color: #0e43e4a8;
+    background-color: #1E2D69;
     height: auto;
     width: 12rem;
 }
@@ -18,7 +18,7 @@ a i{
 }
 
 .mat-list-item:hover{
-    background-color: #0040ff;
+    color: #F56E28;
     height: 3rem;
     transition: 0.5s;
     transform: scale(1.1);
