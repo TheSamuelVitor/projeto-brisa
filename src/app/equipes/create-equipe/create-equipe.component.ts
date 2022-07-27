@@ -1,3 +1,5 @@
+import { CreateEquipesService } from './../../components/equipes/create-equipes.service';
+import { Equipe } from './../../components/equipes/equipe.model';
 import { AvisoService } from './../../components/aviso.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
@@ -9,8 +11,14 @@ import { Router } from '@angular/router'
 })
 export class CreateEquipeComponent implements OnInit {
 
+  equipe: Equipe = {
+    name_team: "Liga da Justiça"
+  }
+
   constructor(private router: Router,
-    private aviso: AvisoService) { }
+    private aviso: AvisoService,
+    private createEquipeService: CreateEquipesService
+    ) { }
 
   ngOnInit(): void {
   }
@@ -20,8 +28,10 @@ export class CreateEquipeComponent implements OnInit {
   }
 
   salvar(): void {
-    this.goBack()
-    this.aviso.showMsg({msg: 'Equipe criada com sucesso'})
+    this.createEquipeService.create(this.equipe).subscribe( () => {
+      this.goBack()
+      this.aviso.showMsg({msg: 'Equipe criada com sucesso'})
+    })
   }
 
 }

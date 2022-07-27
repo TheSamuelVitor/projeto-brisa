@@ -36,6 +36,8 @@ import { CreateTarefasComponent } from './tarefas/create-tarefas/create-tarefas.
 
 import { ProjetosComponent } from './views/projetos/projetos.component';
 import { CreateProjetosComponent } from './projetos/create-projetos/create-projetos.component';
+import { HttpClientModule } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { CreateProjetosComponent } from './projetos/create-projetos/create-proje
     MatInputModule,
     FormsModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
