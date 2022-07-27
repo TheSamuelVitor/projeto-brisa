@@ -1,1 +1,8 @@
-<p>read-projetos works!</p>
+<ul>
+    <li *ngFor="let projeto of projetos">
+        {{ projeto.id_projeto }}
+        {{ projeto.name_project }}
+        {{ projeto.description }}
+        {{ projeto.id_team }}
+    </li>
+</ul>

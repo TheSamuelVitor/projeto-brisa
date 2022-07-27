@@ -17,7 +17,7 @@ export class ReadProjetosComponent implements OnInit {
 
   ngOnInit(): void {
     this.projetoService.read().subscribe( projetos => {
-      this.projetos = this.projetos
+      this.projetos = projetos
       console.log(projetos)
     } )
   }

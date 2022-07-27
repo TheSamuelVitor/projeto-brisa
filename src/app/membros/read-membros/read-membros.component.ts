@@ -17,7 +17,7 @@ export class ReadMembrosComponent implements OnInit {
 
   ngOnInit(): void {
     this.membrosService.read().subscribe( membros => {
-      this.membros = this.membros
+      this.membros = membros
       console.log(membros)
     } )
   }

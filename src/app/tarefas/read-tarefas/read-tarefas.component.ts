@@ -17,7 +17,7 @@ export class ReadTarefasComponent implements OnInit {
 
   ngOnInit(): void {
     this.tarefaService.read().subscribe( tarefas => {
-      this.tarefas = this.tarefas
+      this.tarefas = tarefas
       console.log(tarefas)
     })
   }

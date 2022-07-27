@@ -1,1 +1,9 @@
-<p>read-tarefas works!</p>
+<ul>
+    <li *ngFor="let tarefa of tarefas">
+        {{ tarefa.description }}
+        {{ tarefa.name_task }}
+        {{ tarefa.id_tarefa }}
+        {{ tarefa.id_membro }}
+        {{ tarefa.id_project }}
+    </li>
+</ul>

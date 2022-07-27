@@ -1,1 +1,8 @@
-<p>read-membros works!</p>
+<ul>
+    <li *ngFor="let membro of membros">
+        {{ membro.id_membro }}
+        {{ membro.name_member }}
+        {{ membro.function }}
+        {{ membro.id_equipe }}
+    </li>
+</ul>
