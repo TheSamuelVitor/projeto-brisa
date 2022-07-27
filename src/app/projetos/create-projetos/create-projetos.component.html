@@ -10,11 +10,11 @@
 <form class="form">
     <mat-form-field appearance="fill">
         <mat-label>Nome do projeto</mat-label>
-        <input matInput placeholder="Nome do projeto">
+        <input matInput placeholder="Nome do projeto" [(ngModel)]="projeto.name_project" name="name_project">
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Descrição do projeto</mat-label>
-        <textarea matInput></textarea>
+        <textarea matInput [(ngModel)]="projeto.description" name="description"></textarea>
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Equipe responsável</mat-label>

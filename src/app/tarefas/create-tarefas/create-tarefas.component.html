@@ -11,12 +11,15 @@
 
     <mat-form-field appearance="fill">
         <mat-label>Nome da Tarefa</mat-label>
-        <input matInput placeholder="Nome da tarefa">
+        <input matInput placeholder="Nome da tarefa" 
+        [(ngModel)]="tarefa.name_task" name="name_task">
     </mat-form-field>
     
     <mat-form-field appearance="fill" class="descricao">
         <mat-label>Descrição da Tarefa</mat-label>
-        <textarea matInput cols="30" rows="10"></textarea>
+        <textarea matInput cols="30" rows="10"
+        [(ngModel)]="tarefa.description" name="description"
+        ></textarea>
     </mat-form-field>
 
     <mat-form-field appearance="fill">

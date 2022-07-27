@@ -12,8 +12,8 @@ import { CreateProjetosService } from 'src/app/components/projetos/create-projet
 export class CreateProjetosComponent implements OnInit {
 
   projeto: Projeto = {
-    name_project: "Desafio FullStack",
-    description: "Desafio feito pela Brisanet aos Jovens Aprendizes",
+    name_project: "",
+    description: "",
     id_team: 1
   }
 

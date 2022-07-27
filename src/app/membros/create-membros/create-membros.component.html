@@ -1,11 +1,11 @@
 <form class="form">
     <mat-form-field appearance="fill">
         <mat-label>Nome do membro</mat-label>
-        <input matInput placeholder="Nome do membro">
+        <input matInput placeholder="Nome do membro" [(ngModel)]="membro.name_member" name="name_member">
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Função do membro</mat-label>
-        <input matInput placeholder="Função do Membro">
+        <input matInput placeholder="Função do Membro" [(ngModel)]="membro.function" name="function">
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Nome da Equipe</mat-label>

@@ -12,15 +12,15 @@ import { Router } from '@angular/router'
 export class CreateMembrosComponent implements OnInit {
 
   membro: Membro = {
-    name_member: "Dayanne Bugarim",
-    function: "FrontEnd Developer",
+    name_member: "",
+    function: "",
     id_equipe: 1
   }
 
   constructor(private router: Router,
     private avisoMsg: AvisoService,
     private createMembroService: CreateMembrosService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
   }

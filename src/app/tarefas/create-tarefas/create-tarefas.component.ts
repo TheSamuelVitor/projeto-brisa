@@ -12,8 +12,8 @@ import { CreateTarefasService } from 'src/app/components/tarefas/create-tarefas.
 export class CreateTarefasComponent implements OnInit {
 
   tarefa: Tarefa = {
-    name_task: 'Modelagem do Banco',
-    description: 'Se torna necessário para facilitar o entendemento das relações',
+    name_task: "",
+    description: "",
     id_membro: 1,
     id_project: 1
   }
