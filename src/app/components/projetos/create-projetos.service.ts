@@ -15,4 +15,8 @@ export class CreateProjetosService {
   create(projeto: Projeto): Observable<Projeto> {
     return this.http.post<Projeto>(this.baseUrl, projeto)
   }
+
+  read(): Observable<Projeto[]> {
+    return this.http.get<Projeto[]>(this.baseUrl)
+  }
 }

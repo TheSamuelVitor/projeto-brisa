@@ -15,4 +15,8 @@ export class CreateEquipesService {
   create(equipe: Equipe): Observable<Equipe> {
     return this.http.post<Equipe>(this.baseUrl, equipe)
   }
+
+  read(): Observable<Equipe[]> {
+    return this.http.get<Equipe[]>(this.baseUrl)
+  }
 }

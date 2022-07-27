@@ -15,4 +15,8 @@ export class CreateTarefasService {
   create(tarefa: Tarefa): Observable<Tarefa> {
     return this.http.post<Tarefa>(this.baseUrl, tarefa)
   }
+  
+  read(): Observable<Tarefa[]> {
+    return this.http.get<Tarefa[]>(this.baseUrl)
+  }
 }

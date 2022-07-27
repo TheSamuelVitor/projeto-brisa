@@ -36,7 +36,11 @@ import { CreateTarefasComponent } from './tarefas/create-tarefas/create-tarefas.
 
 import { ProjetosComponent } from './views/projetos/projetos.component';
 import { CreateProjetosComponent } from './projetos/create-projetos/create-projetos.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ReadEquipeComponent } from './equipes/read-equipe/read-equipe.component';
+import { ReadMembrosComponent } from './membros/read-membros/read-membros.component';
+import { ReadProjetosComponent } from './projetos/read-projetos/read-projetos.component';
+import { ReadTarefasComponent } from './tarefas/read-tarefas/read-tarefas.component'
 
 
 @NgModule({
@@ -53,7 +57,11 @@ import { HttpClientModule } from '@angular/common/http'
     CreateEquipeComponent,
     CreateMembrosComponent,
     CreateProjetosComponent,
-    CreateTarefasComponent
+    CreateTarefasComponent,
+    ReadEquipeComponent,
+    ReadMembrosComponent,
+    ReadProjetosComponent,
+    ReadTarefasComponent
   ],
   imports: [
     BrowserModule,

@@ -15,4 +15,8 @@ export class CreateMembrosService {
   create(membro: Membro): Observable<Membro> {
     return this.http.post<Membro>(this.baseUrl, membro)
   }
+
+  read(): Observable<Membro[]> {
+    return this.http.get<Membro[]>(this.baseUrl)
+  }
 }
