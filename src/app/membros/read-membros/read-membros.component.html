@@ -1,8 +1,12 @@
 <ul>
     <li *ngFor="let membro of membros">
-        {{ membro.id_membro }}
-        {{ membro.name_member }}
-        {{ membro.function }}
-        {{ membro.id_equipe }}
+        <span class="nome">{{ membro.name_member }}</span>
+        <span class="funcao">{{ membro.function }}</span>
+        <span class="equipe">
+            <i class="material-icons">
+                people
+            </i>
+            {{ membro.id_equipe }}
+        </span>
     </li>
 </ul>

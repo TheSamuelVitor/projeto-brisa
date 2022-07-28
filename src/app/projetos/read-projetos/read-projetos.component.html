@@ -1,8 +1,17 @@
 <ul>
     <li *ngFor="let projeto of projetos">
-        {{ projeto.id_projeto }}
-        {{ projeto.name_project }}
-        {{ projeto.description }}
-        {{ projeto.id_team }}
+        <span class="nome">{{ projeto.name_project }}</span>
+        <span class="descricao">
+            <i class="material-icons">
+                description
+            </i>
+            {{ projeto.description }}
+        </span>
+        <span class="time">
+            <i class="material-icons">
+                people
+            </i>
+            {{ projeto.id_team }}
+        </span>
     </li>
 </ul>

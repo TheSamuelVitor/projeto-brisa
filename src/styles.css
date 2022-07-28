@@ -21,3 +21,36 @@ button.add{
     color: #F56E28;
     background-color: #1E2D69;
 }
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;
+    height: 150px;
+    list-style: none;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+li span.nome {
+    font-size: 2rem;
+    margin: 2px;
+    font-weight: 500;
+}
+
+span {
+    display: flex;
+    align-items: center;
+}
+
+i {
+    margin-right: 10px;
+}

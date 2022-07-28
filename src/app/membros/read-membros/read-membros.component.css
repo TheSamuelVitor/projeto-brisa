@@ -1,0 +1,14 @@
+span.nome {
+    font-size: 2rem;
+    margin: 2px;
+}
+
+span.funcao, span.equipe{
+    font-size: 1rem;
+    margin: 2px;
+}
+
+span.equipe {
+    display: flex;
+    align-items: center;
+}

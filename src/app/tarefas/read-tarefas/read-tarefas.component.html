@@ -1,9 +1,23 @@
 <ul>
     <li *ngFor="let tarefa of tarefas">
-        {{ tarefa.description }}
-        {{ tarefa.name_task }}
-        {{ tarefa.id_tarefa }}
-        {{ tarefa.id_membro }}
-        {{ tarefa.id_project }}
+        <span class="nome">{{ tarefa.name_task }}</span>
+        <span class="descricao">
+            <i class="material-icons">
+                description
+            </i>
+            {{ tarefa.description }}
+        </span>
+        <span class="membro">
+            <i class="material-icons">
+                person
+            </i>
+            {{ tarefa.id_membro }}
+        </span>
+        <span class="projeto">
+            <i class="material-icons">
+                assignment
+            </i>
+            {{ tarefa.id_project }}
+        </span>
     </li>
 </ul>
