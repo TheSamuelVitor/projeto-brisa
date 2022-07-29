@@ -28,6 +28,8 @@ ul {
 }
 
 li {
+    line-height: 2rem;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

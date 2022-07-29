@@ -1,0 +1,5 @@
+mat-grid-tile {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
