@@ -23,18 +23,20 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-        <mat-label>Projeto da Tarefa</mat-label>
+        <mat-label>Nome do Integrante</mat-label>
         <mat-select>
-            <mat-option value="one">1 - Página Clientes</mat-option>
-            <mat-option value="two">2 - Página Fornecedores</mat-option>
+            <mat-option *ngFor="let membro of membros | async" [value]="membro.id_equipe">
+                {{ membro.id_membro }} - {{ membro.name_member }}
+            </mat-option>
         </mat-select>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-        <mat-label>Nome do Integrante</mat-label>
+        <mat-label>Projeto da Tarefa</mat-label>
         <mat-select>
-            <mat-option value="one">1 - Samuel Vitor</mat-option>
-            <mat-option value="two">2 - Vinicius Guedes</mat-option>
+            <mat-option *ngFor="let projeto of projetos | async" [value]="projeto.id_projeto">
+                {{ projeto.id_projeto }} - {{ projeto.name_project }}
+            </mat-option>
         </mat-select>
     </mat-form-field>
 

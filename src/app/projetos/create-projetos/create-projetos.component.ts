@@ -1,3 +1,6 @@
+import { CreateEquipesService } from './../../components/equipes/create-equipes.service';
+import { Equipe } from './../../components/equipes/equipe.model';
+import { Observable } from 'rxjs';
 import { Projeto } from './../../components/projetos/projeto.model';
 import { AvisoService } from './../../components/aviso.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,6 +14,8 @@ import { CreateProjetosService } from 'src/app/components/projetos/create-projet
 })
 export class CreateProjetosComponent implements OnInit {
 
+  equipes: Observable<Equipe[]> | undefined
+
   projeto: Projeto = {
     name_project: "",
     description: "",
@@ -19,10 +24,12 @@ export class CreateProjetosComponent implements OnInit {
 
   constructor(private router: Router,
     private avisoMsg: AvisoService,
-    private createProjeto: CreateProjetosService
+    private createProjeto: CreateProjetosService,
+    private equipesService: CreateEquipesService
     ) { }
 
   ngOnInit(): void {
+    this.equipes = this.equipesService.read()
   }
 
   goBack(): void {

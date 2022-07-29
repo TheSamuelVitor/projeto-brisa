@@ -15,11 +15,8 @@ import { Router } from '@angular/router'
 export class CreateMembrosComponent implements OnInit {
   membro: Membro = {
     name_member: "",
-    function: "",
-    id_equipe: 1
+    function: ""
   }
-
-  // equipe: Equipe[] = []; 
 
   equipes: Observable<Equipe[]> | undefined
 
@@ -33,13 +30,6 @@ export class CreateMembrosComponent implements OnInit {
   ngOnInit(): void {
 
     this.equipes = this.equipesService.read();
-    // uma forma de fazer o select
-
-    // equipe: Equipe[] = []; 
-    // this.equipesService.read().subscribe( equipes => {
-    //   this.equipe = equipes
-    //   console.log(equipes)
-    // })
   }
 
   goBack(): void {
