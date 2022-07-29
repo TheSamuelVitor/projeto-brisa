@@ -11,6 +11,7 @@ body {
 }
 
 button.add{
+    display: flex;
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
@@ -53,6 +54,6 @@ span {
     align-items: center;
 }
 
-i {
-    margin-right: 10px;
+i.material-icons {
+    margin-right: 5px;
 }

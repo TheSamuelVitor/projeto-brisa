@@ -1,3 +1,4 @@
+import { CountService } from './../../components/count.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor( private count: CountService ) { }
 
   ngOnInit(): void {
+    this.count.countMembros()
+    this.count.countEquipes()
+    this.count.countProjetos()
+    this.count.countTarefas()
   }
 
 }

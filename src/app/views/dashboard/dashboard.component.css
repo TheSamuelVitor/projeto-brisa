@@ -1,5 +1,30 @@
-mat-grid-tile {
-    background-color: aqua;
+div.cards{
     display: flex;
-    flex-direction: column;
+}
+
+div.card {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 10px;
+    width: 25%;
+    height: 10rem;
+    line-height: 2rem;
+    background-color: #1E2D69;
+    border-radius: 10px;
+    color: white;
+}
+
+div.card:hover {
+    color: #F56E28;
+    transform: scale(1.02);
+}
+
+span.title {
+    font-size: 6rem;
+    margin-right: 5px;
+}
+
+span.subtitle {
+    font-size: 2rem;
 }

@@ -28,7 +28,6 @@ export class CreateMembrosComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
     this.equipes = this.equipesService.read();
   }
 
