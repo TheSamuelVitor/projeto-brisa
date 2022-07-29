@@ -10,8 +10,9 @@
     <mat-form-field appearance="fill">
         <mat-label>Nome da Equipe</mat-label>
         <mat-select>
-            <mat-option value="one">Devs Cariri</mat-option>
-            <mat-option value="two">Komanda</mat-option>
+            <mat-option *ngFor="let equipe of equipes | async" [value]="equipe.id_equipe">
+                {{ equipe.id_equipe }} - {{ equipe.name_team }}
+            </mat-option>
         </mat-select>
     </mat-form-field>
     <button mat-raised-button class="salvar" (click)="salvar()">
