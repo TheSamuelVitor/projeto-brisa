@@ -16,10 +16,10 @@ import { MatCardModule } from '@angular/material/card'
 import { MatInputModule } from '@angular/material/input'
 import { MatSelectModule } from '@angular/material/select'
 import { MatSnackBarModule} from  '@angular/material/snack-bar'
+import { MatGridListModule } from '@angular/material/grid-list'
 
 // Import componentes da tela
 import { HeaderComponent } from './components/template/header/header.component';
-import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 
 // Imports da tela
@@ -47,7 +47,6 @@ import { ReadTarefasComponent } from './tarefas/read-tarefas/read-tarefas.compon
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     NavComponent,
     DashboardComponent,
     MembroComponent,
@@ -76,7 +75,8 @@ import { ReadTarefasComponent } from './tarefas/read-tarefas/read-tarefas.compon
     FormsModule,
     MatSelectModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
