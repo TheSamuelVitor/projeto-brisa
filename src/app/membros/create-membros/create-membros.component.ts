@@ -15,7 +15,8 @@ import { Router } from '@angular/router'
 export class CreateMembrosComponent implements OnInit {
   membro: Membro = {
     name_member: "",
-    function: ""
+    function: "",
+    id_equipe: 0
   }
 
   equipes: Observable<Equipe[]> | undefined

@@ -18,25 +18,25 @@ export class CountService {
 
   countMembros(): void {
     this.http.get(this.membrosUrl).subscribe( (response) => {
-      console.log(`Membros = ${response}`)
+      console.log(response)
     } )
   }
 
   countEquipes(): void {
     this.http.get(this.equipesUrl).subscribe( (response) => {
-      console.log(`Equipes = ${response}`)
+      console.log(response)
     })
   }
 
   countProjetos(): void {
     this.http.get(this.projetosUrl).subscribe( (response) => {
-      console.log(`Projetos = ${response}`)
+      console.log(response)
     })
   }
 
   countTarefas(): void {
     this.http.get(this.tarefasUrl).subscribe( (response) => {
-      const qtdTarefas = response
+      console.log(response)
     })
   }
 

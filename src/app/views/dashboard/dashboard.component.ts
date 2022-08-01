@@ -7,14 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor( private count: CountService ) { }
+  
+  constructor( 
+    private countService: CountService 
+  ) { }
 
   ngOnInit(): void {
-    this.count.countMembros()
-    this.count.countEquipes()
-    this.count.countProjetos()
-    this.count.countTarefas()
+    this.countService.countEquipes()
+    this.countService.countMembros()
+    this.countService.countProjetos()
+    this.countService.countTarefas()
   }
 
 }

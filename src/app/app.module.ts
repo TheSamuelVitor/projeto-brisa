@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -76,7 +76,8 @@ import { ReadTarefasComponent } from './tarefas/read-tarefas/read-tarefas.compon
     MatSelectModule,
     MatSnackBarModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
