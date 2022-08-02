@@ -56,3 +56,16 @@ span {
 i.material-icons {
     margin-right: 5px;
 }
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+button.deletar:hover {
+    background-color: rgba(255, 0, 0, 0.603);
+}
+
+button.editar:hover {
+    background-color: rgba(255, 255, 0, 0.5);
+}

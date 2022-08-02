@@ -26,26 +26,16 @@ export class ReadMembrosComponent implements OnInit {
     } )
   }
 
+  atualizaMembro() {
+
+  }
+
   listaMembros() {
     this.http.get(this.url).subscribe( resultado => 
       console.log(resultado)
     )
   }
-
-  listaMembro () {
-    this.http.get(`${this.url}1`).subscribe( resultado =>
-      console.log(resultado)
-    )
-  }
-
-  adicionaMembro () {
-
-  }
-
-  atualizaMembro () {
-
-  }
-
+  
   deletaMembro (id: any) {
     this.http.delete(`${this.url}${id}`).subscribe( resultado =>
       console.log(resultado)

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { CreateProjetosService } from 'src/app/components/projetos/create-projetos.service';
 import { Projeto } from './../../components/projetos/projeto.model';
 import { Component, OnInit } from '@angular/core';
@@ -10,9 +11,11 @@ import { Component, OnInit } from '@angular/core';
 export class ReadProjetosComponent implements OnInit {
 
   projetos: Projeto[] = [];
+  urlProjeto = 'https://api-go-projects.herokuapp.com/projetos/'
 
   constructor(
-    private projetoService: CreateProjetosService
+    private projetoService: CreateProjetosService,
+    private http: HttpClient
   ) { }
 
   ngOnInit(): void {
@@ -20,6 +23,17 @@ export class ReadProjetosComponent implements OnInit {
       this.projetos = projetos
       console.log(projetos)
     } )
+  }
+
+  atualizaProjeto() {
+
+  }
+
+  deletaProjeto(id_projeto: any) {
+    this.http.delete(`${this.urlProjeto}${id_projeto}`).subscribe( 
+      resultado => {
+        console.log(resultado)
+      })
   }
 
 }

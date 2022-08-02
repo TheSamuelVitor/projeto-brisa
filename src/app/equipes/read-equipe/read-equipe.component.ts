@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { CreateEquipesService } from './../../components/equipes/create-equipes.service';
 import { Equipe } from './../../components/equipes/equipe.model';
 import { Component, OnInit } from '@angular/core';
@@ -10,9 +11,11 @@ import { Component, OnInit } from '@angular/core';
 export class ReadEquipeComponent implements OnInit {
 
   equipes: Equipe[] = []
+  equipeUrl = 'https://api-go-projects.herokuapp.com/equipes/'
 
   constructor(
-    private equipeService: CreateEquipesService
+    private equipeService: CreateEquipesService,
+    private http: HttpClient
   ) { }
 
   ngOnInit(): void {
@@ -21,6 +24,16 @@ export class ReadEquipeComponent implements OnInit {
       console.log(equipes)
     }
     )
+  }
+
+  deletaEquipe(id_equipe: any) {
+    this.http.delete(`${this.equipeUrl}${id_equipe}`).subscribe( resultado => 
+      console.log(resultado)
+    )
+  }
+
+  atualizaEquipe() {
+
   }
 
 }

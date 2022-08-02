@@ -13,5 +13,17 @@
             </i>
             {{ projeto.id_team }}
         </span>
+        <div>
+            <button (click)="deletaProjeto(projeto.id_projeto)" class="deletar">
+                <i class="material-icons">
+                    delete
+                </i>
+            </button>
+            <button (click)="atualizaProjeto ()" class="editar">
+                <i class="material-icons">
+                    create
+                </i>
+            </button>
+        </div>
     </li>
 </ul>
