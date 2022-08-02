@@ -28,10 +28,12 @@ export class CreateEquipeComponent implements OnInit {
   }
 
   salvar(): void {
-    this.createEquipeService.create(this.equipe).subscribe( () => {
-      this.goBack()
-      this.aviso.showMsg({msg: 'Equipe criada com sucesso'})
-    })
+    this.createEquipeService.create(this.equipe).subscribe( 
+      () => {
+        this.goBack()
+        this.aviso.showMsg({msg: 'Equipe criada com sucesso'})
+      }
+    )
   }
 
 }

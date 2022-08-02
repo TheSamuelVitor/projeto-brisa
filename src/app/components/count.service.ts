@@ -10,6 +10,7 @@ export class CountService {
     private http: HttpClient
     ) { }
 
+  baseUrl = 'https://api-go-projects.herokuapp.com/'
   membrosUrl = 'https://api-go-projects.herokuapp.com/membros/count'
   equipesUrl = 'https://api-go-projects.herokuapp.com/equipes/count'
   projetosUrl = 'https://api-go-projects.herokuapp.com/projetos/count'

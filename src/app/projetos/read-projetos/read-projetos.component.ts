@@ -1,3 +1,4 @@
+import { AvisoService } from './../../components/aviso.service';
 import { HttpClient } from '@angular/common/http';
 import { CreateProjetosService } from 'src/app/components/projetos/create-projetos.service';
 import { Projeto } from './../../components/projetos/projeto.model';
@@ -15,13 +16,13 @@ export class ReadProjetosComponent implements OnInit {
 
   constructor(
     private projetoService: CreateProjetosService,
-    private http: HttpClient
+    private http: HttpClient,
+    private message: AvisoService
   ) { }
 
   ngOnInit(): void {
     this.projetoService.read().subscribe( projetos => {
       this.projetos = projetos
-      console.log(projetos)
     } )
   }
 
@@ -31,9 +32,10 @@ export class ReadProjetosComponent implements OnInit {
 
   deletaProjeto(id_projeto: any) {
     this.http.delete(`${this.urlProjeto}${id_projeto}`).subscribe( 
-      resultado => {
-        console.log(resultado)
-      })
+      () => {
+        this.message.showMsg( { msg : `Projeto deletada com sucesso` })
+      }
+    )
   }
 
 }

@@ -1,3 +1,4 @@
+import { AvisoService } from './../../components/aviso.service';
 import { HttpClient } from '@angular/common/http';
 import { CreateEquipesService } from './../../components/equipes/create-equipes.service';
 import { Equipe } from './../../components/equipes/equipe.model';
@@ -15,20 +16,22 @@ export class ReadEquipeComponent implements OnInit {
 
   constructor(
     private equipeService: CreateEquipesService,
-    private http: HttpClient
+    private http: HttpClient,
+    private message: AvisoService
   ) { }
 
   ngOnInit(): void {
     this.equipeService.read().subscribe( equipes => {
       this.equipes = equipes
-      console.log(equipes)
     }
     )
   }
 
   deletaEquipe(id_equipe: any) {
-    this.http.delete(`${this.equipeUrl}${id_equipe}`).subscribe( resultado => 
-      console.log(resultado)
+    this.http.delete(`${this.equipeUrl}${id_equipe}`).subscribe( 
+      resultado => {
+        this.message.showMsg({ msg: `Equipe deletada com sucesso` })
+      }
     )
   }
 
