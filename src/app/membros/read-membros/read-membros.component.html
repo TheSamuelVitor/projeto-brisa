@@ -1,12 +1,30 @@
+<button (click)="listaMembros()">GET</button>
+<button (click)="listaMembro()">GET/id</button>
+<button (click)="adicionaMembro()">POST</button>
+<button (click)="atualizaMembro()">PUT/id</button>
 <ul>
     <li *ngFor="let membro of membros">
-        <span class="nome">{{ membro.name_member }}</span>
-        <span class="funcao">{{ membro.function }}</span>
-        <span class="equipe">
-            <i class="material-icons">
-                people
-            </i>
-            {{ membro.id_equipe }}
-        </span>
+        <div>
+            <span class="nome">{{ membro.name_member }}</span>
+            <span class="funcao">{{ membro.function }}</span>
+            <span class="equipe">
+                <i class="material-icons">
+                    people
+                </i>
+                {{ membro.id_equipe }}
+            </span>
+        </div>
+        <div>
+            <button (click)="deletaMembro(membro.id_membro)" class="deletar">
+                <i class="material-icons">
+                    delete
+                </i>
+            </button>
+            <button (click)="atualizaMembro()" class="editar">
+                <i class="material-icons">
+                    create
+                </i>
+            </button>
+        </div>
     </li>
 </ul>

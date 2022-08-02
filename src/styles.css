@@ -29,11 +29,11 @@ ul {
 
 li {
     line-height: 2rem;
-    min-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 25%;
+    min-width: 15rem;
     height: 150px;
     list-style: none;
     border: 1px solid black;
