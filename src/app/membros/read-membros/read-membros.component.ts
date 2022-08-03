@@ -1,7 +1,9 @@
+import { AvisoService } from './../../components/aviso.service';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 import { CreateMembrosService } from './../../components/membros/create-membros.service';
 import { Membro } from './../../components/membros/membro.model';
-import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-read-membros',
@@ -13,10 +15,10 @@ export class ReadMembrosComponent implements OnInit {
   membros: Membro[] = []
   url = "https://api-go-projects.herokuapp.com/membros/"
 
-
   constructor(
-    private http: HttpClient,
-    private membrosService: CreateMembrosService
+    private membrosService: CreateMembrosService,
+    private Aviso: AvisoService,
+    private http: HttpClient
   ) { }
 
   ngOnInit(): void {
@@ -37,8 +39,11 @@ export class ReadMembrosComponent implements OnInit {
   }
   
   deletaMembro (id: any) {
-    this.http.delete(`${this.url}${id}`).subscribe( resultado =>
-      console.log(resultado)
+    this.http.delete(`${this.url}${id}`).subscribe( 
+      resultado =>  {
+        console.log(resultado)
+        this.Aviso.showMsg( { msg: "Membro deletado com sucesso" ,} )
+      }
     )
   }
 

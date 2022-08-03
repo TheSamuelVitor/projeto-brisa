@@ -4,19 +4,16 @@ div.cards{
 
 div.card {
     align-items: center;
-    justify-content: center;
+    border-radius: 10px;
     display: flex;
+    height: 10rem;
+    justify-content: center;
+    line-height: 2rem;
     margin: 10px;
     width: 25%;
-    height: 10rem;
-    line-height: 2rem;
-    background-color: #1E2D69;
-    border-radius: 10px;
-    color: white;
 }
 
 div.card:hover {
-    color: #F56E28;
     transform: scale(1.02);
 }
 

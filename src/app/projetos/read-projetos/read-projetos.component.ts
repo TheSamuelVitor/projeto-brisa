@@ -33,7 +33,7 @@ export class ReadProjetosComponent implements OnInit {
   deletaProjeto(id_projeto: any) {
     this.http.delete(`${this.urlProjeto}${id_projeto}`).subscribe( 
       () => {
-        this.message.showMsg( { msg : `Projeto deletada com sucesso` })
+        this.message.showMsg( { msg : `Projeto deletado com sucesso` })
       }
     )
   }

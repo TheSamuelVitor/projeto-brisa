@@ -9,12 +9,13 @@
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Nome da Equipe</mat-label>
-        <mat-select>
-            <mat-option *ngFor="let equipe of equipes | async" [value]="equipe.name_team" >
-                {{ equipe.id_equipe }} - {{ equipe.name_team }}
+        <mat-select [(ngModel)]="membro.id_equipe" name="id_equipe">
+            <mat-option *ngFor="let equipe of equipes | async" [value]="equipe.id_equipe">
+                {{ equipe.name_team }}
             </mat-option>
         </mat-select>
     </mat-form-field>
+    <p>{{ membro.id_equipe }}</p>
     <button mat-raised-button class="salvar" (click)="salvar()">
         Salvar
     </button>

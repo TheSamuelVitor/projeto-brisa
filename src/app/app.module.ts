@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 // Imports do Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar'
@@ -36,7 +37,7 @@ import { CreateTarefasComponent } from './tarefas/create-tarefas/create-tarefas.
 
 import { ProjetosComponent } from './views/projetos/projetos.component';
 import { CreateProjetosComponent } from './projetos/create-projetos/create-projetos.component';
-import { HttpClientModule } from '@angular/common/http';
+
 import { ReadEquipeComponent } from './equipes/read-equipe/read-equipe.component';
 import { ReadMembrosComponent } from './membros/read-membros/read-membros.component';
 import { ReadProjetosComponent } from './projetos/read-projetos/read-projetos.component';
