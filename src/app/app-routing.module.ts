@@ -1,15 +1,15 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { CreateEquipeComponent } from './equipes/create-equipe/create-equipe.component';
-import { CreateMembrosComponent } from './membros/create-membros/create-membros.component';
 import { CreateProjetosComponent } from './projetos/create-projetos/create-projetos.component';
+import { CreateMembrosComponent } from './membros/create-membros/create-membros.component';
 import { CreateTarefasComponent } from './tarefas/create-tarefas/create-tarefas.component';
-
+import { CreateEquipeComponent } from './equipes/create-equipe/create-equipe.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { EquipeComponent } from './views/equipe/equipe.component';
-import { MembroComponent } from './views/membro/membro.component';
 import { ProjetosComponent } from './views/projetos/projetos.component';
 import { TarefasComponent } from './views/tarefas/tarefas.component';
+import { EquipeComponent } from './views/equipe/equipe.component';
+import { MembroComponent } from './views/membro/membro.component';
+
+import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {

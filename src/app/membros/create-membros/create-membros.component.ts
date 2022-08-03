@@ -17,7 +17,8 @@ export class CreateMembrosComponent implements OnInit {
 
   membro: Membro = {
     name_member: "",
-    function: ""
+    funcao: "",
+    id_equipe: ""
   }
   equipes: Observable<Equipe[]> | undefined
 

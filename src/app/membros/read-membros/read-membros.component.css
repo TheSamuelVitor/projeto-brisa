@@ -25,3 +25,33 @@ button.deletar:hover {
 button.editar:hover {
     background-color: rgba(255, 255, 0, 0.5);
 }
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-around;
+    line-height: 2rem;
+    list-style: none;
+    margin: 10px;
+    min-width: 25rem;
+    padding: 20px;
+    width: 25%;
+}
+
+li span.nome {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 2px;
+}
+
+div.orange {
+    background-color: #ffa500;
+}

@@ -3,7 +3,6 @@
     flex-direction: column;
     transition: 0.5s;
     border-radius: 5px;
-    background-color: #1E2D69;
     height: auto;
     width: 12rem;
 }
@@ -13,7 +12,6 @@ a i{
 }
 
 .mat-list-item{
-    color: white;
     transition: 0.5s;
 }
 
