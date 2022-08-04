@@ -1,17 +1,17 @@
 <ul>
     <li *ngFor="let projeto of projetos">
-        <span class="nome">{{ projeto.name_project }}</span>
+        <span class="nome">{{ projeto.nome_projeto }}</span>
         <span class="descricao">
             <i class="material-icons icon-components">
                 description
             </i>
-            {{ projeto.description }}
+            {{ projeto.descricao }}
         </span>
         <span class="time">
             <i class="material-icons icon-components">
                 people
             </i>
-            {{ projeto.id_team }}
+            {{ projeto.id_equipe }}
         </span>
         <div>
             <button (click)="deletaProjeto(projeto.id_projeto)" class="deletar">

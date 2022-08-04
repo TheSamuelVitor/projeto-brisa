@@ -12,7 +12,7 @@ import { Router } from '@angular/router'
 export class CreateEquipeComponent implements OnInit {
 
   equipe: Equipe = {
-    name_team: ""
+    nome_equipe: ""
   }
 
   constructor(private router: Router,

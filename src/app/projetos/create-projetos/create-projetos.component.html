@@ -10,17 +10,17 @@
 <form class="form">
     <mat-form-field appearance="fill">
         <mat-label>Nome do projeto</mat-label>
-        <input matInput placeholder="Nome do projeto" [(ngModel)]="projeto.name_project" name="name_project">
+        <input matInput placeholder="Nome do projeto" [(ngModel)]="projeto.nome_projeto" name="name_project">
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Descrição do projeto</mat-label>
-        <textarea matInput [(ngModel)]="projeto.description" name="description"></textarea>
+        <textarea matInput [(ngModel)]="projeto.descricao" name="description"></textarea>
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Equipe responsável</mat-label>
         <mat-select>
             <mat-option *ngFor="let equipe of equipes | async" [value]="equipe.id_equipe">
-                {{ equipe.id_equipe }} - {{ equipe.name_team }}
+                {{ equipe.id_equipe }} - {{ equipe.nome_equipe }}
             </mat-option>
         </mat-select>
     </mat-form-field>

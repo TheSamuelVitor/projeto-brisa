@@ -1,6 +1,6 @@
 export interface Membro {
     id_membro?: number
-    name_member: string
+    nome_membro: string
     funcao: string
-    id_equipe: string
+    id_equipe?: number
 }

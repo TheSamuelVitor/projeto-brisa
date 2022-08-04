@@ -1,11 +1,11 @@
 <ul>
     <li *ngFor="let tarefa of tarefas">
-        <span class="nome">{{ tarefa.name_task }}</span>
+        <span class="nome">{{ tarefa.nome_tarefa }}</span>
         <span class="descricao">
             <i class="material-icons icon-components">
                 description
             </i>
-            {{ tarefa.description }}
+            {{ tarefa.descricao }}
         </span>
         <span class="membro">
             <i class="material-icons icon-components">
@@ -17,7 +17,7 @@
             <i class="material-icons icon-components">
                 assignment
             </i>
-            {{ tarefa.id_project }}
+            {{ tarefa.id_projeto }}
         </span>
         <div>
             <button (click)="deletaTarefa(tarefa.id_tarefa)" class="deletar">

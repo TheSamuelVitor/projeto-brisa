@@ -17,10 +17,10 @@ import { CreateTarefasService } from 'src/app/components/tarefas/create-tarefas.
 export class CreateTarefasComponent implements OnInit {
 
   tarefa: Tarefa = {
-    name_task: "",
-    description: "",
+    nome_tarefa: "",
+    descricao: "",
     id_membro: 0,
-    id_project: 0
+    id_projeto: 0
   }
 
   membros: Observable<Membro[]> | undefined

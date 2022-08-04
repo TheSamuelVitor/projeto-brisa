@@ -16,12 +16,12 @@ import { AvisoService } from './../../components/aviso.service';
 export class CreateMembrosComponent implements OnInit {
 
   membro: Membro = {
-    name_member: "",
+    nome_membro: "",
     funcao: "",
-    id_equipe: ""
+    id_equipe: 0
   }
+  
   equipes: Observable<Equipe[]> | undefined
-
 
   constructor(
     private createMembroService: CreateMembrosService,

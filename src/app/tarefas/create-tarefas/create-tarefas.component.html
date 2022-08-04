@@ -12,13 +12,13 @@
     <mat-form-field appearance="fill">
         <mat-label>Nome da Tarefa</mat-label>
         <input matInput placeholder="Nome da tarefa" 
-        [(ngModel)]="tarefa.name_task" name="name_task">
+        [(ngModel)]="tarefa.nome_tarefa" name="name_task">
     </mat-form-field>
     
     <mat-form-field appearance="fill" class="descricao">
         <mat-label>Descrição da Tarefa</mat-label>
         <textarea matInput cols="30" rows="10"
-        [(ngModel)]="tarefa.description" name="description"
+        [(ngModel)]="tarefa.descricao" name="description"
         ></textarea>
     </mat-form-field>
 
@@ -26,7 +26,7 @@
         <mat-label>Nome do Integrante</mat-label>
         <mat-select>
             <mat-option *ngFor="let membro of membros | async" [value]="membro.id_equipe">
-                {{ membro.id_membro }} - {{ membro.name_member }}
+                {{ membro.id_membro }} - {{ membro.nome_membro }}
             </mat-option>
         </mat-select>
     </mat-form-field>
@@ -35,7 +35,7 @@
         <mat-label>Projeto da Tarefa</mat-label>
         <mat-select>
             <mat-option *ngFor="let projeto of projetos | async" [value]="projeto.id_projeto">
-                {{ projeto.id_projeto }} - {{ projeto.name_project }}
+                {{ projeto.id_projeto }} - {{ projeto.nome_projeto }}
             </mat-option>
         </mat-select>
     </mat-form-field>

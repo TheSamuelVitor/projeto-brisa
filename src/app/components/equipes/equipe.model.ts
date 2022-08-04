@@ -1,4 +1,4 @@
 export interface Equipe {
     id_equipe?: number,
-    name_team: string 
+    nome_equipe: string 
 }

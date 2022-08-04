@@ -17,9 +17,9 @@ export class CreateProjetosComponent implements OnInit {
   equipes: Observable<Equipe[]> | undefined
 
   projeto: Projeto = {
-    name_project: "",
-    description: "",
-    id_team: 1
+    nome_projeto: "",
+    descricao: "",
+    id_equipe: 0
   }
 
   constructor(private router: Router,
