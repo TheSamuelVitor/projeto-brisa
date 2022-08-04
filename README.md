@@ -46,7 +46,7 @@ ng serve
 
 
 - [x] Página equipes;
-  - [ ] Página criação de equipes;
+  - [x] Página criação de equipes;
 
 - [x] Página membros;
   - [ ] Página criação de membros;
