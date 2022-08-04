@@ -1,27 +1,59 @@
-# ProjetoBrisa
+<img alt="Golang Logo" height="70" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" />
+<img alt="PostgreSQL Logo" height="70" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
+<img alt="Logo Angular" height="70" width="70" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
+# Projeto Brisa
 
-## Development server
+- Projeto criado por Samuel Vitor;
+- Desafio proposto a Brisanet aos seus aprendizes;
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Informações sobre o sistema
 
-## Code scaffolding
+- Desenvolvido com Angular Postgres e Go.
+- Para poder usar:
+    - Criar uma equipe, pois estará associada aos seguintes passos;
+    - Criar um membro, apenas preencher os campos presentes e escolher uma equipe previamente criada;
+    - Criar um projeto, preencha os campos e defina a equipe que gerenciará o projeto;
+    - Criar uma tarefa, estará associada a um membro da equipe e a um projeto criado.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Como rodar este projeto
+```bash
+# clonando o repositório
+git clone https://github.com/TheSamuelVitor/projeto-brisa
+```
 
-## Running unit tests
+É necessario ter instalado o node e o npm
+```bash
+# importando node_modules
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Agora basta rodar o projeto com um dos comandos abaixo
+```bash
+# ambos os comandos podem ser usados
+npm start
+ng serve
+```
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Atividades
 
-## Further help
+- [x] Página dashboard;
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+- [x] Página equipes;
+  - [ ] Página criação de equipes;
+
+- [x] Página membros;
+  - [ ] Página criação de membros;
+    - [ ] Associar membro a equipe;
+
+- [x] Página projetos;
+  - [ ] Página criação de projetos;
+    - [ ] Associar projeto a equipe;
+
+- [x] Página tarefas;
+  - [ ] Página criação de tarefas;
+    - [ ] Associar tarefa a projeto e a equipe
