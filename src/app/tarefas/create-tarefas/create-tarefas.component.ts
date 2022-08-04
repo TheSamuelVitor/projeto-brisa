@@ -1,13 +1,14 @@
 import { CreateProjetosService } from 'src/app/components/projetos/create-projetos.service';
+import { CreateTarefasService } from 'src/app/components/tarefas/create-tarefas.service';
 import { CreateMembrosService } from './../../components/membros/create-membros.service';
 import { Projeto } from './../../components/projetos/projeto.model';
 import { Membro } from './../../components/membros/membro.model';
-import { Observable } from 'rxjs';
 import { Tarefa } from './../../components/tarefas/tarefa.model';
 import { AvisoService } from './../../components/aviso.service';
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
-import { CreateTarefasService } from 'src/app/components/tarefas/create-tarefas.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-create-tarefas',

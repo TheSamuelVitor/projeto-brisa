@@ -18,12 +18,13 @@
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Equipe responsável</mat-label>
-        <mat-select>
+        <mat-select name="equipe_responsavel" [(ngModel)]="projeto.id_equipe">
             <mat-option *ngFor="let equipe of equipes | async" [value]="equipe.id_equipe">
                 {{ equipe.id_equipe }} - {{ equipe.nome_equipe }}
             </mat-option>
         </mat-select>
     </mat-form-field>
+    <p>{{ projeto.id_equipe }}</p>
     <button mat-raised-button class="salvar" (click)="salvar()">
         Salvar
     </button>
