@@ -14,7 +14,7 @@ export class ReadMembrosComponent implements OnInit {
 
   membros: Membro[] = []
   url = "https://api-go-projects.herokuapp.com/membros/"
-
+  
   constructor(
     private membrosService: CreateMembrosService,
     private Aviso: AvisoService,
@@ -29,7 +29,7 @@ export class ReadMembrosComponent implements OnInit {
   }
 
   atualizaMembro() {
-
+    this.Aviso.showMsg({ msg: "Função em construção"})
   }
 
   listaMembros() {

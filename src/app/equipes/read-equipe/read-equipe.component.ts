@@ -36,7 +36,7 @@ export class ReadEquipeComponent implements OnInit {
   }
 
   atualizaEquipe() {
-
+    this.message.showMsg({ msg: "Função em construção"})
   }
 
 }

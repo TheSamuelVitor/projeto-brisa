@@ -27,7 +27,7 @@ export class ReadProjetosComponent implements OnInit {
   }
 
   atualizaProjeto() {
-
+    this.message.showMsg({ msg: "Função em construção"})
   }
 
   deletaProjeto(id_projeto: any) {

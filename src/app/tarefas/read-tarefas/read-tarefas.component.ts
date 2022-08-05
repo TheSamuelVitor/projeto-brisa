@@ -27,7 +27,7 @@ export class ReadTarefasComponent implements OnInit {
   }
 
   atualizaTarefa() {
-
+    this.message.showMsg({ msg: "Função em construção"})
   }
 
   deletaTarefa(id_tarefa: any) {
@@ -37,5 +37,5 @@ export class ReadTarefasComponent implements OnInit {
       }
     )
   }
-
+  
 }
