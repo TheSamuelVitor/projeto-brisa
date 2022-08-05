@@ -25,3 +25,8 @@ span.title {
 span.subtitle {
     font-size: 2rem;
 }
+
+a {
+    text-decoration: none;
+    color: #000;
+}
