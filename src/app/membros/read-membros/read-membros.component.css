@@ -14,8 +14,8 @@ span.equipe {
 }
 
 button {
-    cursor: pointer;
     border: none;
+    cursor: pointer;
 }
 
 button.deletar:hover {

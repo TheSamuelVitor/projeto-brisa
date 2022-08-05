@@ -1,8 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { CreateTarefasService } from 'src/app/components/tarefas/create-tarefas.service';
 import { AvisoService } from './../../components/aviso.service';
 import { Tarefa } from './../../components/tarefas/tarefa.model';
+
 import { Component, OnInit } from '@angular/core';
-import { CreateTarefasService } from 'src/app/components/tarefas/create-tarefas.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-read-tarefas',

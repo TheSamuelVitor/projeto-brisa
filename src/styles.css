@@ -55,22 +55,22 @@ button.editar:hover {
 }
 
 h1.title-view {
-    width: 173px;
-    height: 50px;
-    left: 19px;
-    top: 25px;
-
     align-items: center;
     color: #232946;
     display: flex;
-
+    height: 50px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 43px;
-
-    line-height: 50px;
+    
     margin-left: 3rem;
     margin-top: 25px;
+    line-height: 50px;
+    left: 19px;
+    
     text-align: center;
+    top: 25px;
+    width: 173px;
 }

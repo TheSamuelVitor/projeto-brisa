@@ -1,11 +1,12 @@
+import { CreateProjetosService } from 'src/app/components/projetos/create-projetos.service';
 import { CreateEquipesService } from './../../components/equipes/create-equipes.service';
-import { Equipe } from './../../components/equipes/equipe.model';
-import { Observable } from 'rxjs';
 import { Projeto } from './../../components/projetos/projeto.model';
+import { Equipe } from './../../components/equipes/equipe.model';
 import { AvisoService } from './../../components/aviso.service';
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
-import { CreateProjetosService } from 'src/app/components/projetos/create-projetos.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-create-projetos',

@@ -1,7 +1,8 @@
-import { AvisoService } from './../../components/aviso.service';
-import { HttpClient } from '@angular/common/http';
 import { CreateProjetosService } from 'src/app/components/projetos/create-projetos.service';
 import { Projeto } from './../../components/projetos/projeto.model';
+import { AvisoService } from './../../components/aviso.service';
+
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

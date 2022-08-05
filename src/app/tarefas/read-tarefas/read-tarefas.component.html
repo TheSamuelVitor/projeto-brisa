@@ -1,35 +1,25 @@
 <ul>
-    <li *ngFor="let tarefa of tarefas">
-        <span class="nome">{{ tarefa.nome_tarefa }}</span>
-        <span class="descricao">
-            <i class="material-icons icon-components">
-                description
-            </i>
-            {{ tarefa.descricao }}
-        </span>
-        <span class="membro">
-            <i class="material-icons icon-components">
-                person
-            </i>
-            {{ tarefa.id_membro }}
-        </span>
-        <span class="projeto">
-            <i class="material-icons icon-components">
-                assignment
-            </i>
-            {{ tarefa.id_projeto }}
-        </span>
-        <div>
-            <button (click)="deletaTarefa(tarefa.id_tarefa)" class="deletar">
-                <i class="material-icons">
-                    delete
-                </i>
-            </button>
-            <button (click)="atualizaTarefa()" class="editar">
-                <i class="material-icons">
-                    create
-                </i>
-            </button>
-        </div>
-    </li>
+  <li *ngFor="let tarefa of tarefas">
+    <span class="nome">{{ tarefa.nome_tarefa }}</span>
+    <span class="descricao">
+      <i class="material-icons icon-components"> description </i>
+      {{ tarefa.descricao }}
+    </span>
+    <span class="membro">
+      <i class="material-icons icon-components"> person </i>
+      {{ tarefa.id_membro }}
+    </span>
+    <span class="projeto">
+      <i class="material-icons icon-components"> assignment </i>
+      {{ tarefa.id_projeto }}
+    </span>
+    <div>
+      <button (click)="deletaTarefa(tarefa.id_tarefa)" class="deletar">
+        <i class="material-icons"> delete </i>
+      </button>
+      <button (click)="atualizaTarefa()" class="editar">
+        <i class="material-icons"> create </i>
+      </button>
+    </div>
+  </li>
 </ul>
