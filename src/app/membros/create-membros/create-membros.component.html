@@ -1,29 +1,34 @@
-<form class="form">
-    
-    <mat-form-field appearance="fill">
-        <mat-label>Nome do membro</mat-label>
-        <input matInput placeholder="Nome do membro" [(ngModel)]="membro.nome_membro" name="name_member">
-    </mat-form-field>
-    
-    <mat-form-field appearance="fill">
-        <mat-label>Função do membro</mat-label>
-        <input matInput placeholder="Função do Membro" [(ngModel)]="membro.funcao" name="funcao">
-    </mat-form-field>
-    
-    <mat-form-field appearance="fill">
-        <mat-label>Nome da Equipe</mat-label>
-        <mat-select name="id_equipe" [(ngModel)]="membro.id_equipe">    
-            <mat-option *ngFor="let equipe of equipes | async" [value]="equipe.id_equipe" >
-                {{ equipe.nome_equipe }}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
-    <p>{{ membro.id_equipe }}</p>
+<form class="form" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Nome do membro</mat-label>
+    <input
+      matInput
+      [(ngModel)]="membro.nome_membro"
+      name="name_member"
+      formControlName="nome"
+    />
+  </mat-form-field>
 
-    <button mat-raised-button class="salvar" (click)="salvar()">
-        Salvar
-    </button>
-    <button mat-raised-button class="cancelar" (click)="goBack()">
-        Cancelar
-    </button>
+  <mat-form-field appearance="fill">
+    <mat-label>Função do membro</mat-label>
+    <input matInput placeholder="Função do Membro" name="funcao" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nome da Equipe</mat-label>
+    <mat-select name="id_equipe">
+      <mat-option
+        *ngFor="let equipe of equipes | async"
+        [value]="equipe.id_equipe"
+      >
+        {{ equipe.nome_equipe }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p>{{ membro.id_equipe }}</p>
+
+  <button mat-raised-button class="salvar">Salvar</button>
+  <button mat-raised-button class="cancelar" (click)="goBack()">
+    Cancelar
+  </button>
 </form>

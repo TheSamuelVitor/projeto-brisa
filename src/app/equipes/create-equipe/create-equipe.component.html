@@ -1,22 +1,22 @@
 <mat-card class="form">
-    <mat-card-title>
-        Criar equipe
-    </mat-card-title>
-    <mat-card-subtitle>
-        Área para criação de novas equipes
-    </mat-card-subtitle>
+  <mat-card-title> Criar equipe </mat-card-title>
+  <mat-card-subtitle> Área para criação de novas equipes </mat-card-subtitle>
 </mat-card>
 
-<form class="form">
-    <mat-form-field class="create-equipe" appearance="fill">
-        <mat-label>Nome da Equipe</mat-label>
-        <input matInput placeholder="Nome da equipe" [(ngModel)]="equipe.nome_equipe" name="name_team">
-    </mat-form-field>
-    <button mat-raised-button class="salvar" (click)="salvar()">
-        Salvar
-    </button>
-    <button mat-raised-button class="cancelar" (click)="goBack()">
-        Cancelar
-    </button>
+<form class="form" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <mat-form-field class="create-equipe" appearance="fill">
+    <mat-label>Nome da Equipe</mat-label>
+    <input
+      matInput
+      placeholder="Nome da equipe"
+      name="name_team"
+      [ngModel]="equipe.nome_equipe"
+      formControlName="nome"
+    />
+  </mat-form-field>
+  <button mat-raised-button class="salvar">Salvar</button>
+  <button mat-raised-button class="cancelar" (click)="goBack()">
+    Cancelar
+  </button>
+  <button mat-raised-button class="limpar" (click)="limpar()">Limpar</button>
 </form>
-

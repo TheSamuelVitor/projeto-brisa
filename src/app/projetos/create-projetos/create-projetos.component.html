@@ -1,34 +1,40 @@
 <mat-card class="form">
-    <mat-card-title>
-        Criar projetos
-    </mat-card-title>
-    <mat-card-subtitle>
-        Área para criação de novos projetos
-    </mat-card-subtitle>
+  <mat-card-title> Criar projetos </mat-card-title>
+  <mat-card-subtitle> Área para criação de novos projetos </mat-card-subtitle>
 </mat-card>
 
 <form class="form">
-    <mat-form-field appearance="fill">
-        <mat-label>Nome do projeto</mat-label>
-        <input matInput placeholder="Nome do projeto" [(ngModel)]="projeto.nome_projeto" name="name_project">
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-        <mat-label>Descrição do projeto</mat-label>
-        <textarea matInput [(ngModel)]="projeto.descricao" name="description"></textarea>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-        <mat-label>Equipe responsável</mat-label>
-        <mat-select name="equipe_responsavel" [(ngModel)]="projeto.id_equipe">
-            <mat-option *ngFor="let equipe of equipes | async" [value]="equipe.id_equipe">
-                {{ equipe.id_equipe }} - {{ equipe.nome_equipe }}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
-    <p>{{ projeto.id_equipe }}</p>
-    <button mat-raised-button class="salvar" (click)="salvar()">
-        Salvar
-    </button>
-    <button mat-raised-button class="cancelar" (click)="goBack()">
-        Cancelar
-    </button>
+  <mat-form-field appearance="fill">
+    <mat-label>Nome do projeto</mat-label>
+    <input
+      matInput
+      placeholder="Nome do projeto"
+      [(ngModel)]="projeto.nome_projeto"
+      name="name_project"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Descrição do projeto</mat-label>
+    <textarea
+      matInput
+      [(ngModel)]="projeto.descricao"
+      name="description"
+    ></textarea>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Equipe responsável</mat-label>
+    <mat-select name="equipe_responsavel" [(ngModel)]="projeto.id_equipe">
+      <mat-option
+        *ngFor="let equipe of equipes | async"
+        [value]="equipe.id_equipe"
+      >
+        {{ equipe.id_equipe }} - {{ equipe.nome_equipe }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p>{{ projeto.id_equipe }}</p>
+  <button mat-raised-button class="salvar" (click)="salvar()">Salvar</button>
+  <button mat-raised-button class="cancelar" (click)="goBack()">
+    Cancelar
+  </button>
 </form>

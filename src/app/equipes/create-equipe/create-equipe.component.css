@@ -17,3 +17,8 @@ button.cancelar{
     margin-top: 10px;
     border: 1px solid blue;
 }
+
+button.limpar {
+    margin-top: 10px;
+    border: 1px solid yellow;
+}
