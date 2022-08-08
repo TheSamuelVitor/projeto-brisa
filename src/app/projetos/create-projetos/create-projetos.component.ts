@@ -5,6 +5,8 @@ import { Equipe } from './../../components/equipes/equipe.model';
 import { AvisoService } from './../../components/aviso.service';
 
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Validators } from '@angular/forms';
 import { Router } from '@angular/router'
 import { Observable } from 'rxjs';
 
@@ -17,6 +19,11 @@ export class CreateProjetosComponent implements OnInit {
 
   equipes: Observable<Equipe[]> | undefined
 
+  formulario = this.formBuilder.group({
+    nome: [null, Validators.required],
+    equipe: [null, Validators.required]
+  })
+
   projeto: Projeto = {
     nome_projeto: "",
     descricao: "",
@@ -26,7 +33,8 @@ export class CreateProjetosComponent implements OnInit {
   constructor(private router: Router,
     private avisoMsg: AvisoService,
     private createProjeto: CreateProjetosService,
-    private equipesService: CreateEquipesService
+    private equipesService: CreateEquipesService,
+    private formBuilder: FormBuilder
     ) { }
 
   ngOnInit(): void {
@@ -37,7 +45,7 @@ export class CreateProjetosComponent implements OnInit {
     this.router.navigate(['projetos'])
   }
 
-  salvar(): void {
+  onSubmit(): void {
     this.createProjeto.create(this.projeto).subscribe( () => {
       this.goBack()
       this.avisoMsg.showMsg({ msg: 'Projeto criado com sucesso' })

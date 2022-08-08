@@ -16,7 +16,11 @@ import { Observable } from "rxjs";
 })
 export class CreateMembrosComponent implements OnInit {
 
-  formulario!: FormGroup;
+  formulario = this.formBuilder.group({
+    nome: [null, Validators.required],
+    funcao: [null, Validators.required],
+    equipe: [null, Validators.required]
+  })
 
   membro: Membro = {
     nome_membro: "",
@@ -36,10 +40,6 @@ export class CreateMembrosComponent implements OnInit {
 
   ngOnInit(): void {
     this.equipes = this.equipesService.read();
-
-    this.formulario = this.formBuilder.group({
-      nome: [null, [Validators.required]]
-    });
   }
 
   goBack(): void {

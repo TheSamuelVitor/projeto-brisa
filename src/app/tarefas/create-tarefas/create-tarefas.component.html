@@ -3,7 +3,7 @@
   <mat-card-subtitle> Área para criar tarefas novas </mat-card-subtitle>
 </mat-card>
 
-<form class="form">
+<form class="form" [formGroup]="formulario" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill">
     <mat-label>Nome da Tarefa</mat-label>
     <input
@@ -11,7 +11,11 @@
       placeholder="Nome da tarefa"
       [(ngModel)]="tarefa.nome_tarefa"
       name="name_task"
+      formControlName="nome"
     />
+    <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
+      O canpo nome da tarefa não pode estar em branco
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill" class="descricao">
@@ -27,7 +31,11 @@
 
   <mat-form-field appearance="fill">
     <mat-label>Nome do Integrante</mat-label>
-    <mat-select name="membro_responsavel" [(ngModel)]="tarefa.id_membro">
+    <mat-select
+      name="membro_responsavel"
+      [(ngModel)]="tarefa.id_membro"
+      formControlName="membro"
+    >
       <mat-option
         *ngFor="let membro of membros | async"
         [value]="membro.id_membro"
@@ -35,11 +43,18 @@
         {{ membro.id_membro }} - {{ membro.nome_membro }}
       </mat-option>
     </mat-select>
+    <mat-error *ngIf="formulario.controls['membro'].hasError('required')">
+      Nome do membro não pode estar em branco
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Projeto da Tarefa</mat-label>
-    <mat-select name="projeto_tarefa" [(ngModel)]="tarefa.id_projeto">
+    <mat-select
+      name="projeto_tarefa"
+      [(ngModel)]="tarefa.id_projeto"
+      formControlName="projeto"
+    >
       <mat-option
         *ngFor="let projeto of projetos | async"
         [value]="projeto.id_projeto"
@@ -47,9 +62,12 @@
         {{ projeto.id_projeto }} - {{ projeto.nome_projeto }}
       </mat-option>
     </mat-select>
+    <mat-error *ngIf="formulario.controls['projeto'].hasError('required')">
+      Projeto da tarefa não pode ser deixado em branco
+    </mat-error>
   </mat-form-field>
 
-  <button mat-raised-button class="salvar" (click)="salvar()">Salvar</button>
+  <button mat-raised-button class="salvar" (click)="onSubmit()">Salvar</button>
   <button mat-raised-button class="cancelar" (click)="goBack()">
     Cancelar
   </button>

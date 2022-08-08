@@ -13,7 +13,9 @@ import { Router } from "@angular/router";
   styleUrls: ["./create-equipe.component.css"],
 })
 export class CreateEquipeComponent implements OnInit {
-  formulario!: FormGroup;
+  formulario = this.formBuilder.group({
+    nome: [null, Validators.required]
+  });
 
   equipe: Equipe = {
     nome_equipe: "",
@@ -27,9 +29,6 @@ export class CreateEquipeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.formulario = this.formBuilder.group({
-      nome: [null, [Validators.required]]
-    })
   }
 
   goBack(): void {

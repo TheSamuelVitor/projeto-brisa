@@ -13,6 +13,9 @@
       [ngModel]="equipe.nome_equipe"
       formControlName="nome"
     />
+    <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
+      Nome da equipe é requerido
+    </mat-error>
   </mat-form-field>
   <button mat-raised-button class="salvar">Salvar</button>
   <button mat-raised-button class="cancelar" (click)="goBack()">
