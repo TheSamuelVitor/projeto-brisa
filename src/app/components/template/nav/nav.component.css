@@ -1,9 +1,9 @@
 .sidenav{
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    transition: 0.5s;
-    border-radius: 5px;
     height: auto;
+    transition: 0.5s;
     width: 12rem;
 }
 
