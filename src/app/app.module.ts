@@ -43,7 +43,6 @@ import { MembroComponent } from './views/membro/membro.component';
 import { EquipeComponent } from './views/equipe/equipe.component';
 
 
-
 @NgModule({
   declarations: [
     CreateProjetosComponent,

@@ -61,4 +61,4 @@ ng serve
 - [x] Página tarefas;
   - [x] Página criação de tarefas;
     - [x] Associar tarefa a projeto e a equipe
-  - [] Editar tarefa;
+  - [ ] Editar tarefa;
