@@ -26,6 +26,7 @@
       rows="10"
       [(ngModel)]="tarefa.descricao"
       name="description"
+      formControlName="descricao"
     ></textarea>
   </mat-form-field>
 
@@ -63,11 +64,11 @@
       </mat-option>
     </mat-select>
     <mat-error *ngIf="formulario.controls['projeto'].hasError('required')">
-      Projeto da tarefa não pode ser deixado em branco
+      Projeto da tarefa não pode ser branco
     </mat-error>
   </mat-form-field>
 
-  <button mat-raised-button class="salvar" (click)="onSubmit()">Salvar</button>
+  <button mat-raised-button class="salvar" (click)="onSubmit()" [disabled]="!formulario.valid">Salvar</button>
   <button mat-raised-button class="cancelar" (click)="goBack()">
     Cancelar
   </button>

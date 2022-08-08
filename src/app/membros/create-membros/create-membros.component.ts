@@ -17,8 +17,7 @@ import { Observable } from "rxjs";
 export class CreateMembrosComponent implements OnInit {
 
   formulario = this.formBuilder.group({
-    nome: [null, Validators.required],
-    funcao: [null, Validators.required],
+    nome: [null, Validators.required],  
     equipe: [null, Validators.required]
   })
 
@@ -46,14 +45,10 @@ export class CreateMembrosComponent implements OnInit {
     this.router.navigate(["membros"]);
   }
 
-  salvar(): void {
+  onSubmit(): void {
     this.createMembroService.create(this.membro).subscribe(() => {
       this.goBack();
       this.avisoMsg.showMsg({ msg: " Membro criado com sucesso " });
     });
-  }
-
-  onSubmit(): void {
-
   }
 }

@@ -21,6 +21,7 @@ export class CreateTarefasComponent implements OnInit {
 
   formulario= this.formBuilder.group({
     nome: [null, Validators.required],
+    descricao: [null, Validators.required],
     membro: [null, Validators.required],
     projeto: [null, Validators.required]
   })
@@ -58,7 +59,5 @@ export class CreateTarefasComponent implements OnInit {
       this.avisoMsg.showMsg( { msg : 'Tarefa criada com sucesso' } )
     })
   }
-
-  teste = document.getElementById('teste')
 
 }

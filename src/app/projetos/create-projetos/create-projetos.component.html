@@ -23,6 +23,7 @@
       matInput
       [(ngModel)]="projeto.descricao"
       name="description"
+      formControlName="descricao"
     ></textarea>
   </mat-form-field>
   <mat-form-field appearance="fill">
@@ -43,8 +44,14 @@
       É necessário escolher a equipe
     </mat-error>
   </mat-form-field>
-  <p>{{ projeto.id_equipe }}</p>
-  <button mat-raised-button class="salvar" (click)="onSubmit()">Salvar</button>
+  <button
+    mat-raised-button
+    class="salvar"
+    (click)="onSubmit()"
+    [disabled]="!formulario.valid"
+  >
+    Salvar
+  </button>
   <button mat-raised-button class="cancelar" (click)="goBack()">
     Cancelar
   </button>
