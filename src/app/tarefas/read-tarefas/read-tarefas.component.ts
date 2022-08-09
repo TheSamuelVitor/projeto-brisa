@@ -1,4 +1,4 @@
-import { CreateTarefasService } from 'src/app/components/tarefas/create-tarefas.service';
+import { CreateTarefasService } from 'src/app/components/tarefas/tarefas.service';
 import { AvisoService } from './../../components/aviso.service';
 import { Tarefa } from './../../components/tarefas/tarefa.model';
 

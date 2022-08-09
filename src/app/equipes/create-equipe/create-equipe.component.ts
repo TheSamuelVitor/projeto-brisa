@@ -1,4 +1,4 @@
-import { CreateEquipesService } from "./../../components/equipes/create-equipes.service";
+import { CreateEquipesService } from "../../components/equipes/equipes.service";
 import { Equipe } from "./../../components/equipes/equipe.model";
 import { AvisoService } from "./../../components/aviso.service";
 
@@ -35,7 +35,7 @@ export class CreateEquipeComponent implements OnInit {
     this.router.navigate(["equipes"]);
   }
 
-  salvar(): void {
+  onSubmit(): void {
     this.createEquipeService.create(this.equipe).subscribe(() => {
       this.aviso.showMsg({ msg: "Equipe criada com sucesso" });
       this.goBack();
@@ -46,8 +46,4 @@ export class CreateEquipeComponent implements OnInit {
     this.formulario.reset()
   }
 
-  onSubmit(): void {
-    console.log(this.formulario.controls)
-    this.formulario.reset()
-  }
 }

@@ -10,14 +10,14 @@
       matInput
       placeholder="Nome da equipe"
       name="name_team"
-      [ngModel]="equipe.nome_equipe"
+      [(ngModel)]="equipe.nome_equipe"
       formControlName="nome"
     />
     <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
       Nome da equipe é requerido
     </mat-error>
   </mat-form-field>
-  <button mat-raised-button class="salvar" (click)="onSubmit()" [disabled]="!formulario.valid">Salvar</button>
+  <button mat-raised-button class="salvar" [disabled]="!formulario.valid">Salvar</button>
   <button mat-raised-button class="cancelar" (click)="goBack()">
     Cancelar
   </button>

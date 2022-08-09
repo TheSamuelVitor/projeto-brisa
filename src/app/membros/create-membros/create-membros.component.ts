@@ -1,5 +1,5 @@
-import { CreateEquipesService } from "./../../components/equipes/create-equipes.service";
-import { CreateMembrosService } from "./../../components/membros/create-membros.service";
+import { CreateEquipesService } from "../../components/equipes/equipes.service";
+import { CreateMembrosService } from "../../components/membros/membros.service";
 import { Equipe } from "./../../components/equipes/equipe.model";
 import { Membro } from "./../../components/membros/membro.model";
 import { AvisoService } from "./../../components/aviso.service";

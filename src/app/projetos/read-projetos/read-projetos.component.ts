@@ -1,4 +1,4 @@
-import { CreateProjetosService } from 'src/app/components/projetos/create-projetos.service';
+import { CreateProjetosService } from 'src/app/components/projetos/projetos.service';
 import { Projeto } from './../../components/projetos/projeto.model';
 import { AvisoService } from './../../components/aviso.service';
 

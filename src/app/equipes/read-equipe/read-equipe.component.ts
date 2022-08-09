@@ -1,4 +1,4 @@
-import { CreateEquipesService } from './../../components/equipes/create-equipes.service';
+import { CreateEquipesService } from '../../components/equipes/equipes.service';
 import { Equipe } from './../../components/equipes/equipe.model';
 import { AvisoService } from './../../components/aviso.service';
 import { HttpClient } from '@angular/common/http';

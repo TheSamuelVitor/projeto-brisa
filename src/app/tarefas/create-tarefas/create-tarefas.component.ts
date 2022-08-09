@@ -1,6 +1,6 @@
-import { CreateProjetosService } from 'src/app/components/projetos/create-projetos.service';
-import { CreateTarefasService } from 'src/app/components/tarefas/create-tarefas.service';
-import { CreateMembrosService } from './../../components/membros/create-membros.service';
+import { CreateProjetosService } from 'src/app/components/projetos/projetos.service';
+import { CreateTarefasService } from 'src/app/components/tarefas/tarefas.service';
+import { CreateMembrosService } from '../../components/membros/membros.service';
 import { Projeto } from './../../components/projetos/projeto.model';
 import { Membro } from './../../components/membros/membro.model';
 import { Tarefa } from './../../components/tarefas/tarefa.model';

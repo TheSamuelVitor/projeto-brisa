@@ -1,5 +1,5 @@
-import { CreateProjetosService } from 'src/app/components/projetos/create-projetos.service';
-import { CreateEquipesService } from './../../components/equipes/create-equipes.service';
+import { CreateProjetosService } from 'src/app/components/projetos/projetos.service';
+import { CreateEquipesService } from '../../components/equipes/equipes.service';
 import { Projeto } from './../../components/projetos/projeto.model';
 import { Equipe } from './../../components/equipes/equipe.model';
 import { AvisoService } from './../../components/aviso.service';
