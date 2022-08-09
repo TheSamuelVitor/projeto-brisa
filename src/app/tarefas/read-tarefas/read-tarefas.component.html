@@ -14,10 +14,10 @@
       {{ tarefa.id_projeto }}
     </span>
     <div>
-      <button (click)="deletaTarefa(tarefa.id_tarefa)" class="deletar">
+      <button (click)="deletaTarefa()" class="deletar">
         <i class="material-icons"> delete </i>
       </button>
-      <button (click)="atualizaTarefa()" class="editar">
+      <button routerLink="/tarefas/update/{{ tarefa.id_tarefa }}" class="editar">
         <i class="material-icons"> create </i>
       </button>
     </div>

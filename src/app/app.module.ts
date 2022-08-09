@@ -28,6 +28,11 @@ import { NavComponent } from './components/template/nav/nav.component';
 
 // Imports da tela
 
+import { MembroComponent } from './views/membro/membro.component';
+import { EquipeComponent } from './views/equipe/equipe.component';
+import { TarefasComponent } from './views/tarefas/tarefas.component';
+import { ProjetosComponent } from './views/projetos/projetos.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { CreateProjetosComponent } from './projetos/create-projetos/create-projetos.component';
 import { CreateMembrosComponent } from './membros/create-membros/create-membros.component';
 import { CreateTarefasComponent } from './tarefas/create-tarefas/create-tarefas.component';
@@ -36,11 +41,6 @@ import { CreateEquipeComponent } from './equipes/create-equipe/create-equipe.com
 import { ReadMembrosComponent } from './membros/read-membros/read-membros.component';
 import { ReadTarefasComponent } from './tarefas/read-tarefas/read-tarefas.component';
 import { ReadEquipeComponent } from './equipes/read-equipe/read-equipe.component';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { ProjetosComponent } from './views/projetos/projetos.component';
-import { TarefasComponent } from './views/tarefas/tarefas.component';
-import { MembroComponent } from './views/membro/membro.component';
-import { EquipeComponent } from './views/equipe/equipe.component';
 import { UpdateEquipeComponent } from './equipes/update-equipe/update-equipe.component';
 import { UpdateMembroComponent } from './membros/update-membro/update-membro.component';
 import { UpdateProjetoComponent } from './projetos/update-projeto/update-projeto.component';

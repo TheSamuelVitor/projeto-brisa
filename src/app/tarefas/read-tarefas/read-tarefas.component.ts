@@ -27,16 +27,9 @@ export class ReadTarefasComponent implements OnInit {
     })
   }
 
-  atualizaTarefa() {
-    this.message.showMsg({ msg: "Função em construção"})
-  }
 
-  deletaTarefa(id_tarefa: any) {
-    this.http.delete(`${this.tarefasUrl}${id_tarefa}`).subscribe(
-      resultado => {
-        this.message.showMsg( { msg : `Tarefa deletada com Sucesso` })
-      }
-    )
+  deletaTarefa() {
+    this.message.showMsg({ msg: "Função em construção"})
   }
   
 }

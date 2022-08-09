@@ -3,6 +3,7 @@ import { Equipe } from './../../components/equipes/equipe.model';
 import { AvisoService } from './../../components/aviso.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-read-equipe',

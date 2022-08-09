@@ -13,7 +13,7 @@
       <button (click)="deletaProjeto(projeto.id_projeto)" class="deletar">
         <i class="material-icons"> delete </i>
       </button>
-      <button (click)="atualizaProjeto()" class="editar">
+      <button routerLink="/projetos/update/{{ projeto.id_projeto }}" class="editar">
         <i class="material-icons"> create </i>
       </button>
     </div>

@@ -13,7 +13,7 @@
         <button (click)="deletaMembro(membro.id_membro)" class="deletar">
           <i class="material-icons"> delete </i>
         </button>
-        <button (click)="atualizaMembro()" class="editar">
+        <button class="editar" routerLink="/membros/update/{{ membro.id_membro }}">
           <i class="material-icons"> create </i>
         </button>
       </div>
