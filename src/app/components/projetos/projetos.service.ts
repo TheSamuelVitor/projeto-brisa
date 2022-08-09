@@ -19,4 +19,14 @@ export class CreateProjetosService {
   read(): Observable<Projeto[]> {
     return this.http.get<Projeto[]>(this.baseUrl)
   }
+
+  getById(id: string): Observable<Projeto> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Projeto>(url)
+  }
+
+  update(projeto: Projeto): Observable<Projeto> {
+    const url = `${this.baseUrl}/${projeto.id_projeto}`
+    return this.http.put<Projeto>(url, projeto)
+  }
 }

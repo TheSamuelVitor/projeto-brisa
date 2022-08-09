@@ -41,6 +41,10 @@ import { ProjetosComponent } from './views/projetos/projetos.component';
 import { TarefasComponent } from './views/tarefas/tarefas.component';
 import { MembroComponent } from './views/membro/membro.component';
 import { EquipeComponent } from './views/equipe/equipe.component';
+import { UpdateEquipeComponent } from './equipes/update-equipe/update-equipe.component';
+import { UpdateMembroComponent } from './membros/update-membro/update-membro.component';
+import { UpdateProjetoComponent } from './projetos/update-projeto/update-projeto.component';
+import { UpdateTarefaComponent } from './tarefas/update-tarefa/update-tarefa.component';
 
 
 @NgModule({
@@ -60,7 +64,11 @@ import { EquipeComponent } from './views/equipe/equipe.component';
     MembroComponent,
     EquipeComponent,
     AppComponent,
-    NavComponent
+    NavComponent,
+    UpdateEquipeComponent,
+    UpdateMembroComponent,
+    UpdateProjetoComponent,
+    UpdateTarefaComponent
   ],
   imports: [
     BrowserAnimationsModule,

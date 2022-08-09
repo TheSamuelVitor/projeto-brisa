@@ -10,6 +10,10 @@ import { MembroComponent } from './views/membro/membro.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { UpdateEquipeComponent } from './equipes/update-equipe/update-equipe.component';
+import { UpdateMembroComponent } from './membros/update-membro/update-membro.component';
+import { UpdateProjetoComponent } from './projetos/update-projeto/update-projeto.component';
+import { UpdateTarefaComponent } from './tarefas/update-tarefa/update-tarefa.component';
 
 const routes: Routes = [
   {
@@ -25,12 +29,20 @@ const routes: Routes = [
     component: CreateEquipeComponent
   },
   {
+    path: "equipes/update/:id",
+    component: UpdateEquipeComponent
+  },
+  {
     path: "membros",
     component: MembroComponent
   },
   {
     path: "membros/create",
     component: CreateMembrosComponent
+  },
+  {
+    path: "membros/update/:id",
+    component: UpdateMembroComponent
   },
   {
     path:"projetos",
@@ -41,12 +53,20 @@ const routes: Routes = [
     component: CreateProjetosComponent
   },
   {
+    path:"projetos/update/:id",
+    component: UpdateProjetoComponent
+  },
+  {
     path: "tarefas",
     component: TarefasComponent
   },
   {
     path: "tarefas/create",
     component: CreateTarefasComponent
+  },
+  {
+    path:"tarefas/update/:id",
+    component: UpdateTarefaComponent
   }
 ];
 

@@ -19,4 +19,14 @@ export class CreateEquipesService {
   read(): Observable<Equipe[]> {
     return this.http.get<Equipe[]>(this.baseUrl)
   }
+
+  getById(id: string): Observable<Equipe> {
+    const url= `${this.baseUrl}/${id}`
+    return this.http.get<Equipe>(url)
+  }
+
+  update(equipe: Equipe): Observable<Equipe> {
+    const url= `${this.baseUrl}/${equipe.id_equipe}`
+    return this.http.put<Equipe>(url,equipe)
+  }
 }
