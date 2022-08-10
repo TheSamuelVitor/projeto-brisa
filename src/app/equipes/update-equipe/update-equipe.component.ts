@@ -1,8 +1,10 @@
+import { AvisoService } from './../../components/aviso.service';
 import { ActivatedRoute, Router } from "@angular/router";
 import { FormBuilder, Validators } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import { Equipe } from "src/app/components/equipes/equipe.model";
 import { CreateEquipesService } from "src/app/components/equipes/equipes.service";
+import { ThisReceiver } from "@angular/compiler";
 
 @Component({
   selector: "app-update-equipe",
@@ -13,6 +15,7 @@ export class UpdateEquipeComponent implements OnInit {
   constructor(
     private equipeService: CreateEquipesService,
     private route: ActivatedRoute,
+    private aviso: AvisoService,
     private form: FormBuilder,
     private router: Router
   ) {}
@@ -28,9 +31,16 @@ export class UpdateEquipeComponent implements OnInit {
     nome: [null, Validators.required],
   });
 
-  equipe: Equipe | undefined;
+  equipe!: Equipe;
 
-  onSubmit(): void {}
+  onSubmit(): void {
+    this.equipeService.update(this.equipe).subscribe(
+      () => {
+        this.aviso.showMsg({ msg: 'Equipe atualizada com sucesso' })
+        this.goBack()
+      }
+    )
+  }
 
   goBack(): void {
     this.router.navigate(["/equipes"]);

@@ -25,7 +25,7 @@ export class CreateEquipesService {
   }
 
   update(equipe: Equipe): Observable<Equipe> {
-    const url = `${this.baseUrl}/${equipe.id_equipe}`;
+    const url = `${this.baseUrl}${equipe.id_equipe}`;
     return this.http.put<Equipe>(url, equipe);
   }
 }

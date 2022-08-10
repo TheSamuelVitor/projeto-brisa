@@ -10,7 +10,7 @@
         matInput
         placeholder="Nome da equipe"
         name="name_team"
-        [ngModel]="equipe!.nome_equipe"
+        [(ngModel)]="equipe.nome_equipe"
         formControlName="nome"
       />
       <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
