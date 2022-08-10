@@ -1,0 +1,23 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.form button{
+    width: 150px;
+}
+
+button.salvar {
+    background-color: #60e160;
+}
+
+button.cancelar{
+    margin-top: 10px;
+    border: 1px solid #0000ff;
+}
+
+button.limpar {
+    margin-top: 10px;
+    border: 1px solid #ffff00;
+}
