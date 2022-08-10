@@ -21,7 +21,6 @@ export class UpdateEquipeComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get("id");
     this.equipeService.getById({ id: `${id}` }).subscribe((equipe) => {
       this.equipe = equipe;
-      console.log(equipe);
     });
   }
 

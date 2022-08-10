@@ -1,32 +1,31 @@
-import { HttpClient } from '@angular/common/http'
-import { Injectable } from '@angular/core';
-import { Membro } from './membro.model';
-import { Observable } from 'rxjs';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Membro } from "./membro.model";
+import { Observable } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class CreateMembrosService {
+  baseUrl = "https://api-go-projects.herokuapp.com/membros/";
 
-  baseUrl = 'https://api-go-projects.herokuapp.com/membros/'
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   create(membro: Membro): Observable<Membro> {
-    return this.http.post<Membro>(this.baseUrl, membro)
+    return this.http.post<Membro>(this.baseUrl, membro);
   }
 
   read(): Observable<Membro[]> {
-    return this.http.get<Membro[]>(this.baseUrl)
+    return this.http.get<Membro[]>(this.baseUrl);
   }
 
-  getById(id: string): Observable<Membro> {
-    const url = `${this.baseUrl}/${id}`;
-    return this.http.get<Membro>(url)
+  getById({ id }: { id: string }): Observable<Membro> {
+    const url = `${this.baseUrl}${id}`;
+    return this.http.get<Membro>(url);
   }
 
   update(membro: Membro): Observable<Membro> {
     const url = `${this.baseUrl}/${membro.id_membro}`;
-    return this.http.put<Membro>(url, membro)
+    return this.http.put<Membro>(url, membro);
   }
 }

@@ -25,24 +25,17 @@ export class ReadMembrosComponent implements OnInit {
     this.membrosService.read().subscribe( membros => {
       this.membros = membros
       console.log(membros)
-    } )
+    } ) 
   }
 
   atualizaMembro() {
     this.Aviso.showMsg({ msg: "Função em construção"})
   }
 
-  listaMembros() {
-    this.http.get(this.url).subscribe( resultado => 
-      console.log(resultado)
-    )
-  }
-  
   deletaMembro (id: any) {
     this.http.delete(`${this.url}${id}`).subscribe( 
       resultado =>  {
-        console.log(resultado)
-        this.Aviso.showMsg( { msg: "Membro deletado com sucesso" ,} )
+        this.Aviso.showMsg( { msg: "Membro deletado com sucesso" } )
       }
     )
   }

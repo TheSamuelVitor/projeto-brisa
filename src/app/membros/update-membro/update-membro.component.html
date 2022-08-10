@@ -1,1 +1,49 @@
-<p>update-membro works!</p>
+<form class="form" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Nome do membro</mat-label>
+    <input
+      matInput
+      [(ngModel)]="membro.nome_membro"
+      name="name_member"
+      formControlName="nome"
+    />
+    <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
+      Nome do membro é obrigatório
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Função do membro</mat-label>
+    <input
+      matInput
+      placeholder="Função do Membro"
+      name="funcao"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nome da Equipe</mat-label>
+    <mat-select
+      name="id_equipe"
+      formControlName="equipe"
+      [ngModel]="membro!.id_equipe"
+    >
+      <mat-option
+        *ngFor="let equipe of equipes | async"
+        [value]="equipe.id_equipe"
+      >
+        {{ equipe.nome_equipe }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="formulario.controls['equipe'].hasError('required')">
+      É necessário selecionar a equipe
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button class="salvar" [disabled]="!formulario.valid">
+    Salvar
+  </button>
+  <button mat-raised-button class="cancelar" (click)="goBack()">
+    Cancelar
+  </button>
+</form>

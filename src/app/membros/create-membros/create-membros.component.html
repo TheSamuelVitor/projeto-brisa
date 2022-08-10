@@ -14,12 +14,16 @@
 
   <mat-form-field appearance="fill">
     <mat-label>Função do membro</mat-label>
-    <input matInput placeholder="Função do Membro" name="funcao"/>
+    <input matInput placeholder="Função do Membro" name="funcao" />
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Nome da Equipe</mat-label>
-    <mat-select name="id_equipe" formControlName="equipe" [(ngModel)]="membro.id_equipe">
+    <mat-select
+      name="id_equipe"
+      formControlName="equipe"
+      [(ngModel)]="membro.id_equipe"
+    >
       <mat-option
         *ngFor="let equipe of equipes | async"
         [value]="equipe.id_equipe"
@@ -32,7 +36,9 @@
     </mat-error>
   </mat-form-field>
 
-  <button mat-raised-button class="salvar" [disabled]="!formulario.valid">Salvar</button>
+  <button mat-raised-button class="salvar" [disabled]="!formulario.valid">
+    Salvar
+  </button>
   <button mat-raised-button class="cancelar" (click)="goBack()">
     Cancelar
   </button>
