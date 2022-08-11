@@ -3,12 +3,14 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Equipe } from "./equipe.model";
 import { Observable } from "rxjs";
+import { environment } from '../../../environments/environment.prod';
 
 @Injectable({
   providedIn: "root",
 })
 export class CreateEquipesService {
-  baseUrl = "https://api-go-projects.herokuapp.com/equipes/";
+
+  baseUrl = `${environment.baseApiUrl}equipes/`;
 
   constructor(private http: HttpClient) {}
 
