@@ -3,7 +3,7 @@ import { Equipe } from './../../components/equipes/equipe.model';
 import { AvisoService } from './../../components/aviso.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { environment } from './../../../environments/environment.prod';
 
 @Component({
   selector: 'app-read-equipe',
@@ -13,7 +13,8 @@ import { RouterLink } from '@angular/router';
 export class ReadEquipeComponent implements OnInit {
 
   equipes: Equipe[] = []
-  equipeUrl = 'https://api-go-projects.herokuapp.com/equipes/'
+
+  baseUrl = `${environment.baseApiUrl}equipes/`
 
   constructor(
     private equipeService: CreateEquipesService,
@@ -22,14 +23,16 @@ export class ReadEquipeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.equipeService.read().subscribe( equipes => {
-      this.equipes = equipes
-    }
+    this.equipeService.read().subscribe( 
+      equipes => {
+        this.equipes = equipes
+      }
     )
+    console.log(this.baseUrl)
   }
 
   deletaEquipe(id_equipe: any) {
-    this.http.delete(`${this.equipeUrl}${id_equipe}`).subscribe( 
+    this.http.delete(`${this.baseUrl}${id_equipe}`).subscribe( 
       resultado => {
         this.message.showMsg({ msg: `Equipe deletada com sucesso` })
       }

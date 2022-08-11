@@ -15,6 +15,8 @@ button.add {
     bottom: 0px;
     color: #F56E28;
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 4rem;
     margin: 6rem 3rem;
     position: fixed;

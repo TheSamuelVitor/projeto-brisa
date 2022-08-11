@@ -1,25 +1,5 @@
-div.cards{
-    display: flex;
-}
-
-div.card {
-    align-items: center;
-    border-radius: 10px;
-    display: flex;
-    height: 10rem;
-    justify-content: center;
-    line-height: 2rem;
-    margin: 10px;
-    width: 25%;
-}
-
-div.card:hover {
-    transform: scale(1.02);
-}
-
-span.title {
-    font-size: 6rem;
-    margin-right: 5px;
+h1 {
+    margin-left: -0px;
 }
 
 span.subtitle {

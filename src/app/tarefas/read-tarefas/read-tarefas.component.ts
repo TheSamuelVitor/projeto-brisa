@@ -27,9 +27,8 @@ export class ReadTarefasComponent implements OnInit {
     })
   }
 
-
   deletaTarefa() {
-    this.message.showMsg({ msg: "Função em construção"})
-  }
+    this.message.showMsg({ msg: "Função em construção"});
+  };
   
-}
+};

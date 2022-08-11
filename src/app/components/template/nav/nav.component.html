@@ -1,18 +1,15 @@
 <mat-sidenav-container class="container">
-    <mat-sidenav class="sidenav" mode="side" opened 
-    fixedInViewport="True">
-    <span>
-        <a routerLink="">
-            <img class="logo" src="../../../../assets/images/Brisanet_logo.png" alt="Logo Brisanet">
-        </a>
-    </span>
-    <mat-nav-list class="nav-list">
-        <a mat-list-item routerLink="">
-            <i class="material-icons">
-                dashboard
-            </i>
-            Dashboard
-            </a>
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="True">
+    <a mat-list-item>
+        <img src="../../../../assets/images/Brisanet_logo.png" alt="" class="logo">
+    </a>
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="">
+                <i class="material-icons">
+                    dashboard
+                </i>
+                Dashboard
+                </a>
             <a mat-list-item routerLink="equipes">
                 <i class="material-icons">
                     people
@@ -44,4 +41,4 @@
 
         </router-outlet>
     </mat-card-content>
-</mat-sidenav-container>
+</mat-sidenav-container> 
