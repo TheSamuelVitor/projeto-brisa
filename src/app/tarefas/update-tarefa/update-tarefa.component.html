@@ -1,1 +1,77 @@
-<p>update-tarefa works!</p>
+<mat-card class="form">
+    <mat-card-title> Atualizar tarefa </mat-card-title>
+    <mat-card-subtitle> Área para atualizar tarefas </mat-card-subtitle>
+  </mat-card>
+  
+  <form class="form" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome da Tarefa</mat-label>
+      <input
+        matInput
+        placeholder="Nome da tarefa"
+        [(ngModel)]="tarefa.nome_tarefa"
+        name="name_task"
+        formControlName="nome"
+      />
+      <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
+        O canpo nome da tarefa não pode estar em branco
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill" class="descricao">
+      <mat-label>Descrição da Tarefa</mat-label>
+      <textarea
+        matInput
+        cols="30"
+        rows="10"
+        [(ngModel)]="tarefa.descricao"
+        name="description"
+        formControlName="descricao"
+      ></textarea>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Projeto da Tarefa</mat-label>
+      <mat-select
+        name="projeto_tarefa"
+        [(ngModel)]="tarefa.id_projeto"
+        formControlName="projeto"
+      >
+        <mat-option
+          *ngFor="let projeto of projetos | async"
+          [value]="projeto.id_projeto"
+        >
+          {{ projeto.id_projeto }} - {{ projeto.nome_projeto }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="formulario.controls['projeto'].hasError('required')">
+        Projeto da tarefa não pode ser branco
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Nome do Integrante</mat-label>
+      <mat-select
+        name="membro_responsavel"
+        [(ngModel)]="tarefa.id_membro"
+        formControlName="membro"
+      >
+        <mat-option
+          *ngFor="let membro of membros | async"
+          [value]="membro.id_membro"
+        >
+          {{ membro.id_membro }} - {{ membro.nome_membro }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="formulario.controls['membro'].hasError('required')">
+        Nome do membro não pode estar em branco
+      </mat-error>
+    </mat-form-field>
+  
+  
+    <button mat-raised-button class="salvar" [disabled]="!formulario.valid">Salvar</button>
+    <button mat-raised-button class="cancelar" (click)="goBack()">
+      Cancelar
+    </button>
+  </form>
+  

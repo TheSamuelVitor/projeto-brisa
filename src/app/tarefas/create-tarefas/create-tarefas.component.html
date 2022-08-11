@@ -31,6 +31,25 @@
   </mat-form-field>
 
   <mat-form-field appearance="fill">
+    <mat-label>Projeto da Tarefa</mat-label>
+    <mat-select
+      name="projeto_tarefa"
+      [(ngModel)]="tarefa.id_projeto"
+      formControlName="projeto"
+    >
+      <mat-option
+        *ngFor="let projeto of projetos | async"
+        [value]="projeto.id_projeto"
+      >
+        {{ projeto.id_projeto }} - {{ projeto.nome_projeto }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="formulario.controls['projeto'].hasError('required')">
+      Projeto da tarefa não pode ser branco
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
     <mat-label>Nome do Integrante</mat-label>
     <mat-select
       name="membro_responsavel"
@@ -49,24 +68,6 @@
     </mat-error>
   </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Projeto da Tarefa</mat-label>
-    <mat-select
-      name="projeto_tarefa"
-      [(ngModel)]="tarefa.id_projeto"
-      formControlName="projeto"
-    >
-      <mat-option
-        *ngFor="let projeto of projetos | async"
-        [value]="projeto.id_projeto"
-      >
-        {{ projeto.id_projeto }} - {{ projeto.nome_projeto }}
-      </mat-option>
-    </mat-select>
-    <mat-error *ngIf="formulario.controls['projeto'].hasError('required')">
-      Projeto da tarefa não pode ser branco
-    </mat-error>
-  </mat-form-field>
 
   <button mat-raised-button class="salvar" [disabled]="!formulario.valid">Salvar</button>
   <button mat-raised-button class="cancelar" (click)="goBack()">
