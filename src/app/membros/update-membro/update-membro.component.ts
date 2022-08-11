@@ -1,3 +1,4 @@
+import { AvisoService } from "./../../components/aviso.service";
 import { CreateMembrosService } from "./../../components/membros/membros.service";
 import { CreateEquipesService } from "src/app/components/equipes/equipes.service";
 import { Equipe } from "./../../components/equipes/equipe.model";
@@ -16,6 +17,7 @@ import { Observable } from "rxjs";
 export class UpdateMembroComponent implements OnInit {
   formulario = this.formBuilder.group({
     nome: [null, Validators.required],
+    funcao: [null],
     equipe: [null, Validators.required],
   });
 
@@ -31,23 +33,27 @@ export class UpdateMembroComponent implements OnInit {
     private membroService: CreateMembrosService,
     private equipesService: CreateEquipesService,
     private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
     private router: Router,
-    private route: ActivatedRoute
+    private aviso: AvisoService
   ) {}
 
   ngOnInit(): void {
     this.equipes = this.equipesService.read();
     const id = this.route.snapshot.paramMap.get("id");
-    this.membroService.getById({ id: `${id}` }).subscribe(
-      membro => {
-        this.membro = membro
-      }
-    );
+    this.membroService.getById({ id: `${id}` }).subscribe((membro) => {
+      this.membro = membro;
+    });
   }
 
   goBack(): void {
     this.router.navigate(["membros"]);
   }
 
-  onSubmit(): void {}
+  onSubmit(): void {
+    this.membroService.update({ membro: this.membro }).subscribe(() => {
+      this.aviso.showMsg({ msg: "Membro atualizado com sucesso" });
+      this.goBack();
+    });
+  }
 }

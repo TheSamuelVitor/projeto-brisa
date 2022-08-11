@@ -14,7 +14,13 @@
 
   <mat-form-field appearance="fill">
     <mat-label>Função do membro</mat-label>
-    <input matInput placeholder="Função do Membro" name="funcao" />
+    <input
+      matInput
+      placeholder="Função do Membro"
+      name="funcao"
+      formControlName="funcao"
+      [(ngModel)]="membro.funcao"
+    />
   </mat-form-field>
 
   <mat-form-field appearance="fill">

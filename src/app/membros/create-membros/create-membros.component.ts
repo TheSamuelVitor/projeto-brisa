@@ -17,7 +17,8 @@ import { Observable } from "rxjs";
 export class CreateMembrosComponent implements OnInit {
 
   formulario = this.formBuilder.group({
-    nome: [null, Validators.required],  
+    nome: [null, Validators.required],
+    funcao: [null],
     equipe: [null, Validators.required]
   })
 

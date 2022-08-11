@@ -24,8 +24,8 @@ export class CreateMembrosService {
     return this.http.get<Membro>(url);
   }
 
-  update(membro: Membro): Observable<Membro> {
-    const url = `${this.baseUrl}/${membro.id_membro}`;
+  update({ membro }: { membro: Membro }): Observable<Membro> {
+    const url = `${this.baseUrl}${membro.id_membro}`;
     return this.http.put<Membro>(url, membro);
   }
 }
