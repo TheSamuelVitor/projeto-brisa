@@ -1,6 +1,6 @@
 .header {
     background-color: white;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .logo {

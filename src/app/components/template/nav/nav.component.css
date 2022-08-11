@@ -21,3 +21,9 @@ a i{
     transition: 0.5s;
     transform: scale(1.1);
 }
+
+.logo {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    max-height: 3rem;
+}

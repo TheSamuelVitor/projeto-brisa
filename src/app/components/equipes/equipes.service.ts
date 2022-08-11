@@ -1,3 +1,4 @@
+import { Membro } from './../membros/membro.model';
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Equipe } from "./equipe.model";
@@ -27,5 +28,10 @@ export class CreateEquipesService {
   update(equipe: Equipe): Observable<Equipe> {
     const url = `${this.baseUrl}${equipe.id_equipe}`;
     return this.http.put<Equipe>(url, equipe);
+  }
+
+  getMembrosbyEquipeId(id: string): Observable<Membro> {  
+    const url = `${this.baseUrl}membros/${id}`;
+    return this.http.get<Membro>(url)
   }
 }
