@@ -21,7 +21,7 @@ export class CreateProjetosComponent implements OnInit {
 
   formulario = this.formBuilder.group({
     nome: [null, Validators.required],
-    descricao: [null, Validators.required],
+    descricao: [null],
     equipe: [null, Validators.required]
   })
 

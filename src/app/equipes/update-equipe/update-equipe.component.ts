@@ -1,10 +1,10 @@
+import { CreateEquipesService } from "src/app/components/equipes/equipes.service";
+import { Equipe } from "src/app/components/equipes/equipe.model";
 import { AvisoService } from './../../components/aviso.service';
+
 import { ActivatedRoute, Router } from "@angular/router";
 import { FormBuilder, Validators } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
-import { Equipe } from "src/app/components/equipes/equipe.model";
-import { CreateEquipesService } from "src/app/components/equipes/equipes.service";
-import { ThisReceiver } from "@angular/compiler";
 
 @Component({
   selector: "app-update-equipe",

@@ -21,12 +21,12 @@ export class CreateProjetosService {
   }
 
   getById(id: string): Observable<Projeto> {
-    const url = `${this.baseUrl}/${id}`;
+    const url = `${this.baseUrl}${id}`;
     return this.http.get<Projeto>(url)
   }
 
   update(projeto: Projeto): Observable<Projeto> {
-    const url = `${this.baseUrl}/${projeto.id_projeto}`
+    const url = `${this.baseUrl}${projeto.id_projeto}`
     return this.http.put<Projeto>(url, projeto)
   }
 }
