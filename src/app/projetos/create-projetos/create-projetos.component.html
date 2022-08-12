@@ -12,6 +12,7 @@
       [(ngModel)]="projeto.nome_projeto"
       name="name_project"
       formControlName="nome"
+      maxlength="40"
     />
     <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
       Nome do projeto é necessário

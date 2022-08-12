@@ -6,6 +6,7 @@
       [(ngModel)]="membro.nome_membro"
       name="name_member"
       formControlName="nome"
+      maxlength="30"
     />
     <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
       Nome do membro é obrigatório
@@ -20,6 +21,7 @@
       name="funcao"
       formControlName="funcao"
       [(ngModel)]="membro.funcao"
+      maxlength="30"
     />
   </mat-form-field>
 

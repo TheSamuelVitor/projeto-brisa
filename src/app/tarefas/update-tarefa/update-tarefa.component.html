@@ -12,6 +12,7 @@
         [(ngModel)]="tarefa.nome_tarefa"
         name="name_task"
         formControlName="nome"
+        maxlength="30"
       />
       <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
         O canpo nome da tarefa não pode estar em branco

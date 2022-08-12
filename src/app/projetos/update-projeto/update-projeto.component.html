@@ -1,6 +1,6 @@
 <mat-card class="form">
-    <mat-card-title> Criar projetos </mat-card-title>
-    <mat-card-subtitle> Área para criação de novos projetos </mat-card-subtitle>
+    <mat-card-title> Atualizar projetos </mat-card-title>
+    <mat-card-subtitle> Área para atualização de projetos</mat-card-subtitle>
   </mat-card>
   
   <form class="form" [formGroup]="formulario" (ngSubmit)="onSubmit()">
@@ -12,6 +12,7 @@
         [(ngModel)]="projeto.nome_projeto"
         name="name_project"
         formControlName="nome"
+        maxlength="30"
       />
       <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
         Nome do projeto é necessário

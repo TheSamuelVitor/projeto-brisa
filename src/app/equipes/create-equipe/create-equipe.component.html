@@ -12,6 +12,7 @@
       name="name_team"
       [(ngModel)]="equipe.nome_equipe"
       formControlName="nome"
+      maxlength="30"
     />
     <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
       Nome da equipe é requerido
