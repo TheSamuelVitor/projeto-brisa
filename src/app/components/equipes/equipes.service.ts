@@ -10,30 +10,30 @@ import { environment } from '../../../environments/environment.prod';
 })
 export class CreateEquipesService {
 
-  baseUrl = `${environment.baseApiUrl}equipes/`;
+  equipeUrl = `${environment.baseApiUrl}equipes/`;
 
   constructor(private http: HttpClient) {}
 
   create(equipe: Equipe): Observable<Equipe> {
-    return this.http.post<Equipe>(this.baseUrl, equipe);
+    return this.http.post<Equipe>(this.equipeUrl, equipe);
   }
 
   read(): Observable<Equipe[]> {
-    return this.http.get<Equipe[]>(this.baseUrl);
+    return this.http.get<Equipe[]>(this.equipeUrl);
   }
 
   getById({ id }: { id: string }): Observable<Equipe> {
-    const url = `${this.baseUrl}${id}`;
+    const url = `${this.equipeUrl}${id}`;
     return this.http.get<Equipe>(url);
   }
 
   update(equipe: Equipe): Observable<Equipe> {
-    const url = `${this.baseUrl}${equipe.id_equipe}`;
+    const url = `${this.equipeUrl}${equipe.id_equipe}`;
     return this.http.put<Equipe>(url, equipe);
   }
 
   getMembrosbyEquipeId(id: string): Observable<Membro> {  
-    const url = `${this.baseUrl}membros/${id}`;
+    const url = `${this.equipeUrl}membros/${id}`;
     return this.http.get<Membro>(url)
   }
 }

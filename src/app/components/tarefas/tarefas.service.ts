@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment.prod';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Tarefa } from './tarefa.model';
@@ -8,25 +9,25 @@ import { Observable } from 'rxjs';
 })
 export class CreateTarefasService {
 
-  baseUrl = 'https://api-go-projects.herokuapp.com/tarefas/'
+  tarefaUrl = `${environment.baseApiUrl}tarefas/`
 
   constructor(private http: HttpClient) { }
 
   create(tarefa: Tarefa): Observable<Tarefa> {
-    return this.http.post<Tarefa>(this.baseUrl, tarefa)
+    return this.http.post<Tarefa>(this.tarefaUrl, tarefa)
   }
   
   read(): Observable<Tarefa[]> {
-    return this.http.get<Tarefa[]>(this.baseUrl)
+    return this.http.get<Tarefa[]>(this.tarefaUrl)
   }
 
   getById(id: string): Observable<Tarefa> { 
-    const url = `${this.baseUrl}${id}`
+    const url = `${this.tarefaUrl}${id}`
     return this.http.get<Tarefa>(url)
   }
 
   update(tarefa: Tarefa): Observable<Tarefa> { 
-    const url = `${this.baseUrl}${tarefa.id_tarefa}`
+    const url = `${this.tarefaUrl}${tarefa.id_tarefa}`
     return this.http.put<Tarefa>(url, tarefa)
   }
 }

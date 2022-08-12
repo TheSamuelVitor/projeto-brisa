@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment.prod';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Projeto } from './projeto.model';
@@ -8,25 +9,25 @@ import { Observable } from 'rxjs';
 })
 export class CreateProjetosService {
 
-  baseUrl = 'https://api-go-projects.herokuapp.com/projetos/'
+  projetoUrl = `${environment.baseApiUrl}projetos/`
 
   constructor( private http: HttpClient ) { }
 
   create(projeto: Projeto): Observable<Projeto> {
-    return this.http.post<Projeto>(this.baseUrl, projeto)
+    return this.http.post<Projeto>(this.projetoUrl, projeto)
   }
 
   read(): Observable<Projeto[]> {
-    return this.http.get<Projeto[]>(this.baseUrl)
+    return this.http.get<Projeto[]>(this.projetoUrl)
   }
 
   getById(id: string): Observable<Projeto> {
-    const url = `${this.baseUrl}${id}`;
+    const url = `${this.projetoUrl}${id}`;
     return this.http.get<Projeto>(url)
   }
 
   update(projeto: Projeto): Observable<Projeto> {
-    const url = `${this.baseUrl}${projeto.id_projeto}`
+    const url = `${this.projetoUrl}${projeto.id_projeto}`
     return this.http.put<Projeto>(url, projeto)
   }
 }
