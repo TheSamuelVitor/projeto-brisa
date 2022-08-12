@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class CreateTarefasService {
 
-  tarefaUrl = `${environment.baseApiUrl}tarefas/`
+  tarefaUrl = `${environment.apiUrl}tarefas/`
 
   constructor(private http: HttpClient) { }
 

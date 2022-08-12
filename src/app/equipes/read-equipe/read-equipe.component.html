@@ -1,6 +1,6 @@
 <ul>
     <li *ngFor="let equipe of equipes">
-        <span class="nome"> {{ equipe.id_equipe }} - {{ equipe.nome_equipe }}</span>
+        <span class="nome"> {{ equipe.nome_equipe }}</span>
         <div>
             <button (click)="deletaEquipe(equipe.id_equipe)" class="deletar">
                 <i class="material-icons">

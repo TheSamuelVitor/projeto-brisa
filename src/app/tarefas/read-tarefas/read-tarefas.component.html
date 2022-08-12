@@ -1,17 +1,17 @@
 <ul>
   <li *ngFor="let tarefa of tarefas">
-    <span class="nome">{{ tarefa.id_tarefa }} - {{ tarefa.nome_tarefa }}</span>
+    <span class="nome">{{ tarefa.nome_tarefa }}</span>
     <span class="descricao">
       <i class="material-icons icon-components"> description </i>
       {{ tarefa.descricao }}
     </span>
-    <span class="membro">
-      <i class="material-icons icon-components"> person </i>
-      {{ tarefa.id_membro }}
-    </span>
     <span class="projeto">
       <i class="material-icons icon-components"> assignment </i>
-      {{ tarefa.id_projeto }}
+      {{ tarefa.nome_projeto }}
+    </span>
+    <span class="membro">
+      <i class="material-icons icon-components"> person </i>
+      {{ tarefa.nome_membro }}
     </span>
     <div>
       <button (click)="deletaTarefa()" class="deletar">

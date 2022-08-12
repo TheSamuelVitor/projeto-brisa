@@ -2,11 +2,11 @@
   <li *ngFor="let membro of membros">
     <div>
       <div>
-        <span class="nome">{{ membro.id_membro }} - {{ membro.nome_membro }}</span>
+        <span class="nome">{{ membro.nome_membro }}</span>
         <span class="funcao">{{ membro.funcao }}</span>
         <span class="equipe">
           <i class="material-icons icon-components"> people </i>
-          {{ membro.id_equipe }}
+          {{ membro.nome_equipe }}
         </span>
       </div>
       <div>

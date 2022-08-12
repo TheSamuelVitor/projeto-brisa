@@ -3,5 +3,7 @@ export interface Tarefa {
     nome_tarefa: string,
     descricao?: string,
     id_projeto: number,
-    id_membro: number
+    nome_projeto?: string,
+    id_membro: number,
+    nome_membro?: string
 }

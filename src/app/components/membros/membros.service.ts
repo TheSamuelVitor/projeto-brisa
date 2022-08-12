@@ -8,7 +8,7 @@ import { Observable } from "rxjs";
   providedIn: "root",
 })
 export class CreateMembrosService {
-  membroUrl = `${environment.baseApiUrl}membros/`;
+  membroUrl = `${environment.apiUrl}membros/`;
 
   constructor(private http: HttpClient) {}
 

@@ -14,7 +14,7 @@ export class ReadEquipeComponent implements OnInit {
 
   equipes: Equipe[] = []
 
-  baseUrl = `${environment.baseApiUrl}equipes/`
+  baseUrl = `${environment.apiUrl}equipes/`
 
   constructor(
     private equipeService: CreateEquipesService,
