@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { CreateTarefasService } from 'src/app/components/tarefas/tarefas.service';
 import { AvisoService } from './../../components/aviso.service';
 import { Tarefa } from './../../components/tarefas/tarefa.model';
@@ -27,8 +28,12 @@ export class ReadTarefasComponent implements OnInit {
     })
   }
 
-  deletaTarefa() {
-    this.message.showMsg({ msg: "Função em construção"});
+  deletaTarefa(id_tarefa: any) {
+    this.http.delete(`${environment.baseApiUrl}tarefas/${id_tarefa}`).subscribe(
+      () => {
+        this.message.showMsg({ msg: "Tarefa deletada com sucesso"});
+      }
+    )
   };
   
 };
