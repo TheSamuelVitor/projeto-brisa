@@ -45,23 +45,31 @@ ng serve
 - [x] Página dashboard;
 
 - [x] Página equipes;
-
-  - [x] Página criação de equipes;
+  - [x] Mostrar equipes;
+  - [x] Criar equipes;
   - [x] Editar equipe;
+  - [x] Deletar equipe;
 
 - [x] Página membros;
 
-  - [x] Página criação de membros;
+  - [x] Mostrar membros;
+  - [x] Criar membros;
     - [x] Associar membro a equipe;
   - [x] Editar membro;
+  - [x] Deletar membro;
 
 - [x] Página projetos;
 
-  - [x] Página criação de projetos;
+  - [x] Mostrar projetos;
+  - [x] Criar projetos;
     - [x] Associar projeto a equipe;
   - [x] Editar projeto;
+  - [x] Deletar projeto;
 
 - [x] Página tarefas;
-  - [x] Página criação de tarefas;
+
+  - [x] Mostrar tarefas;
+  - [x] Criar tarefas;
     - [x] Associar tarefa a projeto e a equipe;
   - [x] Editar tarefa;
+  - [x] Deletar tarefa;

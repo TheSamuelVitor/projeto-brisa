@@ -38,7 +38,6 @@ export class UpdateTarefaComponent implements OnInit {
 
   constructor(
     private projetoService: CreateProjetosService,
-    private equipeService: CreateEquipesService,
     private membroService: CreateMembrosService,
     private createTarefa: CreateTarefasService,
     private formBuilder: FormBuilder,
