@@ -10,10 +10,17 @@
         </span>
       </div>
       <div>
-        <button (click)="deletaMembro(membro.id_membro)" class="deletar">
+        <button 
+        matTooltip="Deletar membro"
+        (click)="deletaMembro(membro.id_membro)"
+        class="deletar">
           <i class="material-icons"> delete </i>
         </button>
-        <button class="editar" routerLink="/membros/update/{{ membro.id_membro }}">
+        <button
+          matTooltip="Editar membro"
+          class="editar"
+          routerLink="/membros/update/{{ membro.id_membro }}"
+        >
           <i class="material-icons"> create </i>
         </button>
       </div>

@@ -1,8 +1,9 @@
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { CreateEquipesService } from '../../components/equipes/equipes.service';
 import { Equipe } from './../../components/equipes/equipe.model';
 import { AvisoService } from './../../components/aviso.service';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, inject, OnInit } from '@angular/core';
 import { environment } from './../../../environments/environment.prod';
 
 @Component({
@@ -19,7 +20,8 @@ export class ReadEquipeComponent implements OnInit {
   constructor(
     private equipeService: CreateEquipesService,
     private http: HttpClient,
-    private message: AvisoService
+    private message: AvisoService,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -28,19 +30,14 @@ export class ReadEquipeComponent implements OnInit {
         this.equipes = equipes
       }
     )
-    console.log(this.baseUrl)
   }
 
   deletaEquipe(id_equipe: any) {
     this.http.delete(`${this.baseUrl}${id_equipe}`).subscribe( 
-      resultado => {
+      () => {
         this.message.showMsg({ msg: `Equipe deletada com sucesso` })
       }
     )
-  }
-
-  atualizaEquipe() {
-    this.message.showMsg({ msg: "Função em construção"})
   }
 
 }
