@@ -1,3 +1,5 @@
+import { DeleteWarningComponent } from './delete-warning/delete-warning.component';
+import { MatDialog } from '@angular/material/dialog';
 import { environment } from './../../../environments/environment';
 import { CreateTarefasService } from 'src/app/components/tarefas/tarefas.service';
 import { AvisoService } from './../../components/aviso.service';
@@ -19,7 +21,8 @@ export class ReadTarefasComponent implements OnInit {
   constructor(
     private tarefaService: CreateTarefasService,
     private message: AvisoService,
-    private http: HttpClient
+    private http: HttpClient,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -35,5 +38,16 @@ export class ReadTarefasComponent implements OnInit {
       }
     )
   };
+
+  openDialog(
+    enterAnimationDuration: string,
+    exitAnimationDuration: string
+  ): void {
+    this.dialog.open(DeleteWarningComponent, {
+      width: "250px",
+      enterAnimationDuration,
+      exitAnimationDuration
+    })
+  }
   
 };
