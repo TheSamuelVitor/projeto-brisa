@@ -1,17 +1,22 @@
+<button (click)="openDialog('0ms', '0ms')">Abre Dialog</button>
+
 <ul>
-    <li *ngFor="let equipe of equipes">
-        <span class="nome"> {{ equipe.nome_equipe }}</span>
-        <div>
-            <button (click)="deletaEquipe(equipe.id_equipe)" class="deletar">
-                <i class="material-icons">
-                    delete
-                </i>
-            </button>
-            <button class="editar" routerLink="/equipes/update/{{ equipe.id_equipe }}">
-                <i class="material-icons">
-                    create
-                </i>
-            </button>
-        </div>
-    </li>
+  <li *ngFor="let equipe of equipes">
+    <span class="nome"> {{ equipe.nome_equipe }}</span>
+    <div>
+      <button 
+      matTooltip="Deletar equipe"
+      (click)="deletaEquipe(equipe.id_equipe)" 
+      class="deletar">
+        <i class="material-icons"> delete </i>
+      </button>
+      <button
+        matTooltip="Editar equipe"
+        class="editar"
+        routerLink="/equipes/update/{{ equipe.id_equipe }}"
+      >
+        <i class="material-icons"> create </i>
+      </button>
+    </div>
+  </li>
 </ul>
