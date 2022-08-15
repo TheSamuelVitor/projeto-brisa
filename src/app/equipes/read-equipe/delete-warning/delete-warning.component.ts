@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { AvisoService } from 'src/app/components/aviso.service';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-delete-warning',
@@ -11,7 +10,6 @@ import { environment } from 'src/environments/environment';
 })
 export class DeleteWarningComponent {
 
-  baseUrl = `${environment.baseApiUrl}equipes/`
   constructor(
     public dialogRef: MatDialogRef<DeleteWarningComponent>,
     public message: AvisoService,
@@ -23,7 +21,6 @@ export class DeleteWarningComponent {
   }
 
   deletaEquipe() {
-    console.log('é chamado')
     this.fechaDialog()
   }
 
