@@ -1,6 +1,6 @@
 import { DeleteWarningComponent } from './delete-warning/delete-warning.component';
 import { MatDialog } from '@angular/material/dialog';
-import { environment } from './../../../environments/environment';
+import { environment } from './../../../environments/environment.prod';
 import { CreateTarefasService } from 'src/app/components/tarefas/tarefas.service';
 import { AvisoService } from './../../components/aviso.service';
 import { Tarefa } from './../../components/tarefas/tarefa.model';
@@ -32,7 +32,7 @@ export class ReadTarefasComponent implements OnInit {
   }
 
   deletaTarefa(id_tarefa: any) {
-    this.http.delete(`${environment.baseApiUrl}tarefas/${id_tarefa}`).subscribe(
+    this.http.delete(`${environment.apiUrl}tarefas/${id_tarefa}`).subscribe(
       () => {
         this.message.showMsg({ msg: "Tarefa deletada com sucesso"});
       }
