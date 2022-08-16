@@ -29,5 +29,6 @@ export class DeleteWarningComponent {
         this.message.showMsg({ msg: "Tarefa deletada com sucesso\nFavor recarregar a página "});
       }
     )
+    this.fechaDialog();
   };
 }

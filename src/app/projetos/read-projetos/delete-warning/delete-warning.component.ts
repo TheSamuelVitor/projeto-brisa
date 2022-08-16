@@ -27,6 +27,7 @@ export class DeleteWarningComponent{
     this.http.delete(`${this.urlProjeto}${id_projeto}`).subscribe(() => {
       this.message.showMsg({ msg: `Projeto deletado com sucesso\nFavor recarregar a página` });
     });
+    this.fechaDialog();
   }
 
 }

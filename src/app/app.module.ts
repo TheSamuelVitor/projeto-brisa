@@ -29,7 +29,6 @@ import { HeaderComponent } from "./components/template/header/header.component";
 import { NavComponent } from "./components/template/nav/nav.component";
 
 // Imports da tela
-
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
 import { ProjetosComponent } from "./views/projetos/projetos.component";
 import { TarefasComponent } from "./views/tarefas/tarefas.component";
