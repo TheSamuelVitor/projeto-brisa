@@ -1,11 +1,11 @@
-import { DeleteWarningComponent } from './delete-warning/delete-warning.component';
-import { MatDialog } from "@angular/material/dialog";
+import { MatDialog, MatDialogRef } from "@angular/material/dialog";
 import { CreateEquipesService } from "../../components/equipes/equipes.service";
 import { Equipe } from "./../../components/equipes/equipe.model";
 import { AvisoService } from "./../../components/aviso.service";
 import { HttpClient } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
 import { environment } from "./../../../environments/environment.prod";
+import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
 
 @Component({
   selector: "app-read-equipe",
@@ -30,21 +30,16 @@ export class ReadEquipeComponent implements OnInit {
     });
   }
 
-  deletaEquipe(id_equipe: any) {
-    this.http.delete(`${this.baseUrl}${id_equipe}`).subscribe(() => {
-      this.message.showMsg({ msg: `Equipe deletada com sucesso` });
-    });
-  }
-
   openDialog(
     enterAnimationDuration: string,
-    exitAnimationDuration: string
+    exitAnimationDuration: string,
+    id_equipe: any
   ): void {
     this.dialog.open(DeleteWarningComponent, {
+      data: id_equipe,
       width: "250px",
       enterAnimationDuration,
       exitAnimationDuration,
     });
   }
 }
-

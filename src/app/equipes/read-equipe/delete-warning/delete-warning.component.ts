@@ -1,7 +1,9 @@
+import { Equipe } from 'src/app/components/equipes/equipe.model';
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AvisoService } from 'src/app/components/aviso.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-delete-warning',
@@ -10,8 +12,12 @@ import { AvisoService } from 'src/app/components/aviso.service';
 })
 export class DeleteWarningComponent {
 
+  equipe: Equipe[] = [];
+  baseUrl = `${environment.apiUrl}equipes/`;
+
   constructor(
     public dialogRef: MatDialogRef<DeleteWarningComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: { id_equipe: number },
     public message: AvisoService,
     public http: HttpClient
   ) {}
@@ -20,8 +26,12 @@ export class DeleteWarningComponent {
     this.dialogRef.close();
   }
 
-  deletaEquipe() {
-    this.fechaDialog()
+  deletaEquipe(id_equipe: any) {
+    console.log(id_equipe)
+    this.http.delete(`${this.baseUrl}${id_equipe}`).subscribe(() => {
+      this.message.showMsg({ msg: `Equipe deletada com sucesso\nFavor recarregar a página` });
+    });
+    this.fechaDialog();
   }
 
 }
