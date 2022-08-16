@@ -1,10 +1,9 @@
 import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
-import { MatDialog } from "@angular/material/dialog";
 import { CreateProjetosService } from "src/app/components/projetos/projetos.service";
 import { Projeto } from "./../../components/projetos/projeto.model";
 import { AvisoService } from "./../../components/aviso.service";
 
-import { HttpClient } from "@angular/common/http";
+import { MatDialog } from "@angular/material/dialog";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -14,11 +13,9 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ReadProjetosComponent implements OnInit {
   projetos: Projeto[] = [];
-  urlProjeto = "https://api-go-projects.herokuapp.com/projetos/";
 
   constructor(
     private projetoService: CreateProjetosService,
-    private http: HttpClient,
     private message: AvisoService,
     private dialog: MatDialog
   ) {}
@@ -33,17 +30,13 @@ export class ReadProjetosComponent implements OnInit {
     this.message.showMsg({ msg: "Função em construção" });
   }
 
-  deletaProjeto(id_projeto: any) {
-    this.http.delete(`${this.urlProjeto}${id_projeto}`).subscribe(() => {
-      this.message.showMsg({ msg: `Projeto deletado com sucesso` });
-    });
-  }
-
   openDialog(
     enterAnimationDuration: string,
-    exitAnimationDuration: string
+    exitAnimationDuration: string,
+    id_projeto: any
   ): void {
     this.dialog.open(DeleteWarningComponent, {
+      data: id_projeto,
       width: "250px",
       enterAnimationDuration,
       exitAnimationDuration,
