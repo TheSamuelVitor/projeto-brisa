@@ -1,5 +1,9 @@
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { AvisoService } from 'src/app/components/aviso.service';
+import { HttpClient } from '@angular/common/http';
 import { DialogRef } from '@angular/cdk/dialog';
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-delete-warning',
@@ -9,11 +13,21 @@ import { Component } from '@angular/core';
 export class DeleteWarningComponent {
 
   constructor(
-    private dialog: DialogRef
+    private dialog: DialogRef,
+    private http: HttpClient,
+    private message: AvisoService,
+    @Inject(MAT_DIALOG_DATA) public data: {id_tarefa: number },
   ) { }
 
   fechaDialog() {
     this.dialog.close();
   }
 
+  deletaTarefa(id_tarefa: any) {
+    this.http.delete(`${environment.apiUrl}tarefas/${id_tarefa}`).subscribe(
+      () => {
+        this.message.showMsg({ msg: "Tarefa deletada com sucesso\nFavor recarregar a página "});
+      }
+    )
+  };
 }

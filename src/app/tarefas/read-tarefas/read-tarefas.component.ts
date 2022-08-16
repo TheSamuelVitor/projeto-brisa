@@ -31,19 +31,13 @@ export class ReadTarefasComponent implements OnInit {
     })
   }
 
-  deletaTarefa(id_tarefa: any) {
-    this.http.delete(`${environment.apiUrl}tarefas/${id_tarefa}`).subscribe(
-      () => {
-        this.message.showMsg({ msg: "Tarefa deletada com sucesso"});
-      }
-    )
-  };
-
   openDialog(
     enterAnimationDuration: string,
-    exitAnimationDuration: string
+    exitAnimationDuration: string,
+    id_tarefa: any
   ): void {
     this.dialog.open(DeleteWarningComponent, {
+      data: id_tarefa,
       width: "250px",
       enterAnimationDuration,
       exitAnimationDuration
