@@ -1,4 +1,3 @@
-import { Equipe } from 'src/app/components/equipes/equipe.model';
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
@@ -12,7 +11,6 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class DeleteWarningComponent {
 
-  equipe: Equipe[] = [];
   baseUrl = `${environment.apiUrl}equipes/`;
 
   constructor(
@@ -27,7 +25,6 @@ export class DeleteWarningComponent {
   }
 
   deletaEquipe(id_equipe: any) {
-    console.log(id_equipe)
     this.http.delete(`${this.baseUrl}${id_equipe}`).subscribe(() => {
       this.message.showMsg({ msg: `Equipe deletada com sucesso\nFavor recarregar a página` });
     });

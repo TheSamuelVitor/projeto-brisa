@@ -1,10 +1,7 @@
 import { MatDialog, MatDialogRef } from "@angular/material/dialog";
 import { CreateEquipesService } from "../../components/equipes/equipes.service";
 import { Equipe } from "./../../components/equipes/equipe.model";
-import { AvisoService } from "./../../components/aviso.service";
-import { HttpClient } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
-import { environment } from "./../../../environments/environment.prod";
 import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
 
 @Component({
@@ -15,12 +12,8 @@ import { DeleteWarningComponent } from "./delete-warning/delete-warning.componen
 export class ReadEquipeComponent implements OnInit {
   equipes: Equipe[] = [];
 
-  baseUrl = `${environment.apiUrl}equipes/`;
-
   constructor(
     private equipeService: CreateEquipesService,
-    private http: HttpClient,
-    private message: AvisoService,
     public dialog: MatDialog
   ) {}
 

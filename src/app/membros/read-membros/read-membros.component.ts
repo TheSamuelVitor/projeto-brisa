@@ -1,11 +1,9 @@
-import { MatDialog, MatDialogRef } from "@angular/material/dialog";
+import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
 import { CreateMembrosService } from "../../components/membros/membros.service";
+import { MatDialog, MatDialogRef } from "@angular/material/dialog";
 import { Membro } from "./../../components/membros/membro.model";
 import { AvisoService } from "./../../components/aviso.service";
-
 import { Component, OnInit } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
 
 @Component({
   selector: "app-read-membros",
@@ -14,12 +12,9 @@ import { DeleteWarningComponent } from "./delete-warning/delete-warning.componen
 })
 export class ReadMembrosComponent implements OnInit {
   membros: Membro[] = [];
-  url = "https://api-go-projects.herokuapp.com/membros/";
 
   constructor(
     private membrosService: CreateMembrosService,
-    private Aviso: AvisoService,
-    private http: HttpClient,
     private dialog: MatDialog
   ) {}
 
@@ -29,27 +24,16 @@ export class ReadMembrosComponent implements OnInit {
     });
   }
 
-  atualizaMembro() {
-    this.Aviso.showMsg({ msg: "Função em construção" });
-  }
-
-  deletaMembro(id: any) {
-    this.http.delete(`${this.url}${id}`).subscribe(
-      () => {
-      this.Aviso.showMsg({ msg: "Membro deletado com sucesso" });
-    });
-  }
-
   openDialog(
     enterAnimationDuration: string,
-    exitAnimationDuration: string
+    exitAnimationDuration: string,
+    id_membro: any
   ): void {
     this.dialog.open(DeleteWarningComponent, {
+      data: id_membro,
       width: "250px",
       enterAnimationDuration,
-      exitAnimationDuration
+      exitAnimationDuration,
     });
   }
 }
-
-
