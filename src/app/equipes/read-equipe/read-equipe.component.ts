@@ -17,10 +17,14 @@ export class ReadEquipeComponent implements OnInit {
     public dialog: MatDialog
   ) {}
 
-  ngOnInit(): void {
+  mostraEquipes() {
     this.equipeService.read().subscribe((equipes) => {
       this.equipes = equipes;
     });
+  }
+
+  ngOnInit(): void {
+    this.mostraEquipes();
   }
 
   openDialog(

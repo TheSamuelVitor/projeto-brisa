@@ -1,3 +1,4 @@
+import { PaginaEquipeComponent } from './equipes/pagina-equipe/pagina-equipe.component';
 import { CreateProjetosComponent } from './projetos/create-projetos/create-projetos.component';
 import { CreateMembrosComponent } from './membros/create-membros/create-membros.component';
 import { CreateTarefasComponent } from './tarefas/create-tarefas/create-tarefas.component';
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: "equipes",
     component: EquipeComponent
+  },
+  {
+    path: "equipes/:id",
+    component: PaginaEquipeComponent
   },
   {
     path: "equipes/create",
