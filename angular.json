@@ -105,6 +105,41 @@
           "options": {
             "browserTarget": "projeto-brisa:build"
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "projeto-brisa:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "projeto-brisa:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "projeto-brisa:serve:production"
+            }
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "projeto-brisa:serve:production"
+            }
+          }
         }
       }
     }

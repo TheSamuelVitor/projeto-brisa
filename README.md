@@ -40,36 +40,40 @@ npm start
 ng serve
 ```
 
+### Teste com cypress
+
+```bash
+# comando para abrir o CLI do cypress e poder rodar testes automatizados
+./node_modules/.bin/cypress open
+```
+
 ### Atividades
 
-- [x] Página dashboard;
+- [X] Página dashboard;
+- [X] Página equipes;
 
-- [x] Página equipes;
-  - [x] Mostrar equipes;
-  - [x] Criar equipes;
-  - [x] Editar equipe;
-  - [x] Deletar equipe;
+  - [X] Mostrar equipes;
+  - [X] Criar equipes;
+  - [X] Editar equipe;
+  - [X] Deletar equipe;
+- [X] Página membros;
 
-- [x] Página membros;
+  - [X] Mostrar membros;
+  - [X] Criar membros;
+    - [X] Associar membro a equipe;
+  - [X] Editar membro;
+  - [X] Deletar membro;
+- [X] Página projetos;
 
-  - [x] Mostrar membros;
-  - [x] Criar membros;
-    - [x] Associar membro a equipe;
-  - [x] Editar membro;
-  - [x] Deletar membro;
+  - [X] Mostrar projetos;
+  - [X] Criar projetos;
+    - [X] Associar projeto a equipe;
+  - [X] Editar projeto;
+  - [X] Deletar projeto;
+- [X] Página tarefas;
 
-- [x] Página projetos;
-
-  - [x] Mostrar projetos;
-  - [x] Criar projetos;
-    - [x] Associar projeto a equipe;
-  - [x] Editar projeto;
-  - [x] Deletar projeto;
-
-- [x] Página tarefas;
-
-  - [x] Mostrar tarefas;
-  - [x] Criar tarefas;
-    - [x] Associar tarefa a projeto e a equipe;
-  - [x] Editar tarefa;
-  - [x] Deletar tarefa;
+  - [X] Mostrar tarefas;
+  - [X] Criar tarefas;
+    - [X] Associar tarefa a projeto e a equipe;
+  - [X] Editar tarefa;
+  - [X] Deletar tarefa;

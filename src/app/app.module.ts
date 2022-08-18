@@ -30,26 +30,27 @@ import { NavComponent } from "./components/template/nav/nav.component";
 
 // Imports da tela
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
-import { ProjetosComponent } from "./views/projetos/projetos.component";
-import { TarefasComponent } from "./views/tarefas/tarefas.component";
-import { MembroComponent } from "./views/membro/membro.component";
+
 import { EquipeComponent } from "./views/equipe/equipe.component";
-
-import { CreateProjetosComponent } from "./projetos/create-projetos/create-projetos.component";
-import { CreateMembrosComponent } from "./membros/create-membros/create-membros.component";
-import { CreateTarefasComponent } from "./tarefas/create-tarefas/create-tarefas.component";
 import { CreateEquipeComponent } from "./equipes/create-equipe/create-equipe.component";
-
-import { ReadProjetosComponent } from "./projetos/read-projetos/read-projetos.component";
-import { ReadMembrosComponent } from "./membros/read-membros/read-membros.component";
-import { ReadTarefasComponent } from "./tarefas/read-tarefas/read-tarefas.component";
 import { ReadEquipeComponent } from "./equipes/read-equipe/read-equipe.component";
-
-import { UpdateProjetoComponent } from "./projetos/update-projeto/update-projeto.component";
 import { UpdateEquipeComponent } from "./equipes/update-equipe/update-equipe.component";
-import { UpdateMembroComponent } from "./membros/update-membro/update-membro.component";
-import { UpdateTarefaComponent } from "./tarefas/update-tarefa/update-tarefa.component";
 import { DeleteWarningComponent } from './equipes/read-equipe/delete-warning/delete-warning.component';
+
+import { MembroComponent } from "./views/membro/membro.component";
+import { CreateMembrosComponent } from "./membros/create-membros/create-membros.component";
+import { ReadMembrosComponent } from "./membros/read-membros/read-membros.component";
+import { UpdateMembroComponent } from "./membros/update-membro/update-membro.component";
+
+import { ProjetosComponent } from "./views/projetos/projetos.component";
+import { CreateProjetosComponent } from "./projetos/create-projetos/create-projetos.component";
+import { ReadProjetosComponent } from "./projetos/read-projetos/read-projetos.component";
+import { UpdateProjetoComponent } from "./projetos/update-projeto/update-projeto.component";
+
+import { TarefasComponent } from "./views/tarefas/tarefas.component";
+import { CreateTarefasComponent } from "./tarefas/create-tarefas/create-tarefas.component";
+import { ReadTarefasComponent } from "./tarefas/read-tarefas/read-tarefas.component";
+import { UpdateTarefaComponent } from "./tarefas/update-tarefa/update-tarefa.component";
 
 @NgModule({
   declarations: [
