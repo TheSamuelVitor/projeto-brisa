@@ -26,7 +26,7 @@ const routes: Routes = [
     component: EquipeComponent
   },
   {
-    path: "equipes/:id",
+    path: "equipes/dados/:id",
     component: PaginaEquipeComponent
   },
   {

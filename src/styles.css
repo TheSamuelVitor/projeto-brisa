@@ -44,6 +44,10 @@ button.editar {
     padding-left: 5px;
 }
 
+button.informacoes {
+    margin-left: 10px;
+}
+
 button.deletar:hover {
     background-color: rgba(255, 0, 0, 0.603);
 }

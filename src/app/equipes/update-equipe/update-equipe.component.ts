@@ -31,7 +31,9 @@ export class UpdateEquipeComponent implements OnInit {
     nome: [null, Validators.required],
   });
 
-  equipe!: Equipe;
+  equipe: Equipe = {
+    nome_equipe: ''
+  };
 
   onSubmit(): void {
     this.equipeService.update(this.equipe).subscribe(

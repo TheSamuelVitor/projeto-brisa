@@ -16,7 +16,7 @@ export class DeleteWarningComponent {
     public dialogRef: MatDialogRef<DeleteWarningComponent>,
     @Inject(MAT_DIALOG_DATA) public data: { id_equipe: number },
     public message: AvisoService,
-    public http: HttpClient
+    public http: HttpClient,
   ) {}
 
   fechaDialog() {
