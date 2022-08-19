@@ -15,12 +15,11 @@ import { Observable } from "rxjs";
   styleUrls: ["./create-membros.component.css"],
 })
 export class CreateMembrosComponent implements OnInit {
-
   formulario = this.formBuilder.group({
     nome: [null, Validators.required],
     funcao: [null],
-    equipe: [null, Validators.required]
-  })
+    equipe: [null, Validators.required],
+  });
 
   membro: Membro = {
     nome_membro: "",
@@ -47,7 +46,7 @@ export class CreateMembrosComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.createMembroService.create(this.membro).subscribe(() => {
+    this.createMembroService.create({ membro: this.membro }).subscribe(() => {
       this.goBack();
       this.avisoMsg.showMsg({ msg: " Membro criado com sucesso " });
     });

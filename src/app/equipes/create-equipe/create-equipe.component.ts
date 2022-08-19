@@ -13,7 +13,7 @@ import { Router } from "@angular/router";
 })
 export class CreateEquipeComponent implements OnInit {
   formulario = this.formBuilder.group({
-    nome: [null, Validators.required]
+    nome: [null, Validators.required],
   });
 
   equipe: Equipe = {
@@ -27,22 +27,20 @@ export class CreateEquipeComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   goBack(): void {
     this.router.navigate(["equipes"]);
   }
 
   onSubmit(): void {
-    this.createEquipeService.create(this.equipe).subscribe(() => {
+    this.createEquipeService.create({ equipe: this.equipe }).subscribe(() => {
       this.aviso.showMsg({ msg: "Equipe criada com sucesso" });
       this.goBack();
     });
   }
 
   limpar(): void {
-    this.formulario.reset()
+    this.formulario.reset();
   }
-
 }

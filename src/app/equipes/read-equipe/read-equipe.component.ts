@@ -18,8 +18,8 @@ export class ReadEquipeComponent implements OnInit {
   ) {}
 
   mostraEquipes() {
-    this.equipeService.read().subscribe((equipes) => {
-      this.equipes = equipes;
+    this.equipeService.read().subscribe((equipe) => {
+      this.equipes = equipe;
     });
   }
 

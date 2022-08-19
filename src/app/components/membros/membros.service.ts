@@ -1,4 +1,4 @@
-import { environment } from './../../../environments/environment.prod';
+import { environment } from "./../../../environments/environment.prod";
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Membro } from "./membro.model";
@@ -12,7 +12,7 @@ export class CreateMembrosService {
 
   constructor(private http: HttpClient) {}
 
-  create(membro: Membro): Observable<Membro> {
+  create({ membro }: { membro: Membro }): Observable<Membro> {
     return this.http.post<Membro>(this.membroUrl, membro);
   }
 

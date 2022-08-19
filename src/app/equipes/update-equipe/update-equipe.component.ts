@@ -1,6 +1,6 @@
 import { CreateEquipesService } from "src/app/components/equipes/equipes.service";
 import { Equipe } from "src/app/components/equipes/equipe.model";
-import { AvisoService } from './../../components/aviso.service';
+import { AvisoService } from "./../../components/aviso.service";
 
 import { ActivatedRoute, Router } from "@angular/router";
 import { FormBuilder, Validators } from "@angular/forms";
@@ -32,16 +32,14 @@ export class UpdateEquipeComponent implements OnInit {
   });
 
   equipe: Equipe = {
-    nome_equipe: ''
+    nome_equipe: "",
   };
 
   onSubmit(): void {
-    this.equipeService.update(this.equipe).subscribe(
-      () => {
-        this.aviso.showMsg({ msg: 'Equipe atualizada com sucesso' })
-        this.goBack()
-      }
-    )
+    this.equipeService.update({ equipe: this.equipe }).subscribe(() => {
+      this.aviso.showMsg({ msg: "Equipe atualizada com sucesso" });
+      this.goBack();
+    });
   }
 
   goBack(): void {
