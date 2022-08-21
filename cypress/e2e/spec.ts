@@ -23,7 +23,8 @@ describe("pagina equipes", () => {
   });
 
   it("cria equipes", () => {
-    cy.visit(url + "equipes/create/");
+    cy.get('.add').click();
+    cy.get('.cancelar').click();
   });
 });
 
@@ -34,7 +35,8 @@ describe("pagina membros", () => {
   });
 
   it("cria membros", () => {
-    cy.visit(url + "membros/create/");
+    cy.get('.add').click();
+    cy.get('.cancelar').click();
   });
 });
 
@@ -45,7 +47,8 @@ describe("pagina projetos", () => {
   });
 
   it("cria projeto", () => {
-    cy.visit(url + "projetos/create/");
+    cy.get('.add').click();
+    cy.get('.cancelar').click();
   });
 });
 
@@ -56,7 +59,8 @@ describe("pagina tarefas", () => {
   });
 
   it("cria tarefa", () => {
-    cy.visit(url + "tarefas/create/");
+    cy.get('.add').click();
+    cy.get('.cancelar').click();
     teste()
   });
 });
