@@ -10,10 +10,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./pagina-equipe.component.css"],
 })
 export class PaginaEquipeComponent implements OnInit {
-  membros: Membro = {
-    nome_membro:'',
-    funcao: ''
-  };
+  membros: Membro[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -25,12 +22,10 @@ export class PaginaEquipeComponent implements OnInit {
     this.equipeService.getById({ id: `${id}` }).subscribe((equipe) => {
       this.equipe = equipe;
     });
-    console.log(id);
     this.equipeService
       .getMembrosbyEquipeId({ id: `${id}` })
-      .subscribe((membro) => {
-        this.membros = membro;
-        console.log(membro)
+      .subscribe((membros) => {
+        this.membros = membros;
       });
   }
 

@@ -1,6 +1,6 @@
 import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
 import { CreateMembrosService } from "../../components/membros/membros.service";
-import { MatDialog, MatDialogRef } from "@angular/material/dialog";
+import { MatDialog } from "@angular/material/dialog";
 import { Membro } from "./../../components/membros/membro.model";
 import { Component, OnInit } from "@angular/core";
 

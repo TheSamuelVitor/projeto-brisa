@@ -24,6 +24,8 @@ describe("pagina equipes", () => {
 
   it("cria equipes", () => {
     cy.get('.add').click();
+    // cy.get('input[name="name_team"]').type('Vingadores')
+    // cy.get('.salvar').click();
     cy.get('.cancelar').click();
   });
 });
@@ -36,6 +38,9 @@ describe("pagina membros", () => {
 
   it("cria membros", () => {
     cy.get('.add').click();
+    /*
+    cy.get('input[name="name_team"]').type('Vingadores')
+    */
     cy.get('.cancelar').click();
   });
 });

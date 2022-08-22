@@ -31,8 +31,8 @@ export class CreateEquipesService {
     return this.http.put<Equipe>(url, equipe);
   }
 
-  getMembrosbyEquipeId({ id }: { id: string }): Observable<Membro> {
+  getMembrosbyEquipeId({ id }: { id: string }): Observable<Membro[]> {
     const url = `${this.equipeUrl}membros/${id}`;
-    return this.http.get<Membro>(url);
+    return this.http.get<Membro[]>(url);
   }
 }
