@@ -1,3 +1,24 @@
+<div class="select_equipe">
+  <mat-select id="select_equipe">
+    <mat-option
+      *ngFor="let equipe of equipes"
+      [value]="equipe.id_equipe"
+      (select)="(equipeSelecionada)"
+    >
+      {{ equipe.nome_equipe }}
+    </mat-option>
+  </mat-select>
+
+  <button
+    mat-raised-button
+    id="button_selecionar"
+    color="primary"
+    (click)="procurar(equipeSelecionada)"
+  >
+    Selecionar
+  </button>
+</div>
+
 <ul>
   <li *ngFor="let membro of membros">
     <div>

@@ -1,7 +1,9 @@
 import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
+import { CreateEquipesService } from "src/app/components/equipes/equipes.service";
 import { CreateMembrosService } from "../../components/membros/membros.service";
-import { MatDialog } from "@angular/material/dialog";
+import { Equipe } from "src/app/components/equipes/equipe.model";
 import { Membro } from "./../../components/membros/membro.model";
+import { MatDialog } from "@angular/material/dialog";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -10,16 +12,22 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./read-membros.component.css"],
 })
 export class ReadMembrosComponent implements OnInit {
+  equipeSelecionada: any;
   membros: Membro[] = [];
+  equipes: Equipe[] = [];
 
   constructor(
     private membrosService: CreateMembrosService,
+    private equipeService: CreateEquipesService,
     private dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
     this.membrosService.read().subscribe((membros) => {
       this.membros = membros;
+    });
+    this.equipeService.read().subscribe((equipe) => {
+      this.equipes = equipe;
     });
   }
 
@@ -34,5 +42,12 @@ export class ReadMembrosComponent implements OnInit {
       enterAnimationDuration,
       exitAnimationDuration,
     });
+  }
+
+  procurar(id_equipe: any) {
+    // this.equipeService.getMembrosbyEquipeId(id_equipe).subscribe(res => {
+    //   this.membros = res;
+    // });
+    console.log(id_equipe)
   }
 }
