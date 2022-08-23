@@ -32,8 +32,10 @@ ul {
 }
 
 li {
+    background-color: #3f51b5;
     border: 1px solid black;
     border-radius: 10px;
+    color: white;
     display: flex;
     flex-direction: column;
     height: 150px;
@@ -42,12 +44,35 @@ li {
     list-style: none;
     margin: 10px;
     min-width: 25rem;
-    padding: 20px;
+    padding: 30px;
     width: 35%;
+    box-sizing: content-box;
 }
 
 li span.nome {
     font-size: 1.5rem;
     font-weight: 500;
     margin: 2px;
+}
+
+.select_equipe {
+    align-items: center;
+}
+
+#select_equipe {
+    align-items: center;
+    border: 1px solid black;
+    height: 1rem;
+    margin-left: 3rem;
+    min-width: 25rem;
+    text-align: center;
+    width: 35%;
+
+    font-size: 15px;
+    padding: 10px;
+}
+
+#button_selecionar {
+    position: relative;
+    margin-left: 10px;
 }

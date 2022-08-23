@@ -27,3 +27,7 @@ a i{
     margin-left: 1rem;
     max-height: 3rem;
 }
+
+a:focus {
+    color: #F56E28;
+}

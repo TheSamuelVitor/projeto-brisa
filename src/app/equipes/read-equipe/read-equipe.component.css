@@ -4,7 +4,7 @@ ul {
 }
 
 li {
-    background-color: transparent;
+    background-color: #3f51b5;
     border: 1px solid black;
     border-radius: 10px;
     display: flex;
@@ -21,6 +21,7 @@ li {
 }
 
 li span.nome {
+    color: white;
     font-size: 1.5rem;
     font-weight: 500;
     margin: 2px;
