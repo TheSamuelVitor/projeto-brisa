@@ -76,3 +76,7 @@ li span.nome {
     position: relative;
     margin-left: 10px;
 }
+
+#button_voltar {
+    margin-left: 10px;
+}

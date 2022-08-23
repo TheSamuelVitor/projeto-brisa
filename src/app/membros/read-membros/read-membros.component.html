@@ -3,7 +3,6 @@
     <mat-option
       *ngFor="let equipe of equipes"
       [value]="equipe.id_equipe"
-      (select)="(equipeSelecionada)"
     >
       {{ equipe.nome_equipe }}
     </mat-option>
@@ -13,9 +12,17 @@
     mat-raised-button
     id="button_selecionar"
     color="primary"
-    (click)="procurar(equipeSelecionada)"
+    (click)="procurar(2)"
   >
     Selecionar
+  </button>
+
+  <button 
+  mat-raised-button
+  (click)="ngOnInit()"
+  id="button_voltar"
+  matTooltip="Mostra todos os membros">
+    Voltar
   </button>
 </div>
 
