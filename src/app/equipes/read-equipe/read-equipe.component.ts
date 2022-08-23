@@ -1,8 +1,9 @@
-import { MatDialog, MatDialogRef } from "@angular/material/dialog";
+import { MatDialog } from "@angular/material/dialog";
+import { Component, OnInit } from "@angular/core";
+
+import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
 import { CreateEquipesService } from "../../components/equipes/equipes.service";
 import { Equipe } from "./../../components/equipes/equipe.model";
-import { Component, OnInit } from "@angular/core";
-import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
 
 @Component({
   selector: "app-read-equipe",

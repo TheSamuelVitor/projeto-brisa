@@ -1,7 +1,6 @@
-import { Membro } from "./../membros/membro.model";
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Equipe } from "./equipe.model";
+import { Equipe, EquipecomInfo } from "./equipe.model";
 import { Observable } from "rxjs";
 import { environment } from "../../../environments/environment.prod";
 
@@ -21,9 +20,9 @@ export class CreateEquipesService {
     return this.http.get<Equipe[]>(this.equipeUrl);
   }
 
-  getById({ id }: { id: string }): Observable<Equipe> {
+  getById({ id }: { id: string }): Observable<EquipecomInfo> {
     const url = `${this.equipeUrl}${id}`;
-    return this.http.get<Equipe>(url);
+    return this.http.get<EquipecomInfo>(url);
   }
 
   update({ equipe }: { equipe: Equipe }): Observable<Equipe> {
@@ -31,8 +30,4 @@ export class CreateEquipesService {
     return this.http.put<Equipe>(url, equipe);
   }
 
-  getMembrosbyEquipeId({ id }: { id: string }): Observable<Membro[]> {
-    const url = `${this.equipeUrl}membros/${id}`;
-    return this.http.get<Membro[]>(url);
-  }
 }

@@ -1,5 +1,5 @@
 import { Membro } from "./../../components/membros/membro.model";
-import { Equipe } from "src/app/components/equipes/equipe.model";
+import { Equipe, EquipecomInfo } from "src/app/components/equipes/equipe.model";
 import { CreateEquipesService } from "src/app/components/equipes/equipes.service";
 import { ActivatedRoute } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
@@ -11,7 +11,13 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PaginaEquipeComponent implements OnInit {
   membros: Membro[] = [];
-
+  
+  equipe: EquipecomInfo = {
+    nome_equipe: "",
+    membros: [],
+    projetos: [],
+  };
+  
   constructor(
     private route: ActivatedRoute,
     private equipeService: CreateEquipesService
@@ -21,15 +27,8 @@ export class PaginaEquipeComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get("id");
     this.equipeService.getById({ id: `${id}` }).subscribe((equipe) => {
       this.equipe = equipe;
+      this.membros = this.equipe.membros;
     });
-    this.equipeService
-      .getMembrosbyEquipeId({ id: `${id}` })
-      .subscribe((membros) => {
-        this.membros = membros;
-      });
   }
 
-  equipe: Equipe = {
-    nome_equipe: "",
-  };
 }
