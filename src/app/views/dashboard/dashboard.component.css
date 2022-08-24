@@ -10,3 +10,15 @@ a {
     color: #000;
     text-decoration: none;
 }
+
+.cards {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    margin: 10px;
+    text-align: center;
+    width: 20rem;
+}

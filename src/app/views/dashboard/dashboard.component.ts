@@ -1,11 +1,11 @@
-import { Projeto } from './../../components/projetos/projeto.model';
-import { Tarefa } from 'src/app/components/tarefas/tarefa.model';
-import { Membro } from './../../components/membros/membro.model';
-import { Equipe } from 'src/app/components/equipes/equipe.model';
 import { CreateEquipesService } from 'src/app/components/equipes/equipes.service';
 import { CreateMembrosService } from './../../components/membros/membros.service';
 import { CreateProjetosService } from 'src/app/components/projetos/projetos.service';
 import { CreateTarefasService } from 'src/app/components/tarefas/tarefas.service';
+import { Projeto } from './../../components/projetos/projeto.model';
+import { Tarefa } from 'src/app/components/tarefas/tarefa.model';
+import { Membro } from './../../components/membros/membro.model';
+import { Equipe } from 'src/app/components/equipes/equipe.model';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 

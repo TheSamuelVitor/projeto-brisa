@@ -24,6 +24,8 @@
 .dados {
     width: 30%;
     align-items: center;
+    min-width: 30rem;
+    padding: 10px;
 }
 
 .acoes {
@@ -53,21 +55,24 @@
 
 .info { 
     width: 60%;
+    min-width: 30rem;
 }
 
 .quantidades {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: flex-start ;
+    flex-wrap: nowrap;
+    margin: 20px;
 }
 
 .quantidade {
+    padding: 20px;
     margin-left: 2.5rem;
     width: 10rem;
     text-align: center;
     margin-bottom: 20px;
-    min-width: 5rem;
+    height: 4rem;
 }
 
 div {
@@ -83,7 +88,7 @@ li {
 .card {
     margin-top: 10px;
     width: 60%;
-    min-width: 25rem;
+    min-width: 35rem;
     box-sizing: content-box;
 }
 
@@ -92,4 +97,8 @@ li {
     font-weight: bold;
     margin-left: 2.5rem;
     margin-top: 20px;
+}
+
+.card_projeto {
+    text-align: left;
 }
