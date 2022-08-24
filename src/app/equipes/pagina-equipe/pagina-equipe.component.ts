@@ -4,6 +4,7 @@ import { Equipe, EquipecomInfo } from "src/app/components/equipes/equipe.model";
 import { CreateEquipesService } from "src/app/components/equipes/equipes.service";
 import { ActivatedRoute } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
+import { AvisoService } from "../../components/aviso.service"
 
 @Component({
   selector: "app-pagina-equipe",
@@ -13,16 +14,17 @@ import { Component, OnInit } from "@angular/core";
 export class PaginaEquipeComponent implements OnInit {
   membros: Membro[] = [];
   projetos: Projeto[] = [];
-  
+
   equipe: EquipecomInfo = {
     nome_equipe: "",
     membros: [],
     projetos: [],
   };
-  
+
   constructor(
     private route: ActivatedRoute,
-    private equipeService: CreateEquipesService
+    private equipeService: CreateEquipesService,
+    private aviso: AvisoService,
   ) {}
 
   ngOnInit(): void {
@@ -32,6 +34,11 @@ export class PaginaEquipeComponent implements OnInit {
       this.membros = this.equipe.membros;
       this.projetos = this.equipe.projetos
     });
+  }
+
+  funcao() {
+    this.aviso.showMsg({ msg: "Funcao e chamada"})
+
   }
 
 }

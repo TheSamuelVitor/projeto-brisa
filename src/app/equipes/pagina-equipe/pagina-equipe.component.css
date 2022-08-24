@@ -1,8 +1,72 @@
+.arrow {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.geral {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 20px;
+    height: 100%;
+}
+
+.title-view {
+    margin: 20px 0;
+}
+
+.dados {
+    width: 30%;
+    align-items: center;
+}
+
+.acoes {
+    margin-top: 20px;
+}
+
+.acoes button{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    width: 10rem;
+}
+
+.imagem {
+    text-align: center;
+    width: 15rem;
+    height: 15rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem span {
+    font-size: 8rem;
+}
+
+.info { 
+    width: 60%;
+}
+
+.quantidades {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .quantidade {
     margin-left: 2.5rem;
     width: 10rem;
     text-align: center;
     margin-bottom: 20px;
+    min-width: 5rem;
 }
 
 div {
@@ -16,6 +80,7 @@ li {
 }
 
 .card {
+    margin-top: 10px;
     width: 40%;
     min-width: 25rem;
 }

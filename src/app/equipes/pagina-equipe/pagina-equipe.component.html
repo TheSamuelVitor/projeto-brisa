@@ -1,45 +1,71 @@
-<h1 class="title-view"> {{ equipe.nome_equipe }}</h1>
+<i class="material-icons arrow" routerLink="../..">
+    arrow_back
+</i>
 
-<mat-card class="quantidade">
-    <mat-card-title>
-        {{ membros.length }}
-    </mat-card-title>
-    <mat-card-subtitle>
-        Membros Cadastrados
-    </mat-card-subtitle>
-</mat-card>
-<mat-card class="quantidade">
-    <mat-card-title>
-        {{ projetos.length }}
-    </mat-card-title>
-    <mat-card-subtitle>
-        Projetos Cadastrados
-    </mat-card-subtitle>
-</mat-card>
+<div class="geral">
+    <div class="dados">
+        
+        <div class="imagem">
+            <span>{{ equipe.nome_equipe[0] }}</span>
+        </div>
+        
+        <h1 class="title-view"> {{ equipe.nome_equipe }}</h1>
 
-<div class="info">
-    <span class="subtitle">Membros</span>
-    <ul class="membro">
-        <li *ngFor="let membro of membros">
-            <mat-card class="card">
+        <div class="acoes">
+            <button mat-raised-button class="editar" (click)="funcao()">
+                Editar Equipe
+            </button>
+            <button mat-raised-button class="deletar" (click)="funcao()">
+                Deletar Equipe
+            </button>
+        </div>
+    
+    </div>
+    
+    <div class="info">
+
+        <div class="quantidades">
+            <mat-card class="quantidade">
                 <mat-card-title>
-                    <span class="membro_nome">{{ membro.nome_membro }}</span>
+                    {{ membros.length }}
                 </mat-card-title>
                 <mat-card-subtitle>
-                    <span class="membro_funcao">{{ membro.funcao }}</span>
+                    Membro(s) Cadastrado(s)
                 </mat-card-subtitle>
             </mat-card>
-        </li>
-    </ul>
-    
-    <span class="subtitle">Projetos</span>
-    <ul class="projeto">
-        <li *ngFor="let projeto of projetos">
-            <mat-card class="card">
+            <mat-card class="quantidade">
                 <mat-card-title>
-                    <span class="projeto_nome">{{ projeto.nome_projeto }}</span>
+                    {{ projetos.length }}
                 </mat-card-title>
+                Projeto(s)<br> Cadastrado(s)
+                <mat-card-subtitle>
+                </mat-card-subtitle>
             </mat-card>
-        </li>
-    </ul>
+        </div>
+
+        <span class="subtitle">Membros</span>
+        <ul class="membro">
+            <li *ngFor="let membro of membros">
+                <mat-card class="card">
+                    <mat-card-title>
+                        <span class="membro_nome">{{ membro.nome_membro }}</span>
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        <span class="membro_funcao">{{ membro.funcao }}</span>
+                    </mat-card-subtitle>
+                </mat-card>
+            </li>
+        </ul>
+    
+        <span class="subtitle">Projetos</span>
+        <ul class="projeto">
+            <li *ngFor="let projeto of projetos">
+                <mat-card class="card card_projeto">
+                    <mat-card-title>
+                        <span class="projeto_nome">{{ projeto.nome_projeto }}</span>
+                    </mat-card-title>
+                </mat-card>
+            </li>
+        </ul>
+    </div>
 </div>

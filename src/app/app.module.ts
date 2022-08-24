@@ -37,7 +37,7 @@ import { EquipeComponent } from "./views/equipe/equipe.component";
 import { CreateEquipeComponent } from "./equipes/create-equipe/create-equipe.component";
 import { ReadEquipeComponent } from "./equipes/read-equipe/read-equipe.component";
 import { UpdateEquipeComponent } from "./equipes/update-equipe/update-equipe.component";
-import { DeleteWarningComponent } from "./equipes/read-equipe/delete-warning/delete-warning.component";
+import { DeleteWarningComponent } from "./equipes/pagina-equipe/delete-warning/delete-warning.component";
 
 import { MembroComponent } from "./views/membro/membro.component";
 import { CreateMembrosComponent } from "./membros/create-membros/create-membros.component";
