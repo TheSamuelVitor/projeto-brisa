@@ -9,15 +9,18 @@ li {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    height: 150px;
     justify-content: space-around;
     line-height: 2rem;
     list-style: none;
     margin: 10px;
     min-width: 25rem;
     padding: 30px;
-    width: 35%;
+    width: 30%;
     box-sizing: content-box;
+}
+
+li:hover {
+    cursor: pointer;
 }
 
 li span.nome {

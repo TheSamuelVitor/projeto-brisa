@@ -1,0 +1,19 @@
+h1 {
+    align-items: center;
+    display: flex;
+}
+
+h1 i {
+    margin-right: 5px;
+}
+
+button {
+    border-radius: 5px;
+    height: 1.5rem;
+    margin-right: 5px;
+    padding: 0px 10px;
+}
+
+button.deletar:hover {
+    background-color: #ff000055;
+}

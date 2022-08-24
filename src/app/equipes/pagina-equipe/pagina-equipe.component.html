@@ -12,10 +12,10 @@
         <h1 class="title-view"> {{ equipe.nome_equipe }}</h1>
 
         <div class="acoes">
-            <button mat-raised-button class="editar" (click)="funcao()">
+            <button mat-raised-button class="editar" routerLink="/equipes/update/{{ equipe.id_equipe }}">
                 Editar Equipe
             </button>
-            <button mat-raised-button class="deletar" (click)="funcao()">
+            <button mat-raised-button class="deletar" (click)="openDialog('0ms','0ms', equipe.id_equipe)">
                 Deletar Equipe
             </button>
         </div>
@@ -30,7 +30,7 @@
                     {{ membros.length }}
                 </mat-card-title>
                 <mat-card-subtitle>
-                    Membro(s) Cadastrado(s)
+                    Membro(s)<br> Cadastrado(s)
                 </mat-card-subtitle>
             </mat-card>
             <mat-card class="quantidade">

@@ -4,7 +4,7 @@ export interface Equipe {
 }
 
 export interface EquipecomInfo {
-    id?: number,
+    id_equipe?: any,
     nome_equipe: string,
     membros: [],
     projetos: []

@@ -1,7 +1,6 @@
 import { MatDialog } from "@angular/material/dialog";
 import { Component, OnInit } from "@angular/core";
 
-import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
 import { CreateEquipesService } from "../../components/equipes/equipes.service";
 import { Equipe } from "./../../components/equipes/equipe.model";
 
@@ -28,16 +27,4 @@ export class ReadEquipeComponent implements OnInit {
     this.mostraEquipes();
   }
 
-  openDialog(
-    enterAnimationDuration: string,
-    exitAnimationDuration: string,
-    id_equipe: any
-  ): void {
-    this.dialog.open(DeleteWarningComponent, {
-      data: id_equipe,
-      width: "250px",
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
-  }
 }
