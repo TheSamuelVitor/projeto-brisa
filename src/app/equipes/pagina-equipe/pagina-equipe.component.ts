@@ -1,3 +1,4 @@
+import { Projeto } from './../../components/projetos/projeto.model';
 import { Membro } from "./../../components/membros/membro.model";
 import { Equipe, EquipecomInfo } from "src/app/components/equipes/equipe.model";
 import { CreateEquipesService } from "src/app/components/equipes/equipes.service";
@@ -11,6 +12,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PaginaEquipeComponent implements OnInit {
   membros: Membro[] = [];
+  projetos: Projeto[] = [];
   
   equipe: EquipecomInfo = {
     nome_equipe: "",
@@ -28,6 +30,7 @@ export class PaginaEquipeComponent implements OnInit {
     this.equipeService.getById({ id: `${id}` }).subscribe((equipe) => {
       this.equipe = equipe;
       this.membros = this.equipe.membros;
+      this.projetos = this.equipe.projetos
     });
   }
 

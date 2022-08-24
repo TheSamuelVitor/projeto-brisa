@@ -1,9 +1,10 @@
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { BrowserModule } from "@angular/platform-browser";
-import { AppRoutingModule } from "./app-routing.module";
-import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
+import { AppRoutingModule } from "./app-routing.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserModule } from "@angular/platform-browser";
+import { CommonModule } from "@angular/common";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 
 // Imports do Angular Material
@@ -23,7 +24,7 @@ import { MatTreeModule } from "@angular/material/tree";
 import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { LayoutModule } from "@angular/cdk/layout";
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from "@angular/material/table";
 
 // Import componentes da tela
 import { HeaderComponent } from "./components/template/header/header.component";
@@ -36,7 +37,7 @@ import { EquipeComponent } from "./views/equipe/equipe.component";
 import { CreateEquipeComponent } from "./equipes/create-equipe/create-equipe.component";
 import { ReadEquipeComponent } from "./equipes/read-equipe/read-equipe.component";
 import { UpdateEquipeComponent } from "./equipes/update-equipe/update-equipe.component";
-import { DeleteWarningComponent } from './equipes/read-equipe/delete-warning/delete-warning.component';
+import { DeleteWarningComponent } from "./equipes/read-equipe/delete-warning/delete-warning.component";
 
 import { MembroComponent } from "./views/membro/membro.component";
 import { CreateMembrosComponent } from "./membros/create-membros/create-membros.component";
@@ -52,6 +53,7 @@ import { TarefasComponent } from "./views/tarefas/tarefas.component";
 import { CreateTarefasComponent } from "./tarefas/create-tarefas/create-tarefas.component";
 import { ReadTarefasComponent } from "./tarefas/read-tarefas/read-tarefas.component";
 import { UpdateTarefaComponent } from "./tarefas/update-tarefa/update-tarefa.component";
+import { PaginaEquipeComponent } from "./equipes/pagina-equipe/pagina-equipe.component"
 
 @NgModule({
   declarations: [
@@ -61,6 +63,7 @@ import { UpdateTarefaComponent } from "./tarefas/update-tarefa/update-tarefa.com
     CreateEquipeComponent,
     UpdateEquipeComponent,
     ReadEquipeComponent,
+    PaginaEquipeComponent,
 
     MembroComponent,
     CreateMembrosComponent,
@@ -80,12 +83,13 @@ import { UpdateTarefaComponent } from "./tarefas/update-tarefa/update-tarefa.com
     HeaderComponent,
     AppComponent,
     NavComponent,
-    DeleteWarningComponent,
+    DeleteWarningComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
+    CommonModule,
     FormsModule,
     HttpClientModule,
     LayoutModule,

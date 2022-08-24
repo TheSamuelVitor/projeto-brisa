@@ -1,8 +1,28 @@
-table {
-    width: 50%;
-    border: 1px solid black;
+.quantidade {
+    margin-left: 2.5rem;
+    width: 10rem;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 div {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+}
+
+.card {
+    width: 40%;
+    min-width: 25rem;
+}
+
+.subtitle {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 2.5rem;
+    margin-top: 20px;
 }

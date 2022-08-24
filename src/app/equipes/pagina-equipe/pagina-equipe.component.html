@@ -1,1 +1,45 @@
 <h1 class="title-view"> {{ equipe.nome_equipe }}</h1>
+
+<mat-card class="quantidade">
+    <mat-card-title>
+        {{ membros.length }}
+    </mat-card-title>
+    <mat-card-subtitle>
+        Membros Cadastrados
+    </mat-card-subtitle>
+</mat-card>
+<mat-card class="quantidade">
+    <mat-card-title>
+        {{ projetos.length }}
+    </mat-card-title>
+    <mat-card-subtitle>
+        Projetos Cadastrados
+    </mat-card-subtitle>
+</mat-card>
+
+<div class="info">
+    <span class="subtitle">Membros</span>
+    <ul class="membro">
+        <li *ngFor="let membro of membros">
+            <mat-card class="card">
+                <mat-card-title>
+                    <span class="membro_nome">{{ membro.nome_membro }}</span>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <span class="membro_funcao">{{ membro.funcao }}</span>
+                </mat-card-subtitle>
+            </mat-card>
+        </li>
+    </ul>
+    
+    <span class="subtitle">Projetos</span>
+    <ul class="projeto">
+        <li *ngFor="let projeto of projetos">
+            <mat-card class="card">
+                <mat-card-title>
+                    <span class="projeto_nome">{{ projeto.nome_projeto }}</span>
+                </mat-card-title>
+            </mat-card>
+        </li>
+    </ul>
+</div>
