@@ -56,6 +56,9 @@
                 </mat-card>
             </li>
         </ul>
+        <div *ngIf="membros.length == 0">
+            Não há nenhum membro relacionado a esta equipe
+        </div>
     
         <span class="subtitle">Projetos</span>
         <ul class="projeto">
@@ -67,5 +70,8 @@
                 </mat-card>
             </li>
         </ul>
+        <div *ngIf="projetos.length == 0">
+            Não há nenhum projeto relacionado a esta equipe
+        </div>
     </div>
 </div>
