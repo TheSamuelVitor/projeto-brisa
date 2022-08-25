@@ -15,8 +15,13 @@ import { UpdateEquipeComponent } from './equipes/update-equipe/update-equipe.com
 import { UpdateMembroComponent } from './membros/update-membro/update-membro.component';
 import { UpdateProjetoComponent } from './projetos/update-projeto/update-projeto.component';
 import { UpdateTarefaComponent } from './tarefas/update-tarefa/update-tarefa.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
+  {
+    path: "login",
+    component: LoginComponent
+  },
   {
     path: "",
     component: DashboardComponent

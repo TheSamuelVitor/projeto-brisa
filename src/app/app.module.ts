@@ -53,7 +53,8 @@ import { TarefasComponent } from "./views/tarefas/tarefas.component";
 import { CreateTarefasComponent } from "./tarefas/create-tarefas/create-tarefas.component";
 import { ReadTarefasComponent } from "./tarefas/read-tarefas/read-tarefas.component";
 import { UpdateTarefaComponent } from "./tarefas/update-tarefa/update-tarefa.component";
-import { PaginaEquipeComponent } from "./equipes/pagina-equipe/pagina-equipe.component"
+import { PaginaEquipeComponent } from "./equipes/pagina-equipe/pagina-equipe.component";
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { PaginaEquipeComponent } from "./equipes/pagina-equipe/pagina-equipe.com
     HeaderComponent,
     AppComponent,
     NavComponent,
-    DeleteWarningComponent
+    DeleteWarningComponent,
+    LoginComponent
   ],
   imports: [
     AppRoutingModule,

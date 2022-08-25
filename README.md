@@ -5,7 +5,7 @@
 </div>
 
 # Projeto Brisa
-- Deploed no Vercel, o qual pode acessar <a href="https://projeto-brisa-rouge.vercel.app/">aqui</a>.
+- Deployed no Vercel, o qual pode acessar <a href="https://projeto-brisa-rouge.vercel.app/">aqui</a>.
 - Projeto criado por Samuel Vitor;
 - Desafio proposto a Brisanet aos seus aprendizes;
 
