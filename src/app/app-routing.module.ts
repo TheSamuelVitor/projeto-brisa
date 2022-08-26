@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth-guard.guard';
 import { PaginaEquipeComponent } from './equipes/pagina-equipe/pagina-equipe.component';
 import { CreateProjetosComponent } from './projetos/create-projetos/create-projetos.component';
 import { CreateMembrosComponent } from './membros/create-membros/create-membros.component';
@@ -24,59 +25,73 @@ const routes: Routes = [
   },
   {
     path: "",
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "equipes",
-    component: EquipeComponent
+    component: EquipeComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "equipes/dados/:id",
-    component: PaginaEquipeComponent
+    component: PaginaEquipeComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "equipes/create",
-    component: CreateEquipeComponent
+    component: CreateEquipeComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "equipes/update/:id",
-    component: UpdateEquipeComponent
+    component: UpdateEquipeComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "membros",
-    component: MembroComponent
+    component: MembroComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "membros/create",
-    component: CreateMembrosComponent
+    component: CreateMembrosComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "membros/update/:id",
-    component: UpdateMembroComponent
+    component: UpdateMembroComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:"projetos",
-    component: ProjetosComponent
+    component: ProjetosComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "projetos/create",
-    component: CreateProjetosComponent
+    component: CreateProjetosComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:"projetos/update/:id",
-    component: UpdateProjetoComponent
+    component: UpdateProjetoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "tarefas",
-    component: TarefasComponent
+    component: TarefasComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "tarefas/create",
-    component: CreateTarefasComponent
+    component: CreateTarefasComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:"tarefas/update/:id",
-    component: UpdateTarefaComponent
+    component: UpdateTarefaComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

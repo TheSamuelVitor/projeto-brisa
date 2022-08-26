@@ -56,6 +56,7 @@ import { ReadTarefasComponent } from "./tarefas/read-tarefas/read-tarefas.compon
 import { UpdateTarefaComponent } from "./tarefas/update-tarefa/update-tarefa.component";
 import { PaginaEquipeComponent } from "./equipes/pagina-equipe/pagina-equipe.component";
 import { LoginComponent } from './login/login.component'
+import { AuthGuard } from './guards/auth-guard.guard';
 
 @NgModule({
   declarations: [
@@ -115,7 +116,8 @@ import { LoginComponent } from './login/login.component'
     ReactiveFormsModule,
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent],
 })
