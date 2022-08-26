@@ -1,3 +1,4 @@
+import { AuthService } from './login/auth.service';
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -113,7 +114,9 @@ import { LoginComponent } from './login/login.component'
     MatTreeModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

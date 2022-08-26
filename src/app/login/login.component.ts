@@ -1,3 +1,4 @@
+import { AuthService } from "./auth.service";
 import { User } from "./../components/user/user.model";
 import { UserService } from "./../components/user/user.service";
 import { Validators } from "@angular/forms";
@@ -22,12 +23,13 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private loginService: UserService
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {}
 
   onSubmit(): void {
+    this.authService.fazerLogin(this.user)
     console.log(this.user);
   }
 }

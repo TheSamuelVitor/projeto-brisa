@@ -1,6 +1,4 @@
-<span class="title-view">
-    Login
-</span>
+<span class="title-view"> Login </span>
 <form class="form" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill" class="email">
     <mat-label>Email</mat-label>
@@ -16,7 +14,7 @@
       Email é requerido
     </mat-error>
     <mat-error *ngIf="formLogin.controls['email'].hasError('email')">
-        Favor digitar um email valido
+      Favor digitar um email valido
     </mat-error>
   </mat-form-field>
   <mat-form-field appearance="fill" class="senha">
@@ -33,7 +31,7 @@
       Senha é requerida
     </mat-error>
   </mat-form-field>
-  
+
   <button mat-raised-button class="login" [disabled]="!formLogin.valid">
     Login
   </button>
