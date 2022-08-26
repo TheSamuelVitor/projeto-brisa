@@ -31,8 +31,8 @@ export class CreateEquipesService {
     return this.http.put<Equipe>(url, equipe);
   }
 
-  getMembrosbyEquipeId(id: string): Observable<Membro[]> {
-    return this.http.get<Membro[]>(`${this.equipeUrl}membros/${id}`);
-  }
+  // getMembrosbyEquipeId(id: string): Observable<Membro[]> {
+  //   return this.http.get<Membro[]>(`${this.equipeUrl}membros/${id}`);
+  // }
 
 }

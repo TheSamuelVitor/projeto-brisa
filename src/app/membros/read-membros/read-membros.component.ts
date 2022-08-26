@@ -44,9 +44,9 @@ export class ReadMembrosComponent implements OnInit {
     });
   }
 
-  procurar(id_equipe: any) {
-    this.equipeService.getMembrosbyEquipeId(id_equipe).subscribe(res => {
-      this.membros = res;
-    });
-  }
+  // procurar(id_equipe: any) {
+  //   this.equipeService.getMembrosbyEquipeId(id_equipe).subscribe(res => {
+  //     this.membros = res;
+  //   });
+  // }
 }

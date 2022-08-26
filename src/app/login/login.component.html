@@ -1,1 +1,40 @@
-<p>login works!</p>
+<span class="title-view">
+    Login
+</span>
+<form class="form" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill" class="email">
+    <mat-label>Email</mat-label>
+    <input
+      matInput
+      placeholder="Ex. nome@dominio.com"
+      name="email"
+      formControlName="email"
+      class="inputEmail"
+      [(ngModel)]="user.email"
+    />
+    <mat-error *ngIf="formLogin.controls['email'].hasError('required')">
+      Email é requerido
+    </mat-error>
+    <mat-error *ngIf="formLogin.controls['email'].hasError('email')">
+        Favor digitar um email valido
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="senha">
+    <mat-label>Senha</mat-label>
+    <input
+      matInput
+      type="password"
+      name="senha"
+      formControlName="senha"
+      class="inputSenha"
+      [(ngModel)]="user.password"
+    />
+    <mat-error *ngIf="formLogin.controls['senha'].hasError('required')">
+      Senha é requerida
+    </mat-error>
+  </mat-form-field>
+  
+  <button mat-raised-button class="login" [disabled]="!formLogin.valid">
+    Login
+  </button>
+</form>
