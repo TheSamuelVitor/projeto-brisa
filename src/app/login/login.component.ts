@@ -1,6 +1,5 @@
 import { AuthService } from "./auth.service";
 import { User } from "./../components/user/user.model";
-import { UserService } from "./../components/user/user.service";
 import { Validators } from "@angular/forms";
 import { FormBuilder } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
@@ -30,6 +29,5 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     this.authService.fazerLogin(this.user)
-    console.log(this.user);
   }
 }
