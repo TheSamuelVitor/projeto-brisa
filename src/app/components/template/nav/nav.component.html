@@ -1,44 +1,46 @@
 <mat-sidenav-container class="container">
-    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="True" *ngIf="this.mostraMenu">
+  <mat-sidenav
+    class="sidenav"
+    mode="side"
+    opened
+    fixedInViewport="True"
+    *ngIf="this.mostraMenu"
+  >
     <a mat-list-item>
-        <img src="../../../../assets/images/Brisanet_logo.png" alt="" class="logo">
+      <img
+        src="../../../../assets/images/Brisanet_logo.png"
+        alt="Logo Brisanet"
+        class="logo"
+      />
     </a>
-        <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="">
-                <i class="material-icons">
-                    dashboard
-                </i>
-                Dashboard
-                </a>
-            <a mat-list-item routerLink="equipes">
-                <i class="material-icons">
-                    people
-                </i>
-                Equipe
-            </a>
-            <a mat-list-item routerLink="membros">
-                <i class="material-icons">
-                    person
-                </i>
-                Membro
-            </a>
-            <a mat-list-item routerLink="projetos">
-                <i class="material-icons">
-                    description
-                </i>
-                Projetos
-            </a>
-            <a mat-list-item routerLink="tarefas">
-                <i class="material-icons">
-                    assignment
-                </i>
-                Tarefas
-            </a>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-card-content>
-        <router-outlet>
-
-        </router-outlet>
-    </mat-card-content>
-</mat-sidenav-container> 
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="">
+        <i class="material-icons"> dashboard </i>
+        Dashboard
+      </a>
+      <a mat-list-item routerLink="equipes">
+        <i class="material-icons"> people </i>
+        Equipe
+      </a>
+      <a mat-list-item routerLink="membros">
+        <i class="material-icons"> person </i>
+        Membro
+      </a>
+      <a mat-list-item routerLink="projetos">
+        <i class="material-icons"> description </i>
+        Projetos
+      </a>
+      <a mat-list-item routerLink="tarefas">
+        <i class="material-icons"> assignment </i>
+        Tarefas
+      </a>
+    </mat-nav-list>
+    <button class="logout" (click)="logout()" *ngIf="this.mostraMenu">
+      <i class="material-icons"> logout </i>
+      Logout
+    </button>
+  </mat-sidenav>
+  <mat-card-content>
+    <router-outlet></router-outlet>
+  </mat-card-content>
+</mat-sidenav-container>

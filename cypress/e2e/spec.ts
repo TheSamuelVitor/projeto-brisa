@@ -1,71 +1,59 @@
 import * as cypress from "cypress";
 
 // const url = "https://projeto-brisa-rouge.vercel.app/";
-const url = 'localhost:4200/'
-
-function teste() {
-  cy.visit(url)
-}
+const url = "localhost:4200/";
 
 describe("pagina principal", () => {
   it("pagina principal", () => {
-    expect(true).to.equal(true);
     cy.visit(url);
+    cy.get('input[name="email"]').type("usuario@email.com");
+    cy.get('input[name="senha"]').type("1234");
+    cy.get(".login").click();
+    expect(true).to.equal(true);
     cy.contains("Sobre o Projeto");
   });
 });
 
-
 describe("pagina equipes", () => {
   it("get equipes", () => {
-    cy.visit(url + "equipes");
+    cy.contains("Equipe").click();
     cy.contains("Equipes");
   });
 
   it("cria equipes", () => {
-    cy.get('.add').click();
-    // cy.get('input[name="name_team"]').type('Vingadores')
-    // cy.get('.salvar').click();
-    cy.get('.cancelar').click();
+    cy.get(".add").click();
+    cy.get(".cancelar").click();
   });
 });
 
 describe("pagina membros", () => {
   it("pagina membros", () => {
-    cy.visit(url + "membros");
-    cy.contains("Membros");
+    cy.contains("Membros").click();
   });
 
   it("cria membros", () => {
-    cy.get('.add').click();
-    /*
-    cy.get('input[name="name_team"]').type('Vingadores')
-    */
-    cy.get('.cancelar').click();
+    cy.get(".add").click();
+    cy.get(".cancelar").click();
   });
 });
 
 describe("pagina projetos", () => {
   it("pagina projetos", () => {
-    cy.visit(url + "projetos");
-    cy.contains("Projetos");
+    cy.contains("Projetos").click();
   });
 
   it("cria projeto", () => {
-    cy.get('.add').click();
-    cy.get('.cancelar').click();
+    cy.get(".add").click();
+    cy.get(".cancelar").click();
   });
 });
-
 describe("pagina tarefas", () => {
   it("pagina tarefas", () => {
-    cy.visit(url + "tarefas");
-    cy.contains("Tarefas");
+    cy.contains("Tarefas").click();
   });
 
   it("cria tarefa", () => {
-    cy.get('.add').click();
-    cy.get('.cancelar').click();
-    teste()
+    cy.get(".add").click();
+    cy.get(".cancelar").click();
   });
 });

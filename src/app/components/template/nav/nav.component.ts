@@ -20,4 +20,8 @@ export class NavComponent implements OnInit {
     );
   }
 
+  logout(): void {
+    window.document.location.reload();
+  }
+
 }

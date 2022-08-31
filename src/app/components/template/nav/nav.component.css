@@ -31,3 +31,14 @@ a i{
 a:focus {
     color: #F56E28;
 }
+
+.logout {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 300%;
+    margin-left: 25px;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+}
