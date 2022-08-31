@@ -1,4 +1,4 @@
-import { AuthService } from './login/auth.service';
+import { AuthService } from "./login/auth.service";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -25,7 +25,6 @@ import { MatTreeModule } from "@angular/material/tree";
 import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { LayoutModule } from "@angular/cdk/layout";
-import { MatTableModule } from "@angular/material/table";
 
 // Import componentes da tela
 import { HeaderComponent } from "./components/template/header/header.component";
@@ -55,8 +54,8 @@ import { CreateTarefasComponent } from "./tarefas/create-tarefas/create-tarefas.
 import { ReadTarefasComponent } from "./tarefas/read-tarefas/read-tarefas.component";
 import { UpdateTarefaComponent } from "./tarefas/update-tarefa/update-tarefa.component";
 import { PaginaEquipeComponent } from "./equipes/pagina-equipe/pagina-equipe.component";
-import { LoginComponent } from './login/login.component'
-import { AuthGuard } from './guards/auth-guard.guard';
+import { LoginComponent } from "./login/login.component";
+import { AuthGuard } from "./login/guards/auth-guard.guard";
 
 @NgModule({
   declarations: [
@@ -87,7 +86,7 @@ import { AuthGuard } from './guards/auth-guard.guard';
     AppComponent,
     NavComponent,
     DeleteWarningComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -109,16 +108,12 @@ import { AuthGuard } from './guards/auth-guard.guard';
     MatSelectModule,
     MatSidenavModule,
     MatSnackBarModule,
-    MatTableModule,
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
     ReactiveFormsModule,
   ],
-  providers: [
-    AuthService,
-    AuthGuard
-  ],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

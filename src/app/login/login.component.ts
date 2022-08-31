@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { AuthService } from "./auth.service";
 import { User } from "./../components/user/user.model";
 import { Validators } from "@angular/forms";
@@ -22,12 +23,21 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {}
 
   onSubmit(): void {
-    this.authService.fazerLogin(this.user)
+    this.authService.fazerLogin({ usuario: this.user });
+    this.formLogin.reset();
+  }
+
+  login() {
+    this.http.post('http://localhost:3000/login', this.user).subscribe(
+      (data) => {
+        console.log(data)
+      })
   }
 }

@@ -1,22 +1,22 @@
-import { AuthGuard } from './guards/auth-guard.guard';
-import { PaginaEquipeComponent } from './equipes/pagina-equipe/pagina-equipe.component';
 import { CreateProjetosComponent } from './projetos/create-projetos/create-projetos.component';
+import { UpdateProjetoComponent } from './projetos/update-projeto/update-projeto.component';
 import { CreateMembrosComponent } from './membros/create-membros/create-membros.component';
 import { CreateTarefasComponent } from './tarefas/create-tarefas/create-tarefas.component';
+import { PaginaEquipeComponent } from './equipes/pagina-equipe/pagina-equipe.component';
 import { CreateEquipeComponent } from './equipes/create-equipe/create-equipe.component';
+import { UpdateEquipeComponent } from './equipes/update-equipe/update-equipe.component';
+import { UpdateMembroComponent } from './membros/update-membro/update-membro.component';
+import { UpdateTarefaComponent } from './tarefas/update-tarefa/update-tarefa.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ProjetosComponent } from './views/projetos/projetos.component';
 import { TarefasComponent } from './views/tarefas/tarefas.component';
 import { EquipeComponent } from './views/equipe/equipe.component';
 import { MembroComponent } from './views/membro/membro.component';
+import { AuthGuard } from './login/guards/auth-guard.guard';
+import { LoginComponent } from './login/login.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { UpdateEquipeComponent } from './equipes/update-equipe/update-equipe.component';
-import { UpdateMembroComponent } from './membros/update-membro/update-membro.component';
-import { UpdateProjetoComponent } from './projetos/update-projeto/update-projeto.component';
-import { UpdateTarefaComponent } from './tarefas/update-tarefa/update-tarefa.component';
-import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {

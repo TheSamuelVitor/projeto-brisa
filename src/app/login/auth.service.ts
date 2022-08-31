@@ -1,12 +1,9 @@
+import { HttpClient } from '@angular/common/http';
+import { AvisoService } from "src/app/components/aviso.service";
 import { EventEmitter } from "@angular/core";
-import {
-  ActivatedRouteSnapshot,
-  Router,
-  RouterStateSnapshot,
-} from "@angular/router";
+import { Router } from "@angular/router";
 import { User } from "./../components/user/user.model";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root",
@@ -16,26 +13,10 @@ export class AuthService {
 
   mostrarMenuEmmiter = new EventEmitter<boolean>();
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private aviso: AvisoService, private http: HttpClient) {}
 
   token = window.localStorage.getItem("token");
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> | boolean {
-    if (this.token) {
-      this.usuarioAutenticado = true;
-      this.mostrarMenuEmmiter.emit(true);
-      this.router.navigate([""]);
-      return true;
-    } else {
-      this.usuarioAutenticado = false;
-      this.mostrarMenuEmmiter.emit(false);
-      return false;
-    }
-  }
-
-  fazerLogin(usuario: User) {
+  fazerLogin({ usuario }: { usuario: User }) {
     if (usuario.email === "usuario@email.com" && usuario.password == "1234") {
       this.usuarioAutenticado = true;
       this.mostrarMenuEmmiter.emit(true);
@@ -43,6 +24,7 @@ export class AuthService {
     } else {
       this.usuarioAutenticado = false;
       this.mostrarMenuEmmiter.emit(false);
+      this.aviso.showMsg({ msg: "Login ou senha errados" });
     }
   }
 
