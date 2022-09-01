@@ -1,9 +1,10 @@
-import { HttpClient } from '@angular/common/http';
 import { AvisoService } from "src/app/components/aviso.service";
-import { EventEmitter } from "@angular/core";
-import { Router } from "@angular/router";
 import { User } from "./../components/user/user.model";
+
+import { HttpClient } from "@angular/common/http";
+import { EventEmitter } from "@angular/core";
 import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: "root",
@@ -13,19 +14,26 @@ export class AuthService {
 
   mostrarMenuEmmiter = new EventEmitter<boolean>();
 
-  constructor(private router: Router, private aviso: AvisoService, private http: HttpClient) {}
+  constructor(
+    private router: Router,
+    private aviso: AvisoService,
+    private http: HttpClient
+  ) {}
+
+  loginUrl = "https://api-go-projects.herokuapp.com/login"
 
   token = window.localStorage.getItem("token");
   fazerLogin({ usuario }: { usuario: User }) {
-    if (usuario.email === "usuario@email.com" && usuario.password == "1234") {
-      this.usuarioAutenticado = true;
-      this.mostrarMenuEmmiter.emit(true);
-      this.router.navigate([""]);
-    } else {
-      this.usuarioAutenticado = false;
-      this.mostrarMenuEmmiter.emit(false);
-      this.aviso.showMsg({ msg: "Login ou senha errados" });
-    }
+    this.http.post<string>(this.loginUrl, usuario).subscribe(
+      data => {
+        this.usuarioAutenticado = true;
+        this.router.navigate([""]);
+        this.mostrarMenuEmmiter.emit(true);
+      },
+      err => {
+        console.log("Error: " + err.message);
+      }
+    );
   }
 
   usuarioEstaAutenticado() {
