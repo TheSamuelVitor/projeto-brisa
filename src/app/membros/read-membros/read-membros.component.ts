@@ -18,17 +18,17 @@ export class ReadMembrosComponent implements OnInit {
 
   constructor(
     private membrosService: CreateMembrosService,
-    private equipeService: CreateEquipesService,
     private dialog: MatDialog
   ) {}
 
-  ngOnInit(): void {
+  lerMembros(): void {
     this.membrosService.read().subscribe((membros) => {
       this.membros = membros;
     });
-    this.equipeService.read().subscribe((equipe) => {
-      this.equipes = equipe;
-    });
+  }
+
+  ngOnInit(): void {
+    this.lerMembros();
   }
 
   openDialog(
@@ -44,9 +44,4 @@ export class ReadMembrosComponent implements OnInit {
     });
   }
 
-  // procurar(id_equipe: any) {
-  //   this.equipeService.getMembrosbyEquipeId(id_equipe).subscribe(res => {
-  //     this.membros = res;
-  //   });
-  // }
 }

@@ -56,6 +56,8 @@ import { UpdateTarefaComponent } from "./tarefas/update-tarefa/update-tarefa.com
 import { PaginaEquipeComponent } from "./equipes/pagina-equipe/pagina-equipe.component";
 import { LoginComponent } from "./login/login.component";
 import { AuthGuard } from "./login/guards/auth-guard.guard";
+import { httpInterceptorProviders } from "./httpinterceptors";
+
 
 @NgModule({
   declarations: [
@@ -113,7 +115,7 @@ import { AuthGuard } from "./login/guards/auth-guard.guard";
     MatTreeModule,
     ReactiveFormsModule,
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, httpInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
