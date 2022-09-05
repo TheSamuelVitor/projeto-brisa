@@ -40,8 +40,4 @@ export class CreateEquipeComponent implements OnInit {
       this.goBack();
     });
   }
-
-  limpar(): void {
-    this.formulario.reset();
-  }
 }

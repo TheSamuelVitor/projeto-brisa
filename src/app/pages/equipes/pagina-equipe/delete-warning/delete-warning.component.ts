@@ -21,16 +21,17 @@ export class DeleteWarningComponent {
     public route: Router
   ) {}
 
-  fechaDialog() {
+  fechaDialog() {  
     this.dialogRef.close();
   }
 
   deletaEquipe(id_equipe: any) {
     this.http.delete(`${this.baseUrl}${id_equipe}`).subscribe(() => {
       this.message.showMsg({
-        msg: `Equipe deletada com sucesso. Favor recarregar a página`,
+        msg: `Equipe deletada com sucesso.`,
       });
     });
     this.fechaDialog();
+    this.route.navigate(["equipes"]);
   }
 }

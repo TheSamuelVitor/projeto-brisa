@@ -1,8 +1,8 @@
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
-import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
@@ -55,9 +55,9 @@ import { DeleteWarningComponentProjeto } from "./pages/projetos/read-projetos/de
 
 import { TarefasComponent } from "./pages/tarefas/tarefas/tarefas.component";
 import { CreateTarefasComponent } from "./pages/tarefas/create-tarefas/create-tarefas.component";
+import { DeleteWarningComponentTarefas } from "./pages/tarefas/read-tarefas/delete-warning/delete-warning.component";
 import { ReadTarefasComponent } from "./pages/tarefas/read-tarefas/read-tarefas.component";
 import { UpdateTarefaComponent } from "./pages/tarefas/update-tarefa/update-tarefa.component";
-import { DeleteWarningComponentTarefas } from "./pages/tarefas/read-tarefas/delete-warning/delete-warning.component";
 
 @NgModule({
   declarations: [
