@@ -1,9 +1,9 @@
-import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
 import { MatDialog } from "@angular/material/dialog";
 import { Component, OnInit } from "@angular/core";
 import { Equipe } from "src/app/models/equipe.model";
 import { Membro } from "src/app/models/membro.model";
 import { CreateMembrosService } from "src/app/services/membros.service";
+import { DeleteWarningComponentMembros } from "./delete-warning/delete-warning.component";
 
 @Component({
   selector: "app-read-membros",
@@ -35,7 +35,7 @@ export class ReadMembrosComponent implements OnInit {
     exitAnimationDuration: string,
     id_membro: any
   ): void {
-    this.dialog.open(DeleteWarningComponent, {
+    this.dialog.open(DeleteWarningComponentMembros, {
       data: id_membro,
       width: "250px",
       enterAnimationDuration,

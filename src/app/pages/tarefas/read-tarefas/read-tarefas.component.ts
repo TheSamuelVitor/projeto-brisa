@@ -1,4 +1,4 @@
-import { DeleteWarningComponent } from './delete-warning/delete-warning.component';
+import { DeleteWarningComponentTarefas } from './delete-warning/delete-warning.component';
 import { CreateTarefasService } from 'src/app/services/tarefas.service';
 import { AvisoService } from 'src/app/services/aviso.service';
 import { Tarefa } from 'src/app/models/tarefa.model';
@@ -35,7 +35,7 @@ export class ReadTarefasComponent implements OnInit {
     exitAnimationDuration: string,
     id_tarefa: any
   ): void {
-    this.dialog.open(DeleteWarningComponent, {
+    this.dialog.open(DeleteWarningComponentTarefas, {
       data: id_tarefa,
       width: "250px",
       enterAnimationDuration,

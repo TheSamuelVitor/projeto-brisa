@@ -9,7 +9,7 @@ import { AvisoService } from 'src/app/services/aviso.service';
   templateUrl: './delete-warning.component.html',
   styleUrls: ['./delete-warning.component.css']
 })
-export class DeleteWarningComponent{
+export class DeleteWarningComponentProjeto{
   
   urlProjeto = "https://api-go-projects.herokuapp.com/projetos/";
   constructor(

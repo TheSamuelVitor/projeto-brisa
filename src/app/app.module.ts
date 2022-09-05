@@ -27,64 +27,71 @@ import { LayoutModule } from "@angular/cdk/layout";
 
 // Imports das respectivas paginas
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
+import { LoginComponent } from "./pages/login/login.component";
 
+import { EquipeComponent } from "./pages/equipes/equipe/equipe.component";
 import { CreateEquipeComponent } from "./pages/equipes/create-equipe/create-equipe.component";
-import { PaginaEquipeComponent } from "./pages/equipes/pagina-equipe/pagina-equipe.component";
 import { UpdateEquipeComponent } from "./pages/equipes/update-equipe/update-equipe.component";
+import { ReadEquipeComponent } from "./pages/equipes/read-equipe/read-equipe.component";
 import { DeleteWarningComponent } from "./pages/equipes/pagina-equipe/delete-warning/delete-warning.component";
-
-import { ProjetosComponent } from "src/app/pages/projetos/projetos/projetos.component";
-import { ReadProjetosComponent } from "./pages/projetos/read-projetos/read-projetos.component";
-import { CreateProjetosComponent } from "./pages/projetos/create-projetos/create-projetos.component";
-import { UpdateProjetoComponent } from "./pages/projetos/update-projeto/update-projeto.component";
-
-import { TarefasComponent } from "src/app/pages/tarefas/tarefas/tarefas.component";
-import { CreateTarefasComponent } from "./pages/tarefas/create-tarefas/create-tarefas.component";
-import { ReadTarefasComponent } from "./pages/tarefas/read-tarefas/read-tarefas.component";
-import { UpdateTarefaComponent } from "./pages/tarefas/update-tarefa/update-tarefa.component";
 
 import { MembroComponent } from "./pages/membros/membro/membro.component";
 import { CreateMembrosComponent } from "./pages/membros/create-membros/create-membros.component";
-import { ReadMembrosComponent } from "./pages/membros/read-membros/read-membros.component";
 import { UpdateMembroComponent } from "./pages/membros/update-membro/update-membro.component";
+import { ReadMembrosComponent } from "./pages/membros/read-membros/read-membros.component";
+import { DeleteWarningComponentMembros } from "./pages/membros/read-membros/delete-warning/delete-warning.component";
 
+import { ProjetosComponent } from "./pages/projetos/projetos/projetos.component";
+import { CreateProjetosComponent } from "./pages/projetos/create-projetos/create-projetos.component";
+import { UpdateProjetoComponent } from "./pages/projetos/update-projeto/update-projeto.component";
+import { ReadProjetosComponent } from "./pages/projetos/read-projetos/read-projetos.component";
+import { DeleteWarningComponentProjeto } from "./pages/projetos/read-projetos/delete-warning/delete-warning.component";
 
+import { TarefasComponent } from "./pages/tarefas/tarefas/tarefas.component";
+import { CreateTarefasComponent } from "./pages/tarefas/create-tarefas/create-tarefas.component";
+import { UpdateTarefaComponent } from "./pages/tarefas/update-tarefa/update-tarefa.component";
+import { ReadTarefasComponent } from "./pages/tarefas/read-tarefas/read-tarefas.component";
+import { DeleteWarningComponentTarefas } from "./pages/tarefas/read-tarefas/delete-warning/delete-warning.component";
 
-import { HeaderComponent } from "./template/header/header.component";
-import { LoginComponent } from "./pages/login/login.component";
-import { httpInterceptorProviders } from "./httpinterceptors";
-import { NavComponent } from "./template/nav/nav.component";
 import { AuthService } from "./services/auth.service";
 import { AuthGuard } from "./guards/auth-guard.guard";
+import { httpInterceptorProviders } from "./httpinterceptors";
+import { PaginaEquipeComponent } from "./pages/equipes/pagina-equipe/pagina-equipe.component";
+import { NavComponent } from "./template/nav/nav.component";
+import { HeaderComponent } from "./template/header/header.component";
 
 @NgModule({
   declarations: [
+    AppComponent,
     DashboardComponent,
+    LoginComponent,
+    NavComponent,
+    HeaderComponent,
 
+    EquipeComponent,
     CreateEquipeComponent,
     UpdateEquipeComponent,
+    ReadEquipeComponent,
     PaginaEquipeComponent,
+    DeleteWarningComponent,
 
     MembroComponent,
     CreateMembrosComponent,
     UpdateMembroComponent,
     ReadMembrosComponent,
+    DeleteWarningComponentMembros,
 
     ProjetosComponent,
     CreateProjetosComponent,
-    ReadProjetosComponent,
     UpdateProjetoComponent,
+    ReadProjetosComponent,
+    DeleteWarningComponentProjeto,
 
     TarefasComponent,
     CreateTarefasComponent,
-    ReadTarefasComponent,
     UpdateTarefaComponent,
-
-    HeaderComponent,
-    AppComponent,
-    NavComponent,
-    DeleteWarningComponent,
-    LoginComponent,
+    ReadTarefasComponent,
+    DeleteWarningComponentTarefas
   ],
   imports: [
     AppRoutingModule,

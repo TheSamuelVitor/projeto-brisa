@@ -10,7 +10,7 @@ import { AvisoService } from 'src/app/services/aviso.service';
   templateUrl: './delete-warning.component.html',
   styleUrls: ['./delete-warning.component.css']
 })
-export class DeleteWarningComponent {
+export class DeleteWarningComponentTarefas {
 
   constructor(
     private dialog: DialogRef,
