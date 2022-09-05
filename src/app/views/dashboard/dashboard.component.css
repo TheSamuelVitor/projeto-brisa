@@ -13,6 +13,7 @@ a {
 
 .cards {
     display: flex;
+    flex-wrap: wrap;
     margin: 20px;
     justify-content: space-between;
 }

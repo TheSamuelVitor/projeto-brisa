@@ -1,5 +1,4 @@
-import { AuthService } from './../../login/auth.service';
-import { LoginComponent } from './../../login/login.component';
+import { AuthService } from "./../../login/auth.service";
 import { MatDialog } from "@angular/material/dialog";
 import { Component, OnInit } from "@angular/core";
 
@@ -26,9 +25,7 @@ export class ReadEquipeComponent implements OnInit {
     });
   }
 
-  
   ngOnInit(): void {
     this.mostraEquipes();
   }
-
 }

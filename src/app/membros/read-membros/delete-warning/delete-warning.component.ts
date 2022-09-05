@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AvisoService } from "src/app/components/aviso.service";
 import { HttpClient } from "@angular/common/http";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
@@ -15,7 +16,8 @@ export class DeleteWarningComponent {
     public dialogRef: MatDialogRef<DeleteWarningComponent>,
     @Inject(MAT_DIALOG_DATA) public data: { id_membro: number },
     private http: HttpClient,
-    private Aviso: AvisoService
+    private Aviso: AvisoService,
+    private route: Router
   ) {}
 
   fecha() {
@@ -29,5 +31,6 @@ export class DeleteWarningComponent {
       });
     });
     this.fecha();
+    this.route.navigate(['membros']);
   }
 }

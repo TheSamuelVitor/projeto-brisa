@@ -1,11 +1,11 @@
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+import { AppRoutingModule } from "./app-routing.module";
+import { HttpClientModule } from "@angular/common/http";
 import { AuthService } from "./login/auth.service";
 import { AppComponent } from "./app.component";
-import { AppRoutingModule } from "./app-routing.module";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { BrowserModule } from "@angular/platform-browser";
 import { CommonModule } from "@angular/common";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 
 // Imports do Angular Material
@@ -57,7 +57,6 @@ import { PaginaEquipeComponent } from "./equipes/pagina-equipe/pagina-equipe.com
 import { LoginComponent } from "./login/login.component";
 import { AuthGuard } from "./login/guards/auth-guard.guard";
 import { httpInterceptorProviders } from "./httpinterceptors";
-
 
 @NgModule({
   declarations: [
