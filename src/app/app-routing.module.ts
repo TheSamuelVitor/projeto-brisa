@@ -1,22 +1,21 @@
-import { CreateProjetosComponent } from './projetos/create-projetos/create-projetos.component';
-import { UpdateProjetoComponent } from './projetos/update-projeto/update-projeto.component';
-import { CreateMembrosComponent } from './membros/create-membros/create-membros.component';
-import { CreateTarefasComponent } from './tarefas/create-tarefas/create-tarefas.component';
-import { PaginaEquipeComponent } from './equipes/pagina-equipe/pagina-equipe.component';
-import { CreateEquipeComponent } from './equipes/create-equipe/create-equipe.component';
-import { UpdateEquipeComponent } from './equipes/update-equipe/update-equipe.component';
-import { UpdateMembroComponent } from './membros/update-membro/update-membro.component';
-import { UpdateTarefaComponent } from './tarefas/update-tarefa/update-tarefa.component';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { ProjetosComponent } from './views/projetos/projetos.component';
-import { TarefasComponent } from './views/tarefas/tarefas.component';
-import { EquipeComponent } from './views/equipe/equipe.component';
-import { MembroComponent } from './views/membro/membro.component';
-import { AuthGuard } from './login/guards/auth-guard.guard';
-import { LoginComponent } from './login/login.component';
-
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { ProjetosComponent } from 'src/app/pages/projetos/projetos/projetos.component';
+import { TarefasComponent } from 'src/app/pages/tarefas/tarefas/tarefas.component';
+import { AuthGuard } from './guards/auth-guard.guard';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { CreateEquipeComponent } from './pages/equipes/create-equipe/create-equipe.component';
+import { EquipeComponent } from './pages/equipes/equipe/equipe.component';
+import { PaginaEquipeComponent } from './pages/equipes/pagina-equipe/pagina-equipe.component';
+import { UpdateEquipeComponent } from './pages/equipes/update-equipe/update-equipe.component';
+import { LoginComponent } from './pages/login/login.component';
+import { CreateMembrosComponent } from './pages/membros/create-membros/create-membros.component';
+import { MembroComponent } from './pages/membros/membro/membro.component';
+import { UpdateMembroComponent } from './pages/membros/update-membro/update-membro.component';
+import { CreateProjetosComponent } from './pages/projetos/create-projetos/create-projetos.component';
+import { UpdateProjetoComponent } from './pages/projetos/update-projeto/update-projeto.component';
+import { CreateTarefasComponent } from './pages/tarefas/create-tarefas/create-tarefas.component';
+import { UpdateTarefaComponent } from './pages/tarefas/update-tarefa/update-tarefa.component';
 
 const routes: Routes = [
   {

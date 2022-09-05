@@ -1,0 +1,33 @@
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { environment } from "src/environments/environment.prod";
+import { Membro } from "../models/membro.model";
+
+@Injectable({
+  providedIn: "root",
+})
+export class CreateMembrosService {
+  membroUrl = `${environment.apiUrl}membros/`;
+
+  constructor(private http: HttpClient) {}
+
+  create({ membro }: { membro: Membro }): Observable<Membro> {
+    return this.http.post<Membro>(this.membroUrl, membro);
+  }
+
+  read(): Observable<Membro[]> {
+    return this.http.get<Membro[]>(this.membroUrl);
+  }
+
+  getById({ id }: { id: string }): Observable<Membro> {
+    const url = `${this.membroUrl}${id}`;
+    return this.http.get<Membro>(url);
+  }
+
+  update({ membro }: { membro: Membro }): Observable<Membro> {
+    const url = `${this.membroUrl}${membro.id_membro}`;
+    return this.http.put<Membro>(url, membro);
+  }
+
+}

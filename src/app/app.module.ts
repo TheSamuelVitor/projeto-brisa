@@ -1,4 +1,3 @@
-import { AuthService } from "./login/auth.service";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -26,47 +25,44 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { LayoutModule } from "@angular/cdk/layout";
 
-// Import componentes da tela
-import { HeaderComponent } from "./components/template/header/header.component";
-import { NavComponent } from "./components/template/nav/nav.component";
+// Imports das respectivas paginas
+import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 
-// Imports da tela
-import { DashboardComponent } from "./views/dashboard/dashboard.component";
+import { CreateEquipeComponent } from "./pages/equipes/create-equipe/create-equipe.component";
+import { PaginaEquipeComponent } from "./pages/equipes/pagina-equipe/pagina-equipe.component";
+import { UpdateEquipeComponent } from "./pages/equipes/update-equipe/update-equipe.component";
+import { DeleteWarningComponent } from "./pages/equipes/pagina-equipe/delete-warning/delete-warning.component";
 
-import { EquipeComponent } from "./views/equipe/equipe.component";
-import { CreateEquipeComponent } from "./equipes/create-equipe/create-equipe.component";
-import { ReadEquipeComponent } from "./equipes/read-equipe/read-equipe.component";
-import { UpdateEquipeComponent } from "./equipes/update-equipe/update-equipe.component";
-import { DeleteWarningComponent } from "./equipes/pagina-equipe/delete-warning/delete-warning.component";
+import { ProjetosComponent } from "src/app/pages/projetos/projetos/projetos.component";
+import { ReadProjetosComponent } from "./pages/projetos/read-projetos/read-projetos.component";
+import { CreateProjetosComponent } from "./pages/projetos/create-projetos/create-projetos.component";
+import { UpdateProjetoComponent } from "./pages/projetos/update-projeto/update-projeto.component";
 
-import { MembroComponent } from "./views/membro/membro.component";
-import { CreateMembrosComponent } from "./membros/create-membros/create-membros.component";
-import { ReadMembrosComponent } from "./membros/read-membros/read-membros.component";
-import { UpdateMembroComponent } from "./membros/update-membro/update-membro.component";
+import { TarefasComponent } from "src/app/pages/tarefas/tarefas/tarefas.component";
+import { CreateTarefasComponent } from "./pages/tarefas/create-tarefas/create-tarefas.component";
+import { ReadTarefasComponent } from "./pages/tarefas/read-tarefas/read-tarefas.component";
+import { UpdateTarefaComponent } from "./pages/tarefas/update-tarefa/update-tarefa.component";
 
-import { ProjetosComponent } from "./views/projetos/projetos.component";
-import { CreateProjetosComponent } from "./projetos/create-projetos/create-projetos.component";
-import { ReadProjetosComponent } from "./projetos/read-projetos/read-projetos.component";
-import { UpdateProjetoComponent } from "./projetos/update-projeto/update-projeto.component";
+import { MembroComponent } from "./pages/membros/membro/membro.component";
+import { CreateMembrosComponent } from "./pages/membros/create-membros/create-membros.component";
+import { ReadMembrosComponent } from "./pages/membros/read-membros/read-membros.component";
+import { UpdateMembroComponent } from "./pages/membros/update-membro/update-membro.component";
 
-import { TarefasComponent } from "./views/tarefas/tarefas.component";
-import { CreateTarefasComponent } from "./tarefas/create-tarefas/create-tarefas.component";
-import { ReadTarefasComponent } from "./tarefas/read-tarefas/read-tarefas.component";
-import { UpdateTarefaComponent } from "./tarefas/update-tarefa/update-tarefa.component";
-import { PaginaEquipeComponent } from "./equipes/pagina-equipe/pagina-equipe.component";
-import { LoginComponent } from "./login/login.component";
-import { AuthGuard } from "./login/guards/auth-guard.guard";
+
+
+import { HeaderComponent } from "./template/header/header.component";
+import { LoginComponent } from "./pages/login/login.component";
 import { httpInterceptorProviders } from "./httpinterceptors";
-
+import { NavComponent } from "./template/nav/nav.component";
+import { AuthService } from "./services/auth.service";
+import { AuthGuard } from "./guards/auth-guard.guard";
 
 @NgModule({
   declarations: [
     DashboardComponent,
 
-    EquipeComponent,
     CreateEquipeComponent,
     UpdateEquipeComponent,
-    ReadEquipeComponent,
     PaginaEquipeComponent,
 
     MembroComponent,
