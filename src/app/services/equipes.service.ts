@@ -30,6 +30,4 @@ export class CreateEquipesService {
     const url = `${this.equipeUrl}${equipe.id_equipe}`;
     return this.http.put<Equipe>(url, equipe);
   }
-
-
 }

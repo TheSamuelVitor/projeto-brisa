@@ -1,8 +1,9 @@
+import { environment } from 'src/environments/environment.prod';
+import { Projeto } from '../models/projeto.model';
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment.prod';
-import { Projeto } from '../models/projeto.model';
 
 @Injectable({
   providedIn: 'root'

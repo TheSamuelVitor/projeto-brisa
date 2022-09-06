@@ -1,8 +1,9 @@
+import { environment } from "src/environments/environment.prod";
+import { Membro } from "../models/membro.model";
+
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { environment } from "src/environments/environment.prod";
-import { Membro } from "../models/membro.model";
 
 @Injectable({
   providedIn: "root",
@@ -29,5 +30,4 @@ export class CreateMembrosService {
     const url = `${this.membroUrl}${membro.id_membro}`;
     return this.http.put<Membro>(url, membro);
   }
-
 }

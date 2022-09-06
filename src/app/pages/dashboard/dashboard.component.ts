@@ -1,13 +1,15 @@
-import { HttpClient } from "@angular/common/http";
-import { Component, OnInit } from "@angular/core";
-import { Equipe } from "src/app/models/equipe.model";
-import { Membro } from "src/app/models/membro.model";
-import { Projeto } from "src/app/models/projeto.model";
-import { Tarefa } from "src/app/models/tarefa.model";
 import { CreateEquipesService } from "src/app/services/equipes.service";
 import { CreateMembrosService } from "src/app/services/membros.service";
 import { CreateProjetosService } from "src/app/services/projetos.service";
 import { CreateTarefasService } from "src/app/services/tarefas.service";
+
+import { Equipe } from "src/app/models/equipe.model";
+import { Membro } from "src/app/models/membro.model";
+import { Projeto } from "src/app/models/projeto.model";
+import { Tarefa } from "src/app/models/tarefa.model";
+
+import { HttpClient } from "@angular/common/http";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-dashboard",
@@ -21,7 +23,6 @@ export class DashboardComponent implements OnInit {
   tarefas: Tarefa[] = [];
 
   constructor(
-    private http: HttpClient,
     private equipeService: CreateEquipesService,
     private membroService: CreateMembrosService,
     private projetoService: CreateProjetosService,

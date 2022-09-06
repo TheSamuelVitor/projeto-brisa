@@ -1,9 +1,9 @@
-import { Observable } from "rxjs";
+import { environment } from "src/environments/environment.prod";
+import { User, Token } from "../models/user.model";
+
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { environment } from "src/environments/environment.prod";
-import { Token } from "@angular/compiler";
-import { User } from "../models/user.model";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root",
