@@ -1,24 +1,24 @@
 h1 {
-    margin-left: -0px;
+  margin-left: -0px;
 }
 
 span.subtitle {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .cards {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
 }
 
 .card {
-    margin: 10px;
-    text-align: center;
-    width: 20rem;
+  margin: 10px;
+  text-align: center;
+  width: 20rem;
 }

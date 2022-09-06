@@ -1,83 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { 
-    height: 100%;
+  height: 100%;
 }
 
 body { 
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
-    margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  margin: 0; 
 }
 
 button.add {
-    background-color: #1E2D69;
-    border-radius: 50%;
-    bottom: 0px;
-    color: #F56E28;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    margin: 6rem 3rem;
-    position: fixed;
-    right: 0px;
-    width: 4rem;
+  background-color: #1E2D69;
+  border-radius: 50%;
+  bottom: 0px;
+  color: #F56E28;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  margin: 6rem 3rem;
+  position: fixed;
+  right: 0px;
+  width: 4rem;
 }
 
 span {
-    align-items: center;
-    display: flex;
+  align-items: center;
+  display: flex;
 }
 
 button {
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
 
 button.deletar {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 button.deletar,
 button.editar {
-    border-radius: 5px;
-    padding-left: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
 }
 
 button.informacoes {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 button.deletar:hover {
-    border: 2px solid;
-    border-color: rgba(255, 0, 0, 0.5);
+  border: 2px solid rgba(255, 0, 0, 0.5);
 }
 
 button.editar:hover {
-    border: 2px solid;
-    border-color: rgba(255, 255, 0, 0.5);
+  border: 2px solid rgba(255, 255, 0, 0.5);
 }
 
 .icon-components {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 h1.title-view, span.title-view {
-    align-items: center;
-    color: #232946;
-    display: flex;
-    height: 50px;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 43px;
-    
-    margin-left: 3rem;
-    margin-top: 25px;
-    line-height: 50px;
-    left: 19px;
-    
-    text-align: center;
-    top: 25px;
+  align-items: center;
+  color: #232946;
+  display: flex;
+  height: 50px;
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 43px;
+  
+  margin-left: 3rem;
+  margin-top: 25px;
+  line-height: 50px;
+  left: 19px;
+  
+  text-align: center;
+  top: 25px;
 }
