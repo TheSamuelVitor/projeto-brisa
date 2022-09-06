@@ -45,11 +45,7 @@
       É necessário escolher a equipe
     </mat-error>
   </mat-form-field>
-  <button
-    mat-raised-button
-    class="salvar"
-    [disabled]="!formulario.valid"
-  >
+  <button mat-raised-button class="salvar" [disabled]="!formulario.valid">
     Salvar
   </button>
   <button mat-raised-button class="cancelar" (click)="goBack()">

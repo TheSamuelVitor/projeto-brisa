@@ -1,17 +1,17 @@
+import { CreateProjetosService } from "src/app/services/projetos.service";
+import { CreateEquipesService } from "src/app/services/equipes.service";
+import { CreateMembrosService } from "src/app/services/membros.service";
+import { CreateTarefasService } from "src/app/services/tarefas.service";
+import { AvisoService } from "src/app/services/aviso.service";
+import { Projeto } from "src/app/models/projeto.model";
+import { Membro } from "src/app/models/membro.model";
+import { Tarefa } from "src/app/models/tarefa.model";
+
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder } from "@angular/forms";
 import { Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
-
-import { Membro } from "src/app/models/membro.model";
-import { Projeto } from "src/app/models/projeto.model";
-import { Tarefa } from "src/app/models/tarefa.model";
-import { AvisoService } from "src/app/services/aviso.service";
-import { CreateEquipesService } from "src/app/services/equipes.service";
-import { CreateMembrosService } from "src/app/services/membros.service";
-import { CreateProjetosService } from "src/app/services/projetos.service";
-import { CreateTarefasService } from "src/app/services/tarefas.service";
 
 @Component({
   selector: "app-create-tarefas",

@@ -1,20 +1,20 @@
 form {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 40px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 40px;
 }
 
 .email, .senha {
-    width: 40%;
-    min-width: 35rem;
+  width: 40%;
+  min-width: 35rem;
 }
 
 .login {
-    width: 20%;
-    max-width: 10rem;
-    margin-top: 10px;
+  width: 20%;
+  max-width: 10rem;
+  margin-top: 10px;
 }
 
 .login:hover {
-    background-color: rgb(96, 225, 96);
+  background-color: rgb(96, 225, 96);
 }

@@ -1,19 +1,18 @@
 .form{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
 
 .form button{
-    width: 10rem;
+  width: 10rem;
 }
 
 button.salvar {
-    background-color: rgb(96, 225, 96);
-
+  background-color: rgb(96, 225, 96);
 }
 
 button.cancelar{
-    border: 1px solid blue;
-    margin-top: 10px;
+  border: 1px solid blue;
+  margin-top: 10px;
 }

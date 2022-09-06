@@ -1,13 +1,14 @@
+import { CreateProjetosService } from "src/app/services/projetos.service";
+import { CreateEquipesService } from "src/app/services/equipes.service";
+import { AvisoService } from "src/app/services/aviso.service";
+import { Projeto } from "src/app/models/projeto.model";
+import { Equipe } from "src/app/models/equipe.model";
+
 import { Validators, FormBuilder } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
-import { Equipe } from "src/app/models/equipe.model";
-import { Projeto } from "src/app/models/projeto.model";
-import { AvisoService } from "src/app/services/aviso.service";
-import { CreateEquipesService } from "src/app/services/equipes.service";
-import { CreateProjetosService } from "src/app/services/projetos.service";
 
 @Component({
   selector: "app-update-projeto",

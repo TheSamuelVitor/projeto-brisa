@@ -1,4 +1,3 @@
-
 import { MatDialog } from "@angular/material/dialog";
 import { Component, OnInit } from "@angular/core";
 import { Projeto } from "src/app/models/projeto.model";
