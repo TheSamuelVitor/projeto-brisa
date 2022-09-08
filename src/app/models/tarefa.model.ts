@@ -1,9 +1,9 @@
 export interface Tarefa {
-    id_tarefa?: number,
-    nome_tarefa: string,
-    descricao?: string,
-    id_projeto: number,
-    nome_projeto?: string,
-    id_membro: number,
-    nome_membro?: string
+  id_tarefa?: number,
+  nome_tarefa: string,
+  descricao?: string,
+  id_projeto: number,
+  nome_projeto?: string,
+  id_membro: number,
+  nome_membro?: string
 }

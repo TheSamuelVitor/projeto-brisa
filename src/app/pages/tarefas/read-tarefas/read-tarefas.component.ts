@@ -1,5 +1,6 @@
 import { DeleteWarningComponentTarefas } from "./delete-warning/delete-warning.component";
 import { CreateTarefasService } from "src/app/services/tarefas.service";
+import { environment } from 'src/environments/environment.prod';
 import { AvisoService } from "src/app/services/aviso.service";
 import { Tarefa } from "src/app/models/tarefa.model";
 
@@ -14,7 +15,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class ReadTarefasComponent implements OnInit {
   tarefas: Tarefa[] = [];
-  tarefasUrl = "https://api-go-postgres.herokuapp.com/tarefas/";
+  tarefasUrl = `${environment.apiUrl}tarefas/`;
 
   constructor(
     private tarefaService: CreateTarefasService,

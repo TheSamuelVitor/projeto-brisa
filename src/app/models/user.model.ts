@@ -1,8 +1,8 @@
 export interface User {
-    email: string;
-    password: string;
+  email: string;
+  password: string;
 }
 
 export interface Token { 
-    token: string;
+  token: string;
 }

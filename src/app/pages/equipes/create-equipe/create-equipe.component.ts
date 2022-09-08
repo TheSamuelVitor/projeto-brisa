@@ -1,11 +1,10 @@
-
+import { CreateEquipesService } from "src/app/services/equipes.service";
+import { AvisoService } from "src/app/services/aviso.service";
+import { Equipe } from "src/app/models/equipe.model";
 
 import { FormBuilder, Validators } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { Equipe } from "src/app/models/equipe.model";
-import { CreateEquipesService } from "src/app/services/equipes.service";
-import { AvisoService } from "src/app/services/aviso.service";
 
 @Component({
   selector: "app-create-equipe",

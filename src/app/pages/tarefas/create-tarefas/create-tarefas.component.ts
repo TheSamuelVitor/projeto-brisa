@@ -1,5 +1,4 @@
 import { CreateProjetosService } from "src/app/services/projetos.service";
-import { CreateEquipesService } from "src/app/services/equipes.service";
 import { CreateMembrosService } from "src/app/services/membros.service";
 import { CreateTarefasService } from "src/app/services/tarefas.service";
 import { AvisoService } from "src/app/services/aviso.service";
@@ -39,7 +38,6 @@ export class CreateTarefasComponent implements OnInit {
   constructor(
     private router: Router,
     private projetoService: CreateProjetosService,
-    private equipeService: CreateEquipesService,
     private membroService: CreateMembrosService,
     private createTarefa: CreateTarefasService,
     private formBuilder: FormBuilder,

@@ -1,8 +1,9 @@
-import { Router } from '@angular/router';
-import { HttpClient } from "@angular/common/http";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { environment } from "src/environments/environment.prod";
+import { AvisoService } from "src/app/services/aviso.service";
+import { HttpClient } from "@angular/common/http";
 import { Component, Inject } from "@angular/core";
-import { AvisoService } from 'src/app/services/aviso.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-delete-warning",
@@ -10,7 +11,7 @@ import { AvisoService } from 'src/app/services/aviso.service';
   styleUrls: ["./delete-warning.component.css"],
 })
 export class DeleteWarningComponentMembros {
-  url = "https://api-go-projects.herokuapp.com/membros/";
+  url = `${environment.apiUrl}membros/`;
 
   constructor(
     public dialogRef: MatDialogRef<DeleteWarningComponentMembros>,
@@ -30,7 +31,7 @@ export class DeleteWarningComponentMembros {
         msg: "Membro deletado com sucesso\nFavor recarregar a pagina",
       });
     });
+    this.route.navigate(["membros"]);
     this.fecha();
-    this.route.navigate(['membros']);
   }
 }

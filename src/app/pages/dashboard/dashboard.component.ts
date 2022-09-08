@@ -7,8 +7,6 @@ import { Equipe } from "src/app/models/equipe.model";
 import { Membro } from "src/app/models/membro.model";
 import { Projeto } from "src/app/models/projeto.model";
 import { Tarefa } from "src/app/models/tarefa.model";
-
-import { HttpClient } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
