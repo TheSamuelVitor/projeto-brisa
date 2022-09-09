@@ -1,11 +1,10 @@
 import { ActivatedRoute } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
-import { DeleteWarningComponent } from './delete-warning/delete-warning.component';
+import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
 import { MatDialog } from "@angular/material/dialog";
 import { EquipecomInfo } from "src/app/models/equipe.model";
 import { Membro } from "src/app/models/membro.model";
 import { Projeto } from "src/app/models/projeto.model";
-import { AvisoService } from "src/app/services/aviso.service";
 import { CreateEquipesService } from "src/app/services/equipes.service";
 
 @Component({
@@ -26,7 +25,6 @@ export class PaginaEquipeComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private equipeService: CreateEquipesService,
-    private aviso: AvisoService,
     private dialog: MatDialog
   ) {}
 
@@ -35,7 +33,7 @@ export class PaginaEquipeComponent implements OnInit {
     this.equipeService.getById({ id: `${id}` }).subscribe((equipe) => {
       this.equipe = equipe;
       this.membros = this.equipe.membros;
-      this.projetos = this.equipe.projetos
+      this.projetos = this.equipe.projetos;
     });
   }
 
@@ -52,4 +50,7 @@ export class PaginaEquipeComponent implements OnInit {
     });
   }
 
+  goBack(): void {
+    history.back();
+  }
 }

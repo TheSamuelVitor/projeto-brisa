@@ -1,104 +1,104 @@
 .arrow {
-    position: relative;
-    top: 10px;
-    left: 20px;
+  position: relative;
+  top: 10px;
+  left: 20px;
 }
 
 .arrow:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .geral {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 20px;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 20px;
+  height: 100%;
 }
 
 .title-view {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .dados {
-    width: 30%;
-    align-items: center;
-    min-width: 30rem;
-    padding: 10px;
+  width: 30%;
+  align-items: center;
+  min-width: 30rem;
+  padding: 10px;
 }
 
 .acoes {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .acoes button{
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-    width: 10rem;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  width: 10rem;
 }
 
 .imagem {
-    text-align: center;
-    width: 15rem;
-    height: 15rem;
-    border: 1px solid black;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  width: 15rem;
+  height: 15rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
 .imagem span {
-    font-size: 8rem;
+  font-size: 8rem;
 }
 
 .info { 
-    width: 60%;
-    min-width: 30rem;
+  width: 60%;
+  min-width: 30rem;
 }
 
 .quantidades {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start ;
-    flex-wrap: nowrap;
-    margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start ;
+  flex-wrap: nowrap;
+  margin: 20px;
 }
 
 .quantidade {
-    padding: 20px;
-    margin-left: 2.5rem;
-    width: 10rem;
-    text-align: center;
-    margin-bottom: 20px;
-    height: 4rem;
+  padding: 20px;
+  margin-left: 2.5rem;
+  width: 10rem;
+  text-align: center;
+  margin-bottom: 20px;
+  height: 4rem;
 }
 
 div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .card {
-    margin-top: 10px;
-    width: 60%;
-    min-width: 35rem;
-    box-sizing: content-box;
+  margin-top: 10px;
+  width: 60%;
+  min-width: 35rem;
+  box-sizing: content-box;
 }
 
 .subtitle {
-    font-size: 30px;
-    font-weight: bold;
-    margin-left: 2.5rem;
-    margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 2.5rem;
+  margin-top: 20px;
 }
 
 .card_projeto {
-    text-align: left;
+  text-align: left;
 }

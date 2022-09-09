@@ -1,77 +1,81 @@
-<i class="material-icons arrow" routerLink="../..">
-    arrow_back
-</i>
+<i class="material-icons arrow" (click)="goBack()"> arrow_back </i>
 
 <div class="geral">
-    <div class="dados">
-        
-        <div class="imagem">
-            <span>{{ equipe.nome_equipe[0] }}</span>
-        </div>
-        
-        <h1 class="title-view"> {{ equipe.nome_equipe }}</h1>
-
-        <div class="acoes">
-            <button mat-raised-button class="editar" routerLink="/equipes/update/{{ equipe.id_equipe }}">
-                Editar Equipe
-            </button>
-            <button mat-raised-button class="deletar" (click)="openDialog('0ms','0ms', equipe.id_equipe)">
-                Deletar Equipe
-            </button>
-        </div>
-    
+  <div class="dados">
+    <div class="imagem">
+      <span>{{ equipe.nome_equipe[0] }}</span>
     </div>
-    
-    <div class="info">
 
-        <div class="quantidades">
-            <mat-card class="quantidade">
-                <mat-card-title>
-                    {{ membros.length }}
-                </mat-card-title>
-                <mat-card-subtitle>
-                    Membro(s)<br> Cadastrado(s)
-                </mat-card-subtitle>
-            </mat-card>
-            <mat-card class="quantidade">
-                <mat-card-title>
-                    {{ projetos.length }}
-                </mat-card-title>
-                Projeto(s)<br> Cadastrado(s)
-                <mat-card-subtitle>
-                </mat-card-subtitle>
-            </mat-card>
-        </div>
+    <h1 class="title-view">{{ equipe.nome_equipe }}</h1>
 
-        <span class="subtitle">Membros</span>
-        <ul class="membro">
-            <li *ngFor="let membro of membros">
-                <mat-card class="card">
-                    <mat-card-title>
-                        <span class="membro_nome">{{ membro.nome_membro }}</span>
-                    </mat-card-title>
-                    <mat-card-subtitle>
-                        <span class="membro_funcao">{{ membro.funcao }}</span>
-                    </mat-card-subtitle>
-                </mat-card>
-            </li>
-        </ul>
-        <div *ngIf="membros.length == 0">
-            Não há nenhum membro relacionado a esta equipe
-        </div>
-    
-        <span class="subtitle">Projetos</span>
-        <ul class="projeto">
-            <li *ngFor="let projeto of projetos">
-                <mat-card class="card card_projeto">
-                    <mat-card-title>
-                        <span class="projeto_nome">{{ projeto.nome_projeto }}</span>
-                    </mat-card-title>
-                </mat-card>
-            </li>
-        </ul>
-        <div *ngIf="projetos.length == 0">
-            Não há nenhum projeto relacionado a esta equipe
-        </div>
+    <div class="acoes">
+      <button
+        mat-raised-button
+        class="editar"
+        routerLink="/equipes/update/{{ equipe.id_equipe }}"
+      >
+        Editar Equipe
+      </button>
+      <button
+        mat-raised-button
+        class="deletar"
+        (click)="openDialog('0ms', '0ms', equipe.id_equipe)"
+      >
+        Deletar Equipe
+      </button>
     </div>
+  </div>
+
+  <div class="info">
+    <div class="quantidades">
+      <mat-card class="quantidade">
+        <mat-card-title>
+          {{ membros.length }}
+        </mat-card-title>
+        <mat-card-subtitle>
+          Membro(s)<br />
+          Cadastrado(s)
+        </mat-card-subtitle>
+      </mat-card>
+      <mat-card class="quantidade">
+        <mat-card-title>
+          {{ projetos.length }}
+        </mat-card-title>
+        Projeto(s)<br />
+        Cadastrado(s)
+        <mat-card-subtitle> </mat-card-subtitle>
+      </mat-card>
+    </div>
+
+    <span class="subtitle">Membros</span>
+    <ul class="membro">
+      <li *ngFor="let membro of membros" routerLink="/membros/dados/{{ this.membro.id_membro }}">
+        <mat-card class="card">
+          <mat-card-title>
+            <span class="membro_nome">{{ membro.nome_membro }}</span>
+          </mat-card-title>
+          <mat-card-subtitle>
+            <span class="membro_funcao">{{ membro.funcao }}</span>
+          </mat-card-subtitle>
+        </mat-card>
+      </li>
+    </ul>
+    <div *ngIf="membros.length == 0">
+      Não há nenhum membro relacionado a esta equipe
+    </div>
+
+    <span class="subtitle">Projetos</span>
+    <ul class="projeto">
+      <li *ngFor="let projeto of projetos">
+        <mat-card class="card card_projeto">
+          <mat-card-title>
+            <span class="projeto_nome">{{ projeto.nome_projeto }}</span>
+          </mat-card-title>
+        </mat-card>
+      </li>
+    </ul>
+    <div *ngIf="projetos.length == 0">
+      Não há nenhum projeto relacionado a esta equipe
+    </div>
+  </div>
 </div>

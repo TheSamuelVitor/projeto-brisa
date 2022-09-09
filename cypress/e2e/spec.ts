@@ -1,5 +1,3 @@
-import * as cypress from "cypress";
-
 // const url = "https://projeto-brisa-rouge.vercel.app/";
 const url = "localhost:4200/";
 
