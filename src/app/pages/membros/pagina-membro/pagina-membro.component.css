@@ -23,6 +23,10 @@
   flex-direction: column;
 } 
 
+.dados * {
+  margin-top: 10px;
+}
+
 .imagem {
   display: flex;
   text-align: center;
@@ -46,6 +50,14 @@
   margin-top: 20px;
 }
 
+.equipe {
+  font-size: 1.5rem;
+}
+
+.equipe:hover {
+  cursor: pointer;
+}
+
 .acoes button{
   display: flex;
   justify-content: center;
@@ -58,6 +70,7 @@ li {
 }
 
 .tarefas {
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: left;

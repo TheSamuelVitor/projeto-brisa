@@ -45,7 +45,7 @@ import { MembroComponent } from "./pages/membros/membro/membro.component";
 import { CreateMembrosComponent } from "./pages/membros/create-membros/create-membros.component";
 import { ReadMembrosComponent } from "./pages/membros/read-membros/read-membros.component";
 import { UpdateMembroComponent } from "./pages/membros/update-membro/update-membro.component";
-import { DeleteWarningComponentMembros } from "./pages/membros/read-membros/delete-warning/delete-warning.component";
+import { DeleteWarningComponentMembros } from "./pages/membros/pagina-membro/delete-warning/delete-warning.component";
 
 import { ProjetosComponent } from "./pages/projetos/projetos/projetos.component";
 import { CreateProjetosComponent } from "./pages/projetos/create-projetos/create-projetos.component";

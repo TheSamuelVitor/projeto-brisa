@@ -28,7 +28,7 @@ export class DeleteWarningComponentMembros {
   deletaMembro(id_membro: any) {
     this.http.delete(`${this.url}${id_membro}`).subscribe(() => {
       this.Aviso.showMsg({
-        msg: "Membro deletado com sucesso\nFavor recarregar a pagina",
+        msg: "Membro deletado com sucesso",
       });
     });
     this.route.navigate(["membros"]);

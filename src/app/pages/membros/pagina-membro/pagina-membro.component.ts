@@ -1,9 +1,10 @@
-import { AvisoService } from 'src/app/services/aviso.service';
+import { MatDialog } from "@angular/material/dialog";
 import { Tarefa } from "./../../../models/tarefa.model";
 import { CreateMembrosService } from "src/app/services/membros.service";
 import { MembrocomInfo } from "./../../../models/membro.model";
 import { ActivatedRoute } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
+import { DeleteWarningComponentMembros } from "./delete-warning/delete-warning.component";
 
 @Component({
   selector: "app-pagina-membro",
@@ -24,25 +25,33 @@ export class PaginaMembroComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private aviso: AvisoService,
+    private dialog: MatDialog,
     private membroService: CreateMembrosService
   ) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get("id");
     this.membroService.getById({ id: `${id}` }).subscribe((res) => {
-      this.membro.nome_membro = res.nome_membro
-      this.membro.id_membro = res.id_membro
-      this.membro.id_equipe = res.id_equipe
-      this.membro.nome_equipe = res.nome_equipe
-      this.membro.funcao = res.funcao
-      this.tarefas = res.tarefas
+      this.membro.nome_membro = res.nome_membro;
+      this.membro.id_membro = res.id_membro;
+      this.membro.id_equipe = res.id_equipe;
+      this.membro.nome_equipe = res.nome_equipe;
+      this.membro.funcao = res.funcao;
+      this.tarefas = res.tarefas;
     });
   }
 
-
-  deletaMembro() {
-    this.aviso.showMsg({ msg: "Função em construcao"})
+  openDialog(
+    enterAnimationDuration: string,
+    exitAnimationDuration: string,
+    id_membro: any
+  ): void {
+    this.dialog.open(DeleteWarningComponentMembros, {
+      data: id_membro,
+      width: "250px",
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
   }
 
   goBack() {

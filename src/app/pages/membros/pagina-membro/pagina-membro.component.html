@@ -9,7 +9,7 @@
     <h1 class="title-view">{{ membro.nome_membro }}</h1>
 
     <span class="equipe" routerLink="/equipes/dados/{{ membro.id_equipe }}">
-      {{ membro.nome_equipe }}  
+      {{ membro.nome_equipe }}
     </span>
 
     <div class="acoes">
@@ -20,7 +20,7 @@
       >
         Editar Membro
       </button>
-      <button mat-raised-button class="deletar" (click)="deletaMembro()">
+      <button mat-raised-button class="deletar" (click)="openDialog('0ms', '0ms', membro.id_membro)">
         Deletar Membro
       </button>
     </div>
@@ -41,7 +41,10 @@
       </li>
     </ul>
     <div *ngIf="tarefas.length == 0" class="vazio">
-      <img src="./../../../../assets/images/warning_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+      <img
+        src="./../../../../assets/images/info_FILL0_wght400_GRAD0_opsz48.svg"
+        alt=""
+      />
       Não há nenhuma tarefa atribuída a esta pesssoa
     </div>
   </div>

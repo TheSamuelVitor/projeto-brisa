@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { Equipe } from "src/app/models/equipe.model";
 import { Membro } from "src/app/models/membro.model";
 import { CreateMembrosService } from "src/app/services/membros.service";
-import { DeleteWarningComponentMembros } from "./delete-warning/delete-warning.component";
+import { DeleteWarningComponentMembros } from "../pagina-membro/delete-warning/delete-warning.component";
 
 @Component({
   selector: "app-read-membros",
