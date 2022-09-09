@@ -1,3 +1,4 @@
+import { MembrocomInfo } from './../models/membro.model';
 import { environment } from "src/environments/environment.prod";
 import { Membro } from "../models/membro.model";
 
@@ -21,9 +22,9 @@ export class CreateMembrosService {
     return this.http.get<Membro[]>(this.membroUrl);
   }
 
-  getById({ id }: { id: string }): Observable<Membro> {
+  getById({ id }: { id: string }): Observable<MembrocomInfo> {
     const url = `${this.membroUrl}${id}`;
-    return this.http.get<Membro>(url);
+    return this.http.get<MembrocomInfo>(url);
   }
 
   update({ membro }: { membro: Membro }): Observable<Membro> {

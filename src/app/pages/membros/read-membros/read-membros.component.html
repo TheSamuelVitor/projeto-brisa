@@ -1,15 +1,11 @@
 <ul>
   <li *ngFor="let membro of membros">
-    <div>
+    <div routerLink="/membros/dados/{{membro.id_membro}}">
       <div>
         <span class="nome">{{ membro.nome_membro }}</span>
         <span class="funcao">{{ membro.funcao }}</span>
-        <span class="equipe">
-          <i class="material-icons icon-components"> people </i>
-          {{ membro.nome_equipe }}
-        </span>
       </div>
-      <div>
+      <!-- <div>
         <button
           matTooltip="Deletar membro"
           (click)="openDialog('0ms', '0ms', membro.id_membro)"
@@ -17,14 +13,7 @@
         >
           <i class="material-icons"> delete </i>
         </button>
-        <button
-          matTooltip="Editar membro"
-          class="editar"
-          routerLink="/membros/update/{{ membro.id_membro }}"
-        >
-          <i class="material-icons"> create </i>
-        </button>
-      </div>
+      </div> -->
     </div>
   </li>
 </ul>

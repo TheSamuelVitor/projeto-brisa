@@ -21,6 +21,7 @@ import { ProjetosComponent } from "src/app/pages/projetos/projetos/projetos.comp
 import { TarefasComponent } from "src/app/pages/tarefas/tarefas/tarefas.component";
 import { CreateTarefasComponent } from "./pages/tarefas/create-tarefas/create-tarefas.component";
 import { UpdateTarefaComponent } from "./pages/tarefas/update-tarefa/update-tarefa.component";
+import { PaginaMembroComponent } from "./pages/membros/pagina-membro/pagina-membro.component";
 
 const routes: Routes = [
   {
@@ -65,6 +66,11 @@ const routes: Routes = [
   {
     path: "membros/update/:id",
     component: UpdateMembroComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "membros/dados/:id",
+    component: PaginaMembroComponent,
     canActivate: [AuthGuard],
   },
   {

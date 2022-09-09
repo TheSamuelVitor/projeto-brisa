@@ -1,0 +1,48 @@
+<i class="material-icons arrow" (click)="goBack()"> arrow_back </i>
+
+<div class="geral">
+  <div class="dados">
+    <div class="imagem">
+      <span>{{ membro.nome_membro[0] }}</span>
+    </div>
+
+    <h1 class="title-view">{{ membro.nome_membro }}</h1>
+
+    <span class="equipe" routerLink="/equipes/dados/{{ membro.id_equipe }}">
+      {{ membro.nome_equipe }}  
+    </span>
+
+    <div class="acoes">
+      <button
+        mat-raised-button
+        class="editar"
+        routerLink="/membros/update/{{ membro.id_membro }}"
+      >
+        Editar Membro
+      </button>
+      <button mat-raised-button class="deletar" (click)="deletaMembro()">
+        Deletar Membro
+      </button>
+    </div>
+  </div>
+
+  <div class="tarefas">
+    <span class="subtitle"> Tarefas </span>
+    <ul class="tarefas" *ngIf="tarefas.length > 0">
+      <li *ngFor="let tarefa of tarefas" class="card">
+        <mat-card class="tarefa">
+          <mat-card-title>
+            {{ tarefa.nome_tarefa }}
+          </mat-card-title>
+          <mat-card-subtitle>
+            {{ tarefa.descricao }}
+          </mat-card-subtitle>
+        </mat-card>
+      </li>
+    </ul>
+    <div *ngIf="tarefas.length == 0" class="vazio">
+      <img src="./../../../../assets/images/warning_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+      Não há nenhuma tarefa atribuída a esta pesssoa
+    </div>
+  </div>
+</div>
