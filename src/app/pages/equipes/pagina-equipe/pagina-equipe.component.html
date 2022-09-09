@@ -49,7 +49,10 @@
 
     <span class="subtitle">Membros</span>
     <ul class="membro">
-      <li *ngFor="let membro of membros" routerLink="/membros/dados/{{ this.membro.id_membro }}">
+      <li
+        *ngFor="let membro of this.membros"
+        routerLink="/membros/dados/{{ this.membro.id_membro }}"
+      >
         <mat-card class="card">
           <mat-card-title>
             <span class="membro_nome">{{ membro.nome_membro }}</span>
@@ -60,9 +63,6 @@
         </mat-card>
       </li>
     </ul>
-    <div *ngIf="membros.length == 0">
-      Não há nenhum membro relacionado a esta equipe
-    </div>
 
     <span class="subtitle">Projetos</span>
     <ul class="projeto">

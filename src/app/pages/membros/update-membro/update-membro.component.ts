@@ -47,7 +47,7 @@ export class UpdateMembroComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(["membros"]);
+    history.back();
   }
 
   onSubmit(): void {

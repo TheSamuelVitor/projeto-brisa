@@ -45,6 +45,7 @@ import { MembroComponent } from "./pages/membros/membro/membro.component";
 import { CreateMembrosComponent } from "./pages/membros/create-membros/create-membros.component";
 import { ReadMembrosComponent } from "./pages/membros/read-membros/read-membros.component";
 import { UpdateMembroComponent } from "./pages/membros/update-membro/update-membro.component";
+import { PaginaMembroComponent } from "./pages/membros/pagina-membro/pagina-membro.component";
 import { DeleteWarningComponentMembros } from "./pages/membros/pagina-membro/delete-warning/delete-warning.component";
 
 import { ProjetosComponent } from "./pages/projetos/projetos/projetos.component";
@@ -58,7 +59,6 @@ import { CreateTarefasComponent } from "./pages/tarefas/create-tarefas/create-ta
 import { DeleteWarningComponentTarefas } from "./pages/tarefas/read-tarefas/delete-warning/delete-warning.component";
 import { ReadTarefasComponent } from "./pages/tarefas/read-tarefas/read-tarefas.component";
 import { UpdateTarefaComponent } from "./pages/tarefas/update-tarefa/update-tarefa.component";
-import { PaginaMembroComponent } from './pages/membros/pagina-membro/pagina-membro.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +78,7 @@ import { PaginaMembroComponent } from './pages/membros/pagina-membro/pagina-memb
     MembroComponent,
     CreateMembrosComponent,
     ReadMembrosComponent,
+    PaginaMembroComponent,
     UpdateMembroComponent,
     DeleteWarningComponentMembros,
 
@@ -92,7 +93,6 @@ import { PaginaMembroComponent } from './pages/membros/pagina-membro/pagina-memb
     ReadTarefasComponent,
     UpdateTarefaComponent,
     DeleteWarningComponentTarefas,
-    PaginaMembroComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -1,11 +1,11 @@
-import { ActivatedRoute } from "@angular/router";
-import { Component, OnInit } from "@angular/core";
 import { DeleteWarningComponent } from "./delete-warning/delete-warning.component";
-import { MatDialog } from "@angular/material/dialog";
-import { EquipecomInfo } from "src/app/models/equipe.model";
-import { Membro } from "src/app/models/membro.model";
-import { Projeto } from "src/app/models/projeto.model";
 import { CreateEquipesService } from "src/app/services/equipes.service";
+import { EquipecomInfo } from "src/app/models/equipe.model";
+import { Projeto } from "src/app/models/projeto.model";
+import { Membro } from "src/app/models/membro.model";
+import { MatDialog } from "@angular/material/dialog";
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-pagina-equipe",

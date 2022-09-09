@@ -42,7 +42,7 @@ export class UpdateEquipeComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(["/equipes"]);
+    history.back();
   }
 
   limpar(): void {
