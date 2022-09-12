@@ -1,0 +1,108 @@
+.arrow {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.title-view {
+  height: auto;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.geral {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.dados {
+  width: 30%;
+  min-width: 30rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+} 
+
+.dados * {
+  margin-top: 10px;
+}
+
+.imagem {
+  display: flex;
+  text-align: center;
+  width: 15rem;
+  height: 15rem;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-view {
+  margin: 0;
+}
+
+.imagem span {
+  font-size: 8rem;
+}
+
+.acoes {
+  margin-top: 20px;
+}
+
+.equipe {
+  font-size: 1.5rem;
+}
+
+.equipe:hover {
+  cursor: pointer;
+}
+
+.acoes button{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  width: 10rem;
+}
+
+li {
+  list-style: none;
+}
+
+.tarefas {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 2.5rem;
+  margin-top: 20px;
+}
+
+.card {
+  text-align: left;
+  margin-top: 10px;
+  width: 60%;
+  min-width: 35rem;
+  box-sizing: content-box;
+}
+
+.vazio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.vazio img {
+  width: 5rem;
+}

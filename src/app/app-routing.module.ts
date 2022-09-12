@@ -22,6 +22,7 @@ import { TarefasComponent } from "src/app/pages/tarefas/tarefas/tarefas.componen
 import { CreateTarefasComponent } from "./pages/tarefas/create-tarefas/create-tarefas.component";
 import { UpdateTarefaComponent } from "./pages/tarefas/update-tarefa/update-tarefa.component";
 import { PaginaMembroComponent } from "./pages/membros/pagina-membro/pagina-membro.component";
+import { PaginaProjetoComponent } from "./pages/projetos/pagina-projeto/pagina-projeto.component";
 
 const routes: Routes = [
   {
@@ -86,6 +87,11 @@ const routes: Routes = [
   {
     path: "projetos/update/:id",
     component: UpdateProjetoComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "projetos/dados/:id",
+    component: PaginaProjetoComponent,
     canActivate: [AuthGuard],
   },
   {

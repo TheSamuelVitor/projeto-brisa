@@ -1,0 +1,52 @@
+<i class="material-icons arrow" (click)="goBack()"> arrow_back </i>
+
+<div class="geral">
+  <div class="dados">
+    <div class="imagem">
+      <span>{{ projeto.nome_projeto[0] }}</span>
+    </div>
+
+    <h1 class="title-view">{{ projeto.nome_projeto }}</h1>
+
+    <span class="equipe" routerLink="/equipes/dados/{{ projeto.id_equipe }}">
+      {{ projeto.nome_equipe }}
+    </span>
+
+    <div class="acoes">
+      <button
+        mat-raised-button
+        class="editar"
+        routerLink="/projetos/update/{{ projeto.id_projeto }}"
+      >
+        Editar Projeto
+      </button>
+      <button
+        mat-raised-button
+        class="deletar"
+        (click)="openDialog('0ms', '0ms', projeto.id_projeto)"
+        >
+        Deletar Projeto
+      </button>
+    </div>
+  </div>
+
+  <div class="tarefas">
+    <span class="subtitle"> Tarefas </span>
+    <ul class="tarefas" *ngIf="this.tarefas.length != 0">
+      <li *ngFor="let tarefa of this.tarefas" class="card">
+        <mat-card class="tarefa">
+          <mat-card-title>
+            {{ tarefa.nome_tarefa }}
+          </mat-card-title>
+          <mat-card-subtitle>
+            {{ tarefa.descricao }}
+          </mat-card-subtitle>
+        </mat-card>
+      </li>
+    </ul>
+    <div *ngIf="this.tarefas.length == 0">
+      <img src="../../../../assets/images/info_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+      Não há nenhuma tarefa relacionada a este projeto
+    </div>
+  </div>
+</div>

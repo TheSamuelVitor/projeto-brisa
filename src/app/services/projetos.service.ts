@@ -1,3 +1,4 @@
+import { ProjetoComInfo } from './../models/projeto.model';
 import { environment } from "src/environments/environment.prod";
 import { Projeto } from "../models/projeto.model";
 
@@ -21,9 +22,9 @@ export class CreateProjetosService {
     return this.http.get<Projeto[]>(this.projetoUrl);
   }
 
-  getById(id: string): Observable<Projeto> {
+  getById(id: string): Observable<ProjetoComInfo> {
     const url = `${this.projetoUrl}${id}`;
-    return this.http.get<Projeto>(url);
+    return this.http.get<ProjetoComInfo>(url);
   }
 
   update(projeto: Projeto): Observable<Projeto> {

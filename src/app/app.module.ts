@@ -52,13 +52,14 @@ import { ProjetosComponent } from "./pages/projetos/projetos/projetos.component"
 import { CreateProjetosComponent } from "./pages/projetos/create-projetos/create-projetos.component";
 import { ReadProjetosComponent } from "./pages/projetos/read-projetos/read-projetos.component";
 import { UpdateProjetoComponent } from "./pages/projetos/update-projeto/update-projeto.component";
-import { DeleteWarningComponentProjeto } from "./pages/projetos/read-projetos/delete-warning/delete-warning.component";
+import { DeleteWarningComponentProjeto } from "./pages/projetos/pagina-projeto/delete-warning/delete-warning.component";
 
 import { TarefasComponent } from "./pages/tarefas/tarefas/tarefas.component";
 import { CreateTarefasComponent } from "./pages/tarefas/create-tarefas/create-tarefas.component";
 import { DeleteWarningComponentTarefas } from "./pages/tarefas/read-tarefas/delete-warning/delete-warning.component";
 import { ReadTarefasComponent } from "./pages/tarefas/read-tarefas/read-tarefas.component";
 import { UpdateTarefaComponent } from "./pages/tarefas/update-tarefa/update-tarefa.component";
+import { PaginaProjetoComponent } from './pages/projetos/pagina-projeto/pagina-projeto.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +94,7 @@ import { UpdateTarefaComponent } from "./pages/tarefas/update-tarefa/update-tare
     ReadTarefasComponent,
     UpdateTarefaComponent,
     DeleteWarningComponentTarefas,
+    PaginaProjetoComponent,
   ],
   imports: [
     AppRoutingModule,

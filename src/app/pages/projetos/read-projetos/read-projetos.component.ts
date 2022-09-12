@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { Projeto } from "src/app/models/projeto.model";
 import { AvisoService } from "src/app/services/aviso.service";
 import { CreateProjetosService } from "src/app/services/projetos.service";
-import { DeleteWarningComponentProjeto } from "./delete-warning/delete-warning.component";
+import { DeleteWarningComponentProjeto } from "../pagina-projeto/delete-warning/delete-warning.component";
 
 @Component({
   selector: "app-read-projetos",
@@ -27,18 +27,5 @@ export class ReadProjetosComponent implements OnInit {
 
   atualizaProjeto() {
     this.message.showMsg({ msg: "Função em construção" });
-  }
-
-  openDialog(
-    enterAnimationDuration: string,
-    exitAnimationDuration: string,
-    id_projeto: any
-  ): void {
-    this.dialog.open(DeleteWarningComponentProjeto, {
-      data: id_projeto,
-      width: "250px",
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
   }
 }
