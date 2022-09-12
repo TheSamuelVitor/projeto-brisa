@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 import { HttpClient } from "@angular/common/http";
 import { DialogRef } from "@angular/cdk/dialog";
@@ -16,7 +17,8 @@ export class DeleteWarningComponentProjeto {
     private dialog: DialogRef,
     @Inject(MAT_DIALOG_DATA) public data: { id_projeto: number },
     private http: HttpClient,
-    private message: AvisoService
+    private message: AvisoService,
+    private router: Router
   ) {}
 
   fechaDialog() {
@@ -30,5 +32,6 @@ export class DeleteWarningComponentProjeto {
       });
     });
     this.fechaDialog();
+    this.router.navigate(['/projetos']);
   }
 }

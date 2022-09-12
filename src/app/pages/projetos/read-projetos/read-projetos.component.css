@@ -19,6 +19,7 @@ li {
   padding: 30px;
   width: 35%;
   box-sizing: content-box;
+  cursor: pointer;
 }
 
 li span.nome {

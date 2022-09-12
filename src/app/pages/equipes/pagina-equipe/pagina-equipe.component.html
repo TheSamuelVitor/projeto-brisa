@@ -66,7 +66,7 @@
 
     <span class="subtitle">Projetos</span>
     <ul class="projeto">
-      <li *ngFor="let projeto of projetos">
+      <li *ngFor="let projeto of projetos" routerLink="../../../projetos/dados/{{ this.projeto.id_projeto }}">
         <mat-card class="card card_projeto">
           <mat-card-title>
             <span class="projeto_nome">{{ projeto.nome_projeto }}</span>
