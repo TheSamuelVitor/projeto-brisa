@@ -13,7 +13,7 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private authService: AuthService) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
-    const token = this.authService.serieToken();
+    const token = window.localStorage.getItem('token');
     let request: HttpRequest<any> = req;
 
     if (token) {

@@ -12,8 +12,6 @@ export class AuthService {
   private usuarioAutenticado: boolean = false;
   private tokenSerie: string = "";
 
-  mostrarMenuEmmiter = new EventEmitter<boolean>();
-
   constructor(private router: Router, private http: HttpClient) {}
 
   loginUrl = `${environment.apiUrl}login`;
@@ -23,7 +21,6 @@ export class AuthService {
       (data) => {
         this.usuarioAutenticado = true;
         this.router.navigate([""]);
-        this.mostrarMenuEmmiter.emit(true);
         window.localStorage.setItem("token", data.token);
         this.tokenSerie = data.token;
       },

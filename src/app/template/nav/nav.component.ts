@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { AuthService } from "src/app/services/auth.service";
+import { AuthGuard } from "src/app/guards/auth-guard.guard";
 
 @Component({
   selector: "app-nav",
@@ -9,15 +9,18 @@ import { AuthService } from "src/app/services/auth.service";
 export class NavComponent implements OnInit {
   mostraMenu: boolean = false;
 
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authGuard: AuthGuard
+  ) {}
 
   ngOnInit(): void {
-    this.authService.mostrarMenuEmmiter.subscribe(
-      (mostrar) => (this.mostraMenu = mostrar)
-    );
+    this.authGuard.mostrarMenuEmmiter.subscribe(
+      (mostrar) => this.mostraMenu = mostrar
+    )
   }
 
   logout(): void {
+    window.localStorage.setItem('token', '')
     window.document.location.reload();
   }
 }
