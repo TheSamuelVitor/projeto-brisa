@@ -26,11 +26,11 @@ import { PaginaProjetoComponent } from "./pages/projetos/pagina-projeto/pagina-p
 
 const routes: Routes = [
   {
-    path: "login",
+    path: "",
     component: LoginComponent,
   },
   {
-    path: "",
+    path: "dashboard",
     component: DashboardComponent,
     canActivate: [AuthGuard],
   },

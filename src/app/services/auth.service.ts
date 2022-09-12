@@ -20,7 +20,7 @@ export class AuthService {
     this.http.post<Token>(this.loginUrl, usuario).subscribe(
       (data) => {
         this.usuarioAutenticado = true;
-        this.router.navigate([""]);
+        this.router.navigate(["dashboard"]);
         window.localStorage.setItem("token", data.token);
         this.tokenSerie = data.token;
       },
