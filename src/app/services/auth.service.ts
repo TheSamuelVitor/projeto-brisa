@@ -1,7 +1,6 @@
 import { environment } from "src/environments/environment.prod";
 import { Token, User } from "../models/user.model";
 import { HttpClient } from "@angular/common/http";
-import { EventEmitter } from "@angular/core";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 

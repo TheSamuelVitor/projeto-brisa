@@ -17,8 +17,6 @@ export class AuthGuard implements CanActivate {
 
   mostrarMenuEmmiter = new EventEmitter<boolean>();
   canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
   ): Observable<boolean> | boolean {
     const token = window.localStorage.getItem("token");
     if (token != "") {
