@@ -27,7 +27,15 @@
   </div>
 
   <div class="tarefas">
-    <span class="subtitle"> Tarefas </span>
+    <div class="titulo">
+      <span class="subtitle">Tarefas</span>
+      <button mat-raised-button class="adicionar" routerLink="/tarefas/create">
+        <img
+          src="../../../assets/images/add_FILL0_wght400_GRAD0_opsz48.svg"
+          alt=""
+        />
+      </button>
+    </div>
     <ul class="tarefas" *ngIf="tarefas.length > 0">
       <li *ngFor="let tarefa of tarefas" class="card">
         <mat-card class="tarefa">

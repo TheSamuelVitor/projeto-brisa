@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from "@angular/core";
 import { AuthGuard } from "src/app/guards/auth-guard.guard";
 
@@ -10,7 +11,8 @@ export class NavComponent implements OnInit {
   mostraMenu: boolean = false;
 
   constructor(
-    private authGuard: AuthGuard
+    private authGuard: AuthGuard,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -21,6 +23,6 @@ export class NavComponent implements OnInit {
 
   logout(): void {
     window.localStorage.setItem('token', '')
-    window.document.location.reload();
+    this.router.navigate([''])
   }
 }

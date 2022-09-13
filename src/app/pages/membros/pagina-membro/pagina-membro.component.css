@@ -102,3 +102,19 @@ li {
 .vazio img {
   width: 5rem;
 }
+
+.adicionar {
+  align-items: center;
+  background-color: #1e2d69;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  width: 1rem;
+}
+
+.titulo {
+  width: 35rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

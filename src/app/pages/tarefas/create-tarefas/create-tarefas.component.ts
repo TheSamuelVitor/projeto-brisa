@@ -50,7 +50,7 @@ export class CreateTarefasComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(["tarefas"]);
+    window.history.back();
   }
 
   onSubmit(): void {

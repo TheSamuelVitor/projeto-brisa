@@ -30,10 +30,10 @@ export class PaginaEquipeComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get("id");
-    this.equipeService.getById({ id: `${id}` }).subscribe((equipe) => {
-      this.equipe = equipe;
-      this.membros = this.equipe.membros;
-      this.projetos = this.equipe.projetos;
+    this.equipeService.getById({ id: `${id}` }).subscribe((resposta) => {
+      this.equipe = resposta;
+      this.membros = resposta.membros;
+      this.projetos = resposta.projetos;
     });
   }
 

@@ -15,8 +15,7 @@ export class UpdateEquipeComponent implements OnInit {
     private equipeService: CreateEquipesService,
     private route: ActivatedRoute,
     private aviso: AvisoService,
-    private form: FormBuilder,
-    private router: Router
+    private form: FormBuilder
   ) {}
 
   ngOnInit(): void {

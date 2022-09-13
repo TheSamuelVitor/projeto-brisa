@@ -106,3 +106,18 @@ li:hover {
 .card_projeto {
   text-align: left;
 }
+
+.adicionar {
+  align-items: center;
+  background-color: #1e2d69;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  width: 1rem;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

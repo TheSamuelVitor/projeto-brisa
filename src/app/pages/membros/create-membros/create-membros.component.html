@@ -44,7 +44,12 @@
     </mat-error>
   </mat-form-field>
 
-  <button mat-raised-button class="salvar" [disabled]="!formulario.valid">
+  <button
+    mat-raised-button
+    class="salvar"
+    [disabled]="!formulario.valid"
+    type="submit"
+  >
     Salvar
   </button>
   <button mat-raised-button class="cancelar" (click)="goBack()">

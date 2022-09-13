@@ -32,8 +32,7 @@ export class CreateMembrosComponent implements OnInit {
     private createMembroService: CreateMembrosService,
     private equipesService: CreateEquipesService,
     private formBuilder: FormBuilder,
-    private avisoMsg: AvisoService,
-    private router: Router
+    private avisoMsg: AvisoService
   ) {}
 
   ngOnInit(): void {
@@ -41,7 +40,7 @@ export class CreateMembrosComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(["membros"]);
+    history.back()
   }
 
   onSubmit(): void {
