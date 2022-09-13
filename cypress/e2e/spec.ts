@@ -3,7 +3,7 @@ const url = "localhost:4200/";
 
 describe("pagina principal", () => {
   it("pagina principal", () => {
-    cy.visit(url);
+    cy.visit(url+"login");
     cy.get('input[name="email"]').type("samuel@gmail.com");
     cy.get('input[name="senha"]').type("1234");
     cy.get(".login").click();
@@ -15,7 +15,7 @@ describe("pagina principal", () => {
     cy.get(".add").click();
     cy.get(".cancelar").click();
     
-    cy.contains("Membros").click();
+    cy.contains("Membro").click();
     cy.get(".add").click();
     cy.get(".cancelar").click();
     
