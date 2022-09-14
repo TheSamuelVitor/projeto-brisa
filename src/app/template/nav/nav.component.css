@@ -1,4 +1,4 @@
-.sidenav{
+.sidenav {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -7,16 +7,16 @@
   width: 12rem;
 }
 
-a i{
+a i {
   margin: 2rem 1rem;
 }
 
-.mat-list-item{
+.mat-list-item {
   transition: 0.5s;
 }
 
-.mat-list-item:hover{
-  color: #F56E28;
+.mat-list-item:hover {
+  color: #f56e28;
   height: 3rem;
   transition: 0.5s;
   transform: scale(1.1);
@@ -29,7 +29,7 @@ a i{
 }
 
 a:focus {
-  color: #F56E28;
+  color: #f56e28;
 }
 
 .logout {
@@ -43,4 +43,24 @@ a:focus {
   width: 100px;
   height: 40px;
   border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .sidenav {
+    display: none;
+  }
+
+  button#menu {
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+  }
+
+  span.barra {
+    margin-top: 5px;
+    height: 5px;
+    width: 2.5rem;
+    border-radius: 10px;
+    background-color: #2b2828;
+  }
 }
