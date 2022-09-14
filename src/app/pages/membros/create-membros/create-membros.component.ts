@@ -1,6 +1,5 @@
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { FormBuilder, Validators } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
 import { Observable } from "rxjs";
 import { Equipe } from "src/app/models/equipe.model";
 import { Membro } from "src/app/models/membro.model";

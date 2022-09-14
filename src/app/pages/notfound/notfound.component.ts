@@ -16,7 +16,7 @@ export class NotfoundComponent implements OnInit {
   }
 
   retorna() {
-    this.router.navigate(["dashboard"])
+    this.router.navigate([""])
   }
 
 }

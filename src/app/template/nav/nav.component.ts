@@ -23,6 +23,6 @@ export class NavComponent implements OnInit {
 
   logout(): void {
     window.localStorage.setItem('token', '')
-    this.router.navigate([''])
+    window.location.pathname = "/"
   }
 }

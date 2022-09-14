@@ -128,8 +128,7 @@ const routes: Routes = [
   },
   {
     path: "**",
-    component: NotfoundComponent,
-    canActivate: [AuthGuard],
+    component: NotfoundComponent
   },
 ];
 
