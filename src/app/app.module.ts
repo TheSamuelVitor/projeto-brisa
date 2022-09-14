@@ -61,6 +61,7 @@ import { DeleteWarningComponentTarefas } from "./pages/tarefas/read-tarefas/dele
 import { ReadTarefasComponent } from "./pages/tarefas/read-tarefas/read-tarefas.component";
 import { UpdateTarefaComponent } from "./pages/tarefas/update-tarefa/update-tarefa.component";
 import { ModalTarefaComponent } from './pages/tarefas/modal-tarefa/modal-tarefa.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -97,6 +98,7 @@ import { ModalTarefaComponent } from './pages/tarefas/modal-tarefa/modal-tarefa.
     DeleteWarningComponentTarefas,
     PaginaProjetoComponent,
     ModalTarefaComponent,
+    NotfoundComponent,
   ],
   imports: [
     AppRoutingModule,

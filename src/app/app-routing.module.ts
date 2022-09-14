@@ -1,3 +1,4 @@
+import { NotfoundComponent } from "./pages/notfound/notfound.component";
 import { RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
 
@@ -33,80 +34,101 @@ const routes: Routes = [
     path: "dashboard",
     component: DashboardComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "equipes",
     component: EquipeComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "equipes/dados/:id",
     component: PaginaEquipeComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "equipes/create",
     component: CreateEquipeComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "equipes/update/:id",
     component: UpdateEquipeComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "membros",
     component: MembroComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "membros/create",
     component: CreateMembrosComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "membros/update/:id",
     component: UpdateMembroComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "membros/dados/:id",
     component: PaginaMembroComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "projetos",
     component: ProjetosComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "projetos/create",
     component: CreateProjetosComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "projetos/update/:id",
     component: UpdateProjetoComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "projetos/dados/:id",
     component: PaginaProjetoComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "tarefas",
     component: TarefasComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "tarefas/create",
     component: CreateTarefasComponent,
     canActivate: [AuthGuard],
+    pathMatch: "full",
   },
   {
     path: "tarefas/update/:id",
     component: UpdateTarefaComponent,
+    canActivate: [AuthGuard],
+    pathMatch: "full",
+  },
+  {
+    path: "**",
+    component: NotfoundComponent,
     canActivate: [AuthGuard],
   },
 ];
