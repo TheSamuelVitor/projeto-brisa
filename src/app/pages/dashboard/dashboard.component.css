@@ -23,3 +23,8 @@ a {
   text-align: center;
   width: 20rem;
 }
+
+.grafico {
+  display: block;
+  width: 60%;
+}

@@ -1,5 +1,3 @@
-import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment.prod';
 import { CreateEquipesService } from "src/app/services/equipes.service";
 import { CreateMembrosService } from "src/app/services/membros.service";
 import { CreateProjetosService } from "src/app/services/projetos.service";
@@ -10,7 +8,6 @@ import { Membro } from "src/app/models/membro.model";
 import { Projeto } from "src/app/models/projeto.model";
 import { Tarefa } from "src/app/models/tarefa.model";
 import { Component, OnInit } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: "app-dashboard",
@@ -27,12 +24,10 @@ export class DashboardComponent implements OnInit {
     private equipeService: CreateEquipesService,
     private membroService: CreateMembrosService,
     private projetoService: CreateProjetosService,
-    private tarefaService: CreateTarefasService,
-    private http: HttpClient,
-    private router: Router
+    private tarefaService: CreateTarefasService
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
     this.equipeService.read().subscribe((equipe) => {
       this.equipes = equipe;
     });

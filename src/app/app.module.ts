@@ -53,15 +53,16 @@ import { CreateProjetosComponent } from "./pages/projetos/create-projetos/create
 import { ReadProjetosComponent } from "./pages/projetos/read-projetos/read-projetos.component";
 import { UpdateProjetoComponent } from "./pages/projetos/update-projeto/update-projeto.component";
 import { DeleteWarningComponentProjeto } from "./pages/projetos/pagina-projeto/delete-warning/delete-warning.component";
-import { PaginaProjetoComponent } from './pages/projetos/pagina-projeto/pagina-projeto.component';
+import { PaginaProjetoComponent } from "./pages/projetos/pagina-projeto/pagina-projeto.component";
 
 import { TarefasComponent } from "./pages/tarefas/tarefas/tarefas.component";
 import { CreateTarefasComponent } from "./pages/tarefas/create-tarefas/create-tarefas.component";
 import { DeleteWarningComponentTarefas } from "./pages/tarefas/read-tarefas/delete-warning/delete-warning.component";
 import { ReadTarefasComponent } from "./pages/tarefas/read-tarefas/read-tarefas.component";
 import { UpdateTarefaComponent } from "./pages/tarefas/update-tarefa/update-tarefa.component";
-import { ModalTarefaComponent } from './pages/tarefas/modal-tarefa/modal-tarefa.component';
-import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { ModalTarefaComponent } from "./pages/tarefas/modal-tarefa/modal-tarefa.component";
+import { NotfoundComponent } from "./pages/notfound/notfound.component";
+import { GrapficoComponent } from "./pages/dashboard/grapfico/grapfico.component";
 
 @NgModule({
   declarations: [
@@ -99,6 +100,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     PaginaProjetoComponent,
     ModalTarefaComponent,
     NotfoundComponent,
+    GrapficoComponent,
   ],
   imports: [
     AppRoutingModule,
