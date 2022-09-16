@@ -1,3 +1,4 @@
+import { Equipecomdata } from './../../../models/equipe.model';
 import { MatDialog } from "@angular/material/dialog";
 import { Component, OnInit } from "@angular/core";
 import { Equipe } from "src/app/models/equipe.model";
@@ -10,7 +11,7 @@ import { AuthService } from "src/app/services/auth.service";
   styleUrls: ["./read-equipe.component.css"],
 })
 export class ReadEquipeComponent implements OnInit {
-  equipes: Equipe[] = [];
+  equipes: Equipecomdata[] = [];
 
   constructor(
     private equipeService: CreateEquipesService,

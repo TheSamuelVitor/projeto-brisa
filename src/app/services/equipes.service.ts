@@ -1,3 +1,4 @@
+import { Equipecomdata } from './../models/equipe.model';
 import { environment } from "src/environments/environment.prod";
 import { Equipe, EquipecomInfo } from "../models/equipe.model";
 
@@ -17,8 +18,8 @@ export class CreateEquipesService {
     return this.http.post<Equipe>(this.equipeUrl, equipe);
   }
 
-  read(): Observable<Equipe[]> {
-    return this.http.get<Equipe[]>(this.equipeUrl);
+  read(): Observable<Equipecomdata[]> {
+    return this.http.get<Equipecomdata[]>(this.equipeUrl);
   }
 
   getById({ id }: { id: string }): Observable<EquipecomInfo> {
