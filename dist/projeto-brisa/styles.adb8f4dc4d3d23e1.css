@@ -360,21 +360,20 @@
     .mat-form-field-label {
     transform: translateY(-1.28122em) scale(0.75);
   }
-  
+
   .mat-form-field-appearance-legacy.mat-form-field-can-float
     .mat-form-field-autofill-control:-webkit-autofill
     + .mat-form-field-label-wrapper
     .mat-form-field-label {
     transform: translateY(-1.28121em) scale(0.75);
   }
-  
+
   .mat-form-field-appearance-legacy.mat-form-field-can-float
     .mat-input-server[label]:not(:label-shown)
     + .mat-form-field-label-wrapper
     .mat-form-field-label {
     transform: translateY(-1.2812em) scale(0.75);
   }
-  
 }
 
 .mat-form-field-appearance-fill .mat-form-field-infix {
@@ -1918,7 +1917,6 @@ td.mat-footer-cell {
     > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
     background-color: #3f51b54d;
   }
-  
 }
 
 .mat-datepicker-content {
@@ -2010,7 +2008,6 @@ td.mat-footer-cell {
     > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
     background-color: #ff40814d;
   }
-  
 }
 
 .mat-datepicker-content.mat-warn .mat-calendar-body-in-range:before {
@@ -2095,7 +2092,6 @@ td.mat-footer-cell {
     > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
     background-color: #f443364d;
   }
-  
 }
 
 .mat-datepicker-content-touch {
@@ -2161,7 +2157,6 @@ td.mat-footer-cell {
     .mat-expansion-panel-header:hover {
     background: #fff;
   }
-  
 }
 
 .mat-expansion-panel-header-title {
@@ -2886,7 +2881,6 @@ td.mat-footer-cell {
   .mat-step-header:hover {
     background: none;
   }
-  
 }
 
 .mat-step-header .mat-step-label,
@@ -3521,12 +3515,11 @@ td.mat-footer-cell {
   .mat-toolbar-multiple-rows {
     min-height: 56px;
   }
-  
+
   .mat-toolbar-row,
   .mat-toolbar-single-row {
     height: 56px;
   }
-  
 }
 
 .mat-tooltip {
@@ -3634,4 +3627,3 @@ span.title-view {
   text-align: center;
   top: 25px;
 }
-
