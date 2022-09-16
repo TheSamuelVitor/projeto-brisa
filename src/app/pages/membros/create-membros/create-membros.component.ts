@@ -39,7 +39,7 @@ export class CreateMembrosComponent implements OnInit {
   }
 
   goBack(): void {
-    history.back()
+    history.back();
   }
 
   onSubmit(): void {

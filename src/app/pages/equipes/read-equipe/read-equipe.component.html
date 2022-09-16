@@ -1,5 +1,8 @@
 <ul>
-  <li *ngFor="let equipe of equipes" routerLink="/equipes/dados/{{ equipe.id_equipe }}">
+  <li
+    *ngFor="let equipe of equipes"
+    routerLink="/equipes/dados/{{ equipe.id_equipe }}"
+  >
     <span class="nome"> {{ equipe.nome_equipe }}</span>
   </li>
 </ul>

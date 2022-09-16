@@ -4,7 +4,8 @@ form {
   margin: 10px 40px;
 }
 
-.email, .senha {
+.email,
+.senha {
   width: 40%;
   min-width: 35rem;
 }

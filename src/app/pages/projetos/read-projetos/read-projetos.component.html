@@ -1,5 +1,8 @@
 <ul>
-  <li *ngFor="let projeto of projetos" routerLink="dados/{{ projeto.id_projeto }}">
+  <li
+    *ngFor="let projeto of projetos"
+    routerLink="dados/{{ projeto.id_projeto }}"
+  >
     <span class="nome">{{ projeto.nome_projeto }}</span>
     <span class="descricao">
       {{ projeto.descricao }}

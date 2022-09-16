@@ -1,4 +1,4 @@
-import { MembrocomInfo } from './../models/membro.model';
+import { MembrocomInfo } from "./../models/membro.model";
 import { environment } from "src/environments/environment.prod";
 import { Membro } from "../models/membro.model";
 

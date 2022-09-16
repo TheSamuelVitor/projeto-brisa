@@ -3,7 +3,8 @@ span.nome {
   margin: 2px;
 }
 
-span.funcao, span.equipe{
+span.funcao,
+span.equipe {
   font-size: 1rem;
   margin: 2px;
 }

@@ -25,6 +25,6 @@ export class NavComponent implements OnInit {
   }
 
   menuResponsivo() {
-    this.menuResp = "flex"
+    this.menuResp = "flex";
   }
 }

@@ -21,7 +21,7 @@ export class DeleteWarningComponent {
     public route: Router
   ) {}
 
-  fechaDialog() {  
+  fechaDialog() {
     this.dialogRef.close();
   }
 

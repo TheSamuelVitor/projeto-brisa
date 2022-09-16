@@ -1,4 +1,4 @@
-import { ProjetoComInfo } from './../models/projeto.model';
+import { ProjetoComInfo } from "./../models/projeto.model";
 import { environment } from "src/environments/environment.prod";
 import { Projeto } from "../models/projeto.model";
 

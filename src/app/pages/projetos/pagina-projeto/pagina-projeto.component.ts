@@ -1,9 +1,9 @@
-import { DeleteWarningComponentProjeto } from './delete-warning/delete-warning.component';
+import { DeleteWarningComponentProjeto } from "./delete-warning/delete-warning.component";
 import { CreateProjetosService } from "src/app/services/projetos.service";
 import { ProjetoComInfo } from "./../../../models/projeto.model";
 import { Tarefa } from "src/app/models/tarefa.model";
 
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog } from "@angular/material/dialog";
 import { ActivatedRoute } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 

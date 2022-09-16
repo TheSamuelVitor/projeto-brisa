@@ -1,23 +1,23 @@
-.form{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
 
-.form button{
-    width: 150px;
+.form button {
+  width: 150px;
 }
 
 button.salvar {
-    background-color: rgb(96, 225, 96);
+  background-color: rgb(96, 225, 96);
 }
 
-button.cancelar{
-    margin-top: 10px;
-    border: 1px solid blue;
+button.cancelar {
+  margin-top: 10px;
+  border: 1px solid blue;
 }
 
 button.limpar {
-    margin-top: 10px;
-    border: 1px solid yellow;
+  margin-top: 10px;
+  border: 1px solid yellow;
 }
