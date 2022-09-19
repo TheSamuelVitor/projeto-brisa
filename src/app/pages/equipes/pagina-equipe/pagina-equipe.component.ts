@@ -21,6 +21,7 @@ export class PaginaEquipeComponent implements OnInit {
     membros: [],
     projetos: [],
   };
+  primeiraLetra: string = "";
 
   constructor(
     private route: ActivatedRoute,
@@ -32,6 +33,7 @@ export class PaginaEquipeComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get("id");
     this.equipeService.getById({ id: `${id}` }).subscribe((resposta) => {
       this.equipe = resposta;
+      this.primeiraLetra = this.equipe.nome_equipe[0]
       this.membros = resposta.membros;
       this.projetos = resposta.projetos;
     });

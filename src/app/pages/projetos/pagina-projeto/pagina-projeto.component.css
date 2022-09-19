@@ -46,6 +46,10 @@
   margin: 0;
 }
 
+.nomeProjeto {
+  height: auto;
+}
+
 .imagem span {
   font-size: 8rem;
 }

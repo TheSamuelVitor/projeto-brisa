@@ -10,7 +10,6 @@ li {
   color: white;
   display: flex;
   flex-direction: column;
-  height: 150px;
   justify-content: space-around;
   line-height: 2rem;
   list-style: none;
@@ -18,10 +17,18 @@ li {
   min-width: 25rem;
   padding: 30px;
   width: 35%;
+  flex-wrap: wrap;
 }
 
 li span.nome {
   font-size: 1.5rem;
   font-weight: 500;
   margin: 2px;
+}
+
+
+li * {
+  box-sizing: border-box;
+  word-break: break-word;
+  text-align: justify;
 }

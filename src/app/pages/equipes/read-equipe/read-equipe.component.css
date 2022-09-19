@@ -16,11 +16,14 @@ li {
   min-width: 25rem;
   padding: 30px;
   width: 30%;
-  box-sizing: content-box;
 }
 
 li:hover {
-  cursor: pointer;
+  cursor: pointer;  
+}
+
+li *{
+  box-sizing: border-box;
 }
 
 li span.nome {
@@ -28,6 +31,8 @@ li span.nome {
   font-size: 1.5rem;
   font-weight: 500;
   margin: 2px;
+  word-break: break-word;
+  text-align: justify;
 }
 
 .data {

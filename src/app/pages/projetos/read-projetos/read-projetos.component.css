@@ -10,7 +10,6 @@ li {
   color: white;
   display: flex;
   flex-direction: column;
-  height: 50px;
   justify-content: space-around;
   line-height: 2rem;
   list-style: none;

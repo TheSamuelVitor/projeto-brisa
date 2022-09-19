@@ -14,19 +14,6 @@ span.equipe {
   display: flex;
 }
 
-button {
-  border: none;
-  cursor: pointer;
-}
-
-button.deletar:hover {
-  background-color: #ff00009a;
-}
-
-button.editar:hover {
-  background-color: #ffff0080;
-}
-
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -46,7 +33,7 @@ li {
   min-width: 25rem;
   padding: 30px;
   width: 35%;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 li span.nome {
@@ -59,28 +46,9 @@ li:hover {
   cursor: pointer;
 }
 
-.select_equipe {
-  align-items: center;
-}
-
-#select_equipe {
-  align-items: center;
-  border: 1px solid #000000;
-  height: 1rem;
-  margin-left: 3rem;
-  min-width: 25rem;
-  text-align: center;
-  width: 35%;
-
-  font-size: 15px;
-  padding: 10px;
-}
-
-#button_selecionar {
-  position: relative;
-  margin-left: 10px;
-}
-
-#button_voltar {
-  margin-left: 10px;
+li * {
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
 }
