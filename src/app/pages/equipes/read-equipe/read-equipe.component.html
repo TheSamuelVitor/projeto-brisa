@@ -4,10 +4,5 @@
     routerLink="/equipes/dados/{{ equipe.id_equipe }}"
   >
     <span class="nome"> {{ equipe.nome_equipe }}</span>
-    <span class="data" matTooltip="data de criação">
-      {{ equipe.createdAt.slice(8, 10) }} /
-      {{ equipe.createdAt.slice(5, 7) }} /
-      {{ equipe.createdAt.slice(0, 4) }} 
-    </span>
   </li>
 </ul>

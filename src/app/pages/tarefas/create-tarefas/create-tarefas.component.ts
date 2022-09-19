@@ -4,7 +4,7 @@ import { CreateTarefasService } from "src/app/services/tarefas.service";
 import { AvisoService } from "src/app/services/aviso.service";
 import { Projeto } from "src/app/models/projeto.model";
 import { Membro } from "src/app/models/membro.model";
-import { Tarefa } from "src/app/models/tarefa.model";
+import { Situacao, Tarefa } from "src/app/models/tarefa.model";
 
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder } from "@angular/forms";
@@ -24,6 +24,21 @@ export class CreateTarefasComponent implements OnInit {
     membro: [null, Validators.required],
     projeto: [null, Validators.required],
   });
+
+  situacao: Situacao[] = [
+    {
+      id: 1,
+      nome: "A fazer"
+    },
+    {
+      id: 2,
+      nome: "Em desenvolvimento"
+    },
+    {
+      id: 3,
+      nome: "Done"
+    }
+  ]
 
   tarefa: Tarefa = {
     nome_tarefa: "",

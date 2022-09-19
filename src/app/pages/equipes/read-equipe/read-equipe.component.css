@@ -16,13 +16,14 @@ li {
   min-width: 25rem;
   padding: 30px;
   width: 30%;
+  text-align: left;
 }
 
 li:hover {
-  cursor: pointer;  
+  cursor: pointer;
 }
 
-li *{
+li * {
   box-sizing: border-box;
 }
 
@@ -33,8 +34,4 @@ li span.nome {
   margin: 2px;
   word-break: break-word;
   text-align: justify;
-}
-
-.data {
-  color: white;
 }

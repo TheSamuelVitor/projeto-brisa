@@ -73,7 +73,7 @@ export class GrapficoComponent implements OnInit {
             display: true,
             title: {
               display: true,
-              text: "Dia da semana",
+              text: "Dia do mês",
             },
           },
           y: {
@@ -98,6 +98,7 @@ export class GrapficoComponent implements OnInit {
         ],
         datasets: [
           {
+            fill: '#ff0000',
             label: "Quantidade de equipes adicionadas",
             // elementos que serão exibidos no gráfico
             data: [

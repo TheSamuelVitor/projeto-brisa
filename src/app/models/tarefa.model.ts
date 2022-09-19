@@ -7,3 +7,8 @@ export interface Tarefa {
   id_membro: number,
   nome_membro?: string
 }
+
+export interface Situacao {
+  id: number,
+  nome: string
+}
