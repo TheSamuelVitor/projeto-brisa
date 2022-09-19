@@ -1,7 +1,6 @@
 import { Equipecomdata } from './../../../models/equipe.model';
 import { MatDialog } from "@angular/material/dialog";
 import { Component, OnInit } from "@angular/core";
-import { Equipe } from "src/app/models/equipe.model";
 import { CreateEquipesService } from "src/app/services/equipes.service";
 import { AuthService } from "src/app/services/auth.service";
 
