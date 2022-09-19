@@ -45,7 +45,6 @@ export class GrapficoComponent implements OnInit {
           this.membros7 += 1;
         }
       });
-
       this.mostraGrafico()
 
     });
@@ -56,7 +55,6 @@ export class GrapficoComponent implements OnInit {
   }
 
   mostraGrafico () {
-    this.lerEquipes()
     Chart.register(...registerables);
 
     new Chart(this.elemento.nativeElement, {
