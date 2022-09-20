@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: "https://api-go-projects.herokuapp.com/"
+  apiUrl: "http://localhost:3000/"
 };

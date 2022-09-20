@@ -13,6 +13,7 @@ import { environment } from "src/environments/environment";
 })
 export class DeleteWarningComponentProjeto {
   urlProjeto = `${environment.apiUrl}projetos/`;
+
   constructor(
     private dialog: DialogRef,
     @Inject(MAT_DIALOG_DATA) public data: { id_projeto: number },
@@ -28,7 +29,7 @@ export class DeleteWarningComponentProjeto {
   deletaProjeto(id_projeto: any) {
     this.http.delete(`${this.urlProjeto}${id_projeto}`).subscribe(() => {
       this.message.showMsg({
-        msg: `Projeto deletado com sucesso\nFavor recarregar a página`,
+        msg: `Projeto deletado com sucesso`,
       });
     });
     this.fechaDialog();

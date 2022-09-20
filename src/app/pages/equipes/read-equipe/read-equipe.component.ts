@@ -1,4 +1,4 @@
-import { Equipecomdata } from './../../../models/equipe.model';
+import { Equipecomdata } from "./../../../models/equipe.model";
 import { MatDialog } from "@angular/material/dialog";
 import { Component, OnInit } from "@angular/core";
 import { CreateEquipesService } from "src/app/services/equipes.service";

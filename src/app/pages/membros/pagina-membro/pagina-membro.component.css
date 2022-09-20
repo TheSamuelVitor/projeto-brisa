@@ -111,7 +111,12 @@ li {
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  width: 1rem;
+  width: 2rem;
+}
+
+.adicionar img {
+  width: 2rem;
+  height: 2rem;
 }
 
 .titulo {

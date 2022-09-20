@@ -31,8 +31,13 @@
   </div>
 
   <div class="tarefas">
-    <span class="subtitle"> Tarefas </span>
-    <ul class="tarefas" *ngIf="this.tarefas.length != 0">
+    <div class="topo">
+      <span class="subtitle"> Tarefas </span> 
+      <button class="adicionar">
+        <img src="../../../../assets/images/add_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+      </button>
+    </div>
+    <ul class="tarefas" *ngIf="this.tarefas != undefined">
       <li *ngFor="let tarefa of this.tarefas" class="card">
         <mat-card class="tarefa">
           <mat-card-title>
@@ -44,7 +49,7 @@
         </mat-card>
       </li>
     </ul>
-    <div *ngIf="this.tarefas.length == 0">
+    <div *ngIf="this.tarefas == undefined" class="listavazia">
       <img
         src="../../../../assets/images/info_FILL0_wght400_GRAD0_opsz48.svg"
         alt=""

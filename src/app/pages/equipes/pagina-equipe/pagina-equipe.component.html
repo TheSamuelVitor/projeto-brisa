@@ -29,7 +29,10 @@
   <div class="info">
     <div class="quantidades">
       <mat-card class="quantidade">
-        <mat-card-title>
+        <mat-card-title *ngIf="membros == undefined">
+          0
+        </mat-card-title>
+        <mat-card-title  *ngIf="membros != undefined">
           {{ membros.length }}
         </mat-card-title>
         <mat-card-subtitle>
@@ -38,7 +41,10 @@
         </mat-card-subtitle>
       </mat-card>
       <mat-card class="quantidade">
-        <mat-card-title>
+        <mat-card-title *ngIf="projetos == undefined">
+          0
+        </mat-card-title>
+        <mat-card-title *ngIf="projetos != undefined">
           {{ projetos.length }}
         </mat-card-title>
         Projeto(s)<br />
@@ -48,7 +54,7 @@
     </div>
 
     <span class="subtitle">Membros</span>
-    <ul class="membro">
+    <ul class="membro" *ngIf="this.membros != undefined">
       <li
         *ngFor="let membro of this.membros"
         routerLink="/membros/dados/{{ this.membro.id_membro }}"
@@ -63,9 +69,12 @@
         </mat-card>
       </li>
     </ul>
+    <div *ngIf="this.membros == undefined" class="listavazia">
+      Não há nenhum projeto relacionado a esta equipe
+    </div>
 
     <span class="subtitle">Projetos</span>
-    <ul class="projeto">
+    <ul class="projeto" *ngIf="projetos != undefined">
       <li
         *ngFor="let projeto of projetos"
         routerLink="../../../projetos/dados/{{ this.projeto.id_projeto }}"
@@ -77,7 +86,7 @@
         </mat-card>
       </li>
     </ul>
-    <div *ngIf="projetos.length == 0">
+    <div *ngIf="projetos == undefined" class="listavazia">
       Não há nenhum projeto relacionado a esta equipe
     </div>
   </div>
