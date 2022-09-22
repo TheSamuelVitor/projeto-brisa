@@ -1,10 +1,10 @@
-import { Equipecomdata } from './../models/equipe.model';
-import { environment } from "src/environments/environment.prod";
-import { Equipe, EquipecomInfo } from "../models/equipe.model";
-
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+
+import { Equipecomdata } from "./../models/equipe.model";
+import { environment } from "src/environments/environment.prod";
+import { Equipe, EquipecomInfo } from "../models/equipe.model";
 
 @Injectable({
   providedIn: "root",

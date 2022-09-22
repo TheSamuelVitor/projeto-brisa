@@ -19,7 +19,7 @@ export class AuthGuard implements CanActivate {
   canActivate(
   ): Observable<boolean> | boolean {
     const token = window.localStorage.getItem("token");
-    if (token != "") {
+    if (token) {
       this.mostrarMenuEmmiter.emit(true);
       return true;
     }
